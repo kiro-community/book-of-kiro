@@ -1,0 +1,61 @@
+# Hugo build artifacts
+/public/
+/resources/_gen/
+
+# Hugo build lock file
+.hugo_build.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js dependencies (if using npm/yarn for asset processing)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Hugo cache
+.hugo_build.lock
+
+## Key files
+*.pem
+
+# CDK build artifacts
+infra/cdk.out/
+infra/dist/
+infra/node_modules/
+infra/*.js
+infra/*.d.ts
+
+# CDK outputs (contains sensitive information)
+infra/cdk-outputs.json
+
+# Temporary files
+secret-values.json
+secret-resource-policy.json
+kms-policy.json

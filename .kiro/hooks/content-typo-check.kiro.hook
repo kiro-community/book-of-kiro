@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Content Typo Checker",
+  "description": "Automatically checks for spelling errors and typos in markdown files within the content/ folder whenever they are created or modified",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "content/**/*.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Please review the modified content files for any spelling errors, typos, or grammatical issues. Check for:\n\n1. Misspelled words (especially technical terms and product names)\n2. Grammar and punctuation errors\n3. Inconsistent terminology or capitalization\n4. Formatting issues that might affect readability\n5. Broken or malformed markdown syntax\n\nFocus on maintaining professional documentation quality while preserving the technical accuracy of the content. If you find issues, provide specific corrections and suggestions for improvement."
+  }
+}

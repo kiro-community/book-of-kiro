@@ -1,0 +1,12 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Book of Kiro'
+theme = 'hugo-book'
+
+# Use ugly URLs to avoid CloudFront directory index issues
+uglyURLs = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
