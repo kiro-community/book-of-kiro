@@ -1,8 +1,8 @@
 # Book of Kiro
 
-![](./kiro_text.svg)
+![Kiro Logo](./kiro_text.svg)
 
-A comprehensive documentation website built with Hugo using the Hugo Book theme. This project serves as a clean, book-like documentation platform for the Kiro ecosystem.
+A comprehensive documentation website built with Hugo using the Hugo Book theme. This project serves as a clean, book-like documentation platform for the Kiro AI IDE ecosystem, featuring competitive analysis, technical documentation, and community resources.
 
 ## Features
 
@@ -41,6 +41,21 @@ hugo server
 ```
 
 4. Open your browser to `http://localhost:1313`
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow:
+
+- **Triggers**: Automatically on push to `main` branch, or manually via GitHub Actions tab
+- **Build**: Uses Hugo 0.128.0 extended with Dart Sass support
+- **Deploy**: Publishes to GitHub Pages with proper artifact handling
+- **URL**: Available at your GitHub Pages URL once deployed
+
+### Setting up GitHub Pages
+
+1. Go to your repository Settings → Pages
+2. Set Source to "GitHub Actions"
+3. Push to main branch to trigger first deployment
 
 ## Development
 
