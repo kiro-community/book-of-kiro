@@ -3,7 +3,7 @@ title: Book of Kiro
 type: docs
 ---
 
-![](/images/kiro_text.svg)
+![](/book-of-kiro/images/kiro_text.svg)
 
 Welcome to the **Book of Kiro** – your comprehensive guide to mastering AI-powered development with [Kiro](https://kiro.dev/), the IDE that transforms ideas into production code through structured, spec-driven development.
 

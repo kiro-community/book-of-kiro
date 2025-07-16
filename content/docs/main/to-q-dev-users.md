@@ -52,13 +52,13 @@ Follow these steps to sign in with your Amazon Q Developer Pro account:
 
 1. On the login page, select **Sign in with your organization identity**.
 
-   ![Sign in options](/images/sign-in-options.png)
+   ![Sign in options](/book-of-kiro/images/sign-in-options.png)
 
 2. On the Sign in with AWS Identity Center page:
    - Input the Start URL (e.g., `xxxx.awsapps.com/start`)
    - Choose the AWS region (e.g., `us-east-1`) where your AWS Identity Center is provisioned
 
-   ![IAM Identity Center](/images/iam-identity-center.png)
+   ![IAM Identity Center](/book-of-kiro/images/iam-identity-center.png)
 
 3. Select **Continue** and complete the authentication process by following the on-screen instructions.
 
