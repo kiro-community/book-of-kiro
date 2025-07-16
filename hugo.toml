@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://kiro-community.github.io/book-of-kiro/'
 languageCode = 'en-us'
 title = 'Book of Kiro'
 theme = 'hugo-book'
