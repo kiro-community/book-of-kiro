@@ -44,7 +44,7 @@ Whether you're coming from Cursor, GitHub Copilot, or traditional IDEs, find tai
 ## Communities
 
 - [Kiro Discord](https://discord.gg/kirodotdev) – English Community
-- [Feishu Group](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=80dk3bc6-ac86-4327-b718-f390c90c2060) - 中文社区
+- [Feishu Group](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=f9bq2a34-0cbe-4ba6-9866-16bb685b2dc1) - 中文社区
 
 
 ## Contributing
