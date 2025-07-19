@@ -1,0 +1,138 @@
+# English translations for Book of Kiro
+# These translations override or extend the theme's default translations
+
+# Language switcher
+- id: language_switch
+  translation: Language
+
+- id: switch_to_chinese
+  translation: 中文
+
+- id: switch_to_english
+  translation: English
+
+- id: current_language
+  translation: Current language
+
+- id: available_languages
+  translation: Available languages
+
+# Translation status messages
+- id: translation_missing
+  translation: This page is not available in English. Showing Chinese version.
+
+- id: help_translate
+  translation: Help us translate
+
+- id: contribute_translation
+  translation: Contribute Translation
+
+- id: page_in_chinese
+  translation: This page is available in Chinese
+
+- id: view_in_chinese
+  translation: View in Chinese
+
+- id: translation_incomplete
+  translation: This translation may be incomplete or outdated.
+
+- id: original_version
+  translation: View original version
+
+# Navigation and UI elements
+- id: home
+  translation: Home
+
+- id: documentation
+  translation: Documentation
+
+- id: blog
+  translation: Blog
+
+- id: main_docs
+  translation: Main Documentation
+
+- id: other_tools
+  translation: Other Tools
+
+- id: competitor_analysis
+  translation: Competitor Analysis
+
+- id: getting_started
+  translation: Getting Started
+
+- id: community
+  translation: Community
+
+- id: resources
+  translation: Resources
+
+# Common UI elements
+- id: read_more
+  translation: Read more
+
+- id: back_to_top
+  translation: Back to top
+
+- id: table_of_contents
+  translation: Table of Contents
+
+- id: on_this_page
+  translation: On this page
+
+- id: related_pages
+  translation: Related pages
+
+- id: next_page
+  translation: Next page
+
+- id: previous_page
+  translation: Previous page
+
+- id: page_not_found
+  translation: Page not found
+
+- id: go_back
+  translation: Go back
+
+# Search related
+- id: search_placeholder
+  translation: Search documentation...
+
+- id: search_results
+  translation: Search results
+
+- id: no_results
+  translation: No results found
+
+- id: search_tip
+  translation: Try different keywords or check spelling
+
+# Content types
+- id: guide
+  translation: Guide
+
+- id: tutorial
+  translation: Tutorial
+
+- id: reference
+  translation: Reference
+
+- id: example
+  translation: Example
+
+- id: comparison
+  translation: Comparison
+
+# Dates and time
+- id: last_updated
+  translation: Last updated
+
+- id: published_on
+  translation: Published on
+
+- id: reading_time
+  translation: Reading time
+
+- id: minutes
+  translation: minutes

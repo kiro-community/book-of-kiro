@@ -8,7 +8,9 @@
 ## Configuration
 - **Main Config**: `hugo.toml` (TOML format)
 - **Title**: Book of Kiro
-- **Language**: English (en-us)
+- **Languages**: Bilingual support (English & Chinese)
+  - **English**: Default language (en-US), content in `content/`
+  - **Chinese**: Secondary language (zh-CN), content in `content.zh/`
 - **Theme**: hugo-book (via git submodule)
 - **Markup**: Goldmark with unsafe HTML enabled for rich content
 - **Deployment**: GitHub Pages via GitHub Actions
@@ -16,15 +18,15 @@
 ## Features & Libraries
 - **KaTeX**: Mathematical expression rendering
 - **Mermaid**: Diagram and flowchart support
-- **Fuse.js**: Client-side search functionality
+- **Fuse.js**: Client-side search functionality (per language)
 - **Responsive Design**: Mobile-friendly layouts
-- **Multi-language Support**: i18n ready
+- **Multi-language Support**: Full i18n implementation with separate content directories
 
 ## Common Commands
 
 ### Development
 ```bash
-# Start development server
+# Start development server (all languages)
 hugo server
 
 # Start with drafts
@@ -32,6 +34,10 @@ hugo server -D
 
 # Start with specific port
 hugo server -p 1314
+
+# Preview specific language
+hugo server --config hugo.toml --contentDir content     # English only
+hugo server --config hugo.toml --contentDir content.zh  # Chinese only
 ```
 
 ### Building

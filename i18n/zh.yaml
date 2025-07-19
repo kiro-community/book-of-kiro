@@ -1,0 +1,157 @@
+# Chinese translations for Book of Kiro
+# 为 Book of Kiro 网站提供的中文翻译
+
+# 语言切换器
+- id: language_switch
+  translation: 语言
+
+- id: switch_to_chinese
+  translation: 中文
+
+- id: switch_to_english
+  translation: English
+
+- id: current_language
+  translation: 当前语言
+
+- id: available_languages
+  translation: 可用语言
+
+# 翻译状态信息
+- id: translation_missing
+  translation: 此页面暂无中文翻译，显示英文版本。
+
+- id: help_translate
+  translation: 帮助我们翻译
+
+- id: contribute_translation
+  translation: 贡献翻译
+
+- id: page_in_english
+  translation: 此页面有英文版本
+
+- id: view_in_english
+  translation: 查看英文版本
+
+- id: translation_incomplete
+  translation: 此翻译可能不完整或已过时。
+
+- id: original_version
+  translation: 查看原版
+
+# 导航和界面元素
+- id: home
+  translation: 首页
+
+- id: documentation
+  translation: 文档
+
+- id: blog
+  translation: 博客
+
+- id: main_docs
+  translation: 主要文档
+
+- id: other_tools
+  translation: 其他工具
+
+- id: competitor_analysis
+  translation: 竞品分析
+
+- id: getting_started
+  translation: 快速开始
+
+- id: community
+  translation: 社区
+
+- id: resources
+  translation: 资源
+
+# 常用界面元素
+- id: read_more
+  translation: 阅读更多
+
+- id: back_to_top
+  translation: 返回顶部
+
+- id: table_of_contents
+  translation: 目录
+
+- id: on_this_page
+  translation: 本页内容
+
+- id: related_pages
+  translation: 相关页面
+
+- id: next_page
+  translation: 下一页
+
+- id: previous_page
+  translation: 上一页
+
+- id: page_not_found
+  translation: 页面未找到
+
+- id: go_back
+  translation: 返回
+
+# 搜索相关
+- id: search_placeholder
+  translation: 搜索文档...
+
+- id: search_results
+  translation: 搜索结果
+
+- id: no_results
+  translation: 未找到结果
+
+- id: search_tip
+  translation: 尝试不同的关键词或检查拼写
+
+# 搜索配置 - 针对中文优化
+- id: bookSearchConfig
+  translation: |
+    {
+      encode: false,
+      tokenize: function(str) {
+        // 中文字符分词：将中文字符单独分离，保留英文单词完整性
+        return str.replace(/[\u4e00-\u9fff]/g, ' $& ').split(/\s+/).filter(function(token) {
+          return token.length > 0;
+        });
+      },
+      threshold: 0.3,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      ignoreLocation: true,
+      findAllMatches: true
+    }
+
+# 内容类型
+- id: guide
+  translation: 指南
+
+- id: tutorial
+  translation: 教程
+
+- id: reference
+  translation: 参考
+
+- id: example
+  translation: 示例
+
+- id: comparison
+  translation: 对比
+
+# 日期和时间
+- id: last_updated
+  translation: 最后更新
+
+- id: published_on
+  translation: 发布于
+
+- id: reading_time
+  translation: 阅读时间
+
+- id: minutes
+  translation: 分钟

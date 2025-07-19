@@ -1,9 +1,58 @@
 baseURL = 'https://kiro-community.github.io/book-of-kiro/'
-languageCode = 'en-us'
-title = 'Book of Kiro'
+defaultContentLanguage = 'zh'
+defaultContentLanguageInSubdir = false
 theme = 'hugo-book'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en-US'
+    weight = 2
+    title = 'Book of Kiro'
+    contentDir = 'content.en'
+    [languages.en.params]
+      BookRepo = 'https://github.com/kiro-community/book-of-kiro'
+      BookEditPage = true
+      BookSearch = true
+      BookSection = '*'
+      BookMenuBundle = '/menu'
+      BookToC = true
+      BookComments = false
+      BookPortableLinks = true
+      BookServiceWorker = true
+
+  [languages.zh]
+    languageName = '中文'
+    languageCode = 'zh-CN'
+    weight = 1
+    title = 'Book of Kiro'
+    contentDir = 'content.zh'
+    [languages.zh.params]
+      BookRepo = 'https://github.com/kiro-community/book-of-kiro'
+      BookEditPage = true
+      BookSearch = true
+      BookSection = '*'
+      BookMenuBundle = '/menu'
+      BookToC = true
+      BookComments = false
+      BookPortableLinks = true
+      BookServiceWorker = true
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# Multilingual configuration
+
+[params]
+  # Global parameters that apply to all languages
+  BookRepo = 'https://github.com/kiro-community/book-of-kiro'
+  BookEditPage = true
+  BookSearch = true
+  BookSection = '*'
+  BookMenuBundle = '/menu'
+  BookToC = true
+  BookComments = false
+  BookPortableLinks = true
+  BookServiceWorker = true

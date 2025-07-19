@@ -10,18 +10,35 @@
 - `.kiro/` - Kiro IDE configuration and steering files
 
 ## Content Organization
+
+### English Content (`content/`)
 ```
 content/
-├── _index.md                    # Homepage content
-├── docs/                        # Main documentation
-│   ├── competitor-analysis/     # Competitive intelligence
-│   │   ├── _index.md           # Section index
-│   │   └── vs-cursor.md        # Cursor comparison
-│   └── main/                   # Core documentation
-│       └── _index.md           # Main docs index
+├── _index.md                    # English homepage content
+├── main/                        # Core documentation
+│   ├── _index.md               # Main docs index
+│   └── *.md                    # Documentation pages
+├── other-tools/                 # Competitor analysis
+│   ├── _index.md               # Section index
+│   └── vs-*.md                 # Tool comparisons
 └── posts/                      # Blog posts/articles
     ├── _index.md               # Blog section index
     └── *.md                    # Individual blog posts
+```
+
+### Chinese Content (`content.zh/`)
+```
+content.zh/
+├── _index.md                    # Chinese homepage content
+├── main/                        # 核心文档
+│   ├── _index.md               # 主文档索引
+│   └── *.md                    # 文档页面
+├── other-tools/                 # 竞品分析
+│   ├── _index.md               # 章节索引
+│   └── vs-*.md                 # 工具对比
+└── posts/                      # 博客文章
+    ├── _index.md               # 博客章节索引
+    └── *.md                    # 个人博客文章
 ```
 
 ## Theme Structure
@@ -59,9 +76,16 @@ menu:                    # Custom menu configuration
 ```
 
 ### Content Types
-- **docs/**: Technical documentation with nested hierarchy
+- **main/**: Core technical documentation with nested hierarchy
+- **other-tools/**: Competitor analysis and tool comparisons
 - **posts/**: Blog-style content with dates and categories
 - **shortcodes/**: Feature demonstrations and examples
+
+### Bilingual Content Management
+- English content in `content/` directory (default language)
+- Chinese content in `content.zh/` directory
+- Parallel structure maintained across both languages
+- Language-specific search indexes and navigation
 
 ## Navigation Structure
 - Automatic navigation from content hierarchy
@@ -93,14 +117,22 @@ book-of-kiro/
 ├── archetypes/                 # Hugo content templates
 │   └── default.md
 ├── assets/                     # Source assets for processing
-├── content/                    # Site content
-│   ├── _index.md              # Homepage content
-│   ├── docs/                  # Documentation sections
+├── content/                    # English site content
+│   ├── _index.md              # English homepage content
+│   ├── main/                  # Core documentation
+│   ├── other-tools/           # Competitor analysis
 │   └── posts/                 # Blog posts
+├── content.zh/                 # Chinese site content
+│   ├── _index.md              # Chinese homepage content
+│   ├── main/                  # 核心文档
+│   ├── other-tools/           # 竞品分析
+│   └── posts/                 # 博客文章
 ├── data/                      # Data files for site generation
 ├── hugo.toml                  # Hugo configuration
 ├── i18n/                      # Internationalization files
-├── kiro_icon_2.svg            # Kiro logo/icon
+│   ├── en.yaml               # English translations
+│   └── zh.yaml               # Chinese translations
+├── kiro_text.svg              # Kiro logo/icon
 ├── layouts/                   # Custom Hugo templates
 ├── public/                    # Generated static site
 │   ├── 404.html

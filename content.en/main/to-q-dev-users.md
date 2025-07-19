@@ -2,6 +2,7 @@
 weight: 2
 bookFlatSection: true
 title: "FAQ for Amazon Q Developer Users"
+translationKey: "q-dev-faq"
 ---
 
 # FAQ for Amazon Q Developer Users

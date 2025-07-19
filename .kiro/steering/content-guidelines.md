@@ -5,6 +5,8 @@
 - **Fact-based**: Use specific examples, metrics, and concrete comparisons
 - **Balanced**: Present fair comparisons while highlighting Kiro's strengths
 - **Actionable**: Provide clear insights that help decision-making
+- **Culturally Appropriate**: Adapt content tone and examples for target language audience
+- **Consistent Across Languages**: Maintain core messaging while allowing for cultural adaptation
 
 ## Competitive Analysis Standards
 
@@ -49,9 +51,11 @@ bookToc: false          # Disable TOC for comparison pages
 - Use `{{% tabs %}}` for alternative views
 
 ### Content Organization
-- Use `_index.md` files for section landing pages
+- Use `_index.md` files for section landing pages in both languages
 - Set `bookFlatSection: true` for flat navigation in sections
 - Use descriptive filenames (e.g., `vs-cursor.md`, `vs-copilot.md`)
+- Maintain parallel structure between `content/` and `content.zh/` directories
+- Ensure consistent navigation weights across languages
 
 ## Maintenance Guidelines
 
@@ -62,10 +66,33 @@ bookToc: false          # Disable TOC for comparison pages
 - Maintain comparison date stamps
 
 ### Quality Checks
-- Ensure all tables have consistent formatting
-- Verify all links are functional
-- Check that comments provide strategic value
+- Ensure all tables have consistent formatting across languages
+- Verify all links are functional in both English and Chinese content
+- Check that comments provide strategic value and cultural relevance
 - Validate technical accuracy of feature descriptions
+- Maintain content parity between language versions
+- Verify proper encoding and display of Chinese characters
+
+## Bilingual Content Guidelines
+
+### Translation Standards
+- Maintain technical accuracy while adapting for cultural context
+- Use consistent terminology across all Chinese content
+- Preserve Hugo shortcode syntax and formatting
+- Keep frontmatter structure identical between languages
+- Translate feature names appropriately while maintaining clarity
+
+### Content Synchronization
+- Update both language versions when making structural changes
+- Maintain parallel navigation weights and organization
+- Ensure feature comparison tables reflect same information
+- Keep comparison dates synchronized across languages
+
+### Chinese-Specific Considerations
+- Use appropriate technical terminology for Chinese developer audience
+- Consider cultural context in examples and use cases
+- Maintain readability with proper spacing and formatting
+- Use simplified Chinese characters consistently
 
 ## Strategic Messaging
 
@@ -80,3 +107,4 @@ bookToc: false          # Disable TOC for comparison pages
 - Emphasize developer control and customization
 - Highlight unique features that competitors lack
 - Focus on productivity and workflow optimization
+- Adapt messaging for regional market preferences and development practices

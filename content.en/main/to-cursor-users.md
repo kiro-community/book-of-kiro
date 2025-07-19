@@ -2,6 +2,7 @@
 weight: 3
 bookFlatSection: true
 title: "FAQ to Cursor users"
+translationKey: "cursor-faq"
 ---
 
 # FAQ to Cursor users

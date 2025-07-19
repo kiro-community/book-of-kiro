@@ -1,6 +1,7 @@
 ---
 title: Book of Kiro
 type: docs
+translationKey: homepage
 ---
 
 ![](/book-of-kiro/images/kiro_text.svg)
