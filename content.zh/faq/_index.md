@@ -1,6 +1,6 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Kiro 使用手册"
+title: "Kiro 常见问题"
 translationKey: "main-docs"
 ---
