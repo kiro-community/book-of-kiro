@@ -7,7 +7,6 @@ weight: 1
 本章节是 [Kiro 官方 Steering 文档](https://kiro.dev/docs/steering/) 的中文翻译。信息可能存在滞后。
 {{% /hint %}}
 
-
 # 什么是 Steering？
 
 Steering 通过 `.kiro/steering/` 目录中的 markdown 文件为 Kiro 提供持久的项目知识。无需在每次聊天中解释您的约定，Steering 文件确保 Kiro 始终遵循您建立的模式、库和标准。
@@ -36,13 +35,13 @@ Kiro 自动创建三个基础文件，建立核心项目上下文：
 
 ## 创建自定义 Steering 文件
 
-通过专门的指导扩展 Kiro 的理解，满足您项目的独特需求：
+通过专门的 Steering 扩展 Kiro 的理解，满足您项目的独特需求：
 
 1. 导航到 Kiro 面板中的 **Steering** 部分
 2. 点击 **+** 按钮创建新的 `.md` 文件
 3. 选择描述性的文件名（例如 `api-standards.md`）
 4. 使用标准 markdown 语法编写您的指导
-5. 使用自然语言描述您的要求，然后选择**优化**按钮，Kiro 会为您格式化
+5. 使用自然语言描述您的要求，然后选择**Refine**按钮，Kiro 会为您格式化
 
 ## 包含模式
 
@@ -52,28 +51,37 @@ Steering 文件可以配置为根据您的需求在不同时间加载。这种�
 
 ### 始终包含（默认）
 
+```yaml
+---
+inclusion: always
+---
+```
+
 这些文件会自动加载到每次 Kiro 交互中。将此模式用于应该影响所有代码生成和建议的核心标准。示例包括您的技术栈、编码约定和基本架构原则。
 
-**最适合**：项目范围的标准、技术偏好、安全策略和普遍适用的编码约定。
+**使用场景**：项目范围的标准、技术偏好、安全策略和普遍适用的编码约定。
 
 ### 条件包含
-
-文件仅在处理匹配指定模式的文件时自动包含。这通过仅在需要时加载专门指导来保持上下文相关性并减少噪音。
-
-**常见模式**：
 
 ```yaml
 ---
 inclusion: fileMatch
-fileMatchPattern: 'README*'
+fileMatchPattern: 'components/**/*.tsx'
 ---
 ```
 
-**最适合**：特定领域的标准，如组件模式、API 设计规则、测试方法或仅适用于特定文件类型的部署程序。
+文件仅在处理匹配指定模式的文件时自动包含。这通过仅在需要时加载专门指导来保持上下文相关性并减少噪音。
+
+常见模式：
+* "*.tsx" - React components and JSX files
+* "app/api/**/*" - API routes and backend logic
+* "**/*.test.*" - Test files and testing utilities
+* "src/components/**/*" - Component-specific guidelines
+* "*.md" - Documentation files
+
+**适用场景**：特定领域的标准，如组件模式、API 设计规则、测试方法或仅适用于特定文件类型的部署程序。
 
 ### 手动包含
-
-通过在聊天消息中使用 `#steering-file-name` 引用文件，按需提供文件。这让您精确控制何时需要专门上下文，而不会使每次交互变得混乱。
 
 ```yaml
 ---
@@ -81,21 +89,24 @@ inclusion: manual
 ---
 ```
 
+通过在聊天消息中使用 `#steering-file-name` 引用文件，按需提供文件。这让您精确控制何时需要专门上下文，而不会使每次交互变得混乱。
+
 **使用方法**：在聊天中输入 `#troubleshooting-guide` 或 `#performance-optimization` 来为当前对话包含该 Steering 文件。
 
-**最适合**：专门的工作流程、故障排除指南、迁移程序或仅偶尔需要的上下文丰富文档。
+**适用场景**：专门的工作流程、故障排除指南、迁移程序或仅偶尔需要的上下文丰富文档。
 
 ## 文件引用
 
 链接到实时项目文件以保持 Steering 的时效性：
 
-示例：
-
 ```markdown
-#[[file:package.json]]
-#[[file:src/types/api.ts]]
-#[[file:docs/api-spec.yaml]]
+#[[file:<relative_file_name>]]
 ```
+
+示例：
+- API specs: #[[file:api/openapi.yaml]]
+- Component patterns: #[[file:components/ui/button.tsx]]
+- Config templates: #[[file:.env.example]]
 
 ## 最佳实践
 
@@ -103,8 +114,9 @@ inclusion: manual
 每个文件一个领域 - API 设计、测试或部署程序。
 
 **使用清晰的名称**
-- `api-standards.md` 而不是 `standards.md`
-- `testing-approach.md` 而不是 `tests.md`
+- `api-standards.md` -  REST API 标准
+- `testing-unit-patterns.md` - 单元测试的方法
+- `components-form-validation.md` - 表单组件标准
 
 **包含上下文**
 解释为什么做出决策，而不仅仅是标准是什么。
