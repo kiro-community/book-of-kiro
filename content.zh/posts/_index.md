@@ -1,7 +1,8 @@
 ---
 title: "文章"
-weight: 3
+weight: 9
 bookFlatSection: false
+hidden: true
 ---
 
 # 文章
