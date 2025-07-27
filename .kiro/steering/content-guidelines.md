@@ -94,6 +94,24 @@ bookToc: false          # Disable TOC for comparison pages
 - Maintain readability with proper spacing and formatting
 - Use simplified Chinese characters consistently
 
+### Terms That Should NOT Be Translated
+The following technical terms should remain in English in Chinese content:
+- **Steering** - Kiro's guidance system (不要翻译为"指导"或"引导")
+- **Project Rules** - Amazon Q Developer's rule system (不要翻译为"项目规则")
+- **Prompt Library** - Amazon Q Developer's prompt storage system (不要翻译为"提示库")
+- **Spec Mode** / **Spec** - Kiro's structured development approach (不要翻译为"规格模式")
+- **Agent Hooks** / **Hooks** - Kiro's automated triggers (不要翻译为"代理钩子"或"钩子")
+- **Vibe** - Kiro's agent mode (不要翻译为"代理模式")
+- **Supervised mode** - Kiro's supervised agent mode (不要翻译为"监督模式")
+- **Autopilot mode** - Kiro's autonomous agent mode (不要翻译为"自动驾驶模式")
+- **Named Agent** - Specialized agents with specific functions (不要翻译为"命名代理")
+- **MCP** - Model Context Protocol (保持英文缩写)
+- **API** - Application Programming Interface (保持英文缩写)
+- **IDE** - Integrated Development Environment (保持英文缩写)
+- **VS Code** - Visual Studio Code (保持英文)
+- **GitHub** - 保持英文
+- **Git** - 版本控制系统名称，保持英文
+
 ## Strategic Messaging
 
 ### Kiro Differentiators to Emphasize
