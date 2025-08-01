@@ -25,11 +25,6 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 - **记忆功能（Memories）**：基于对话自动生成的规则，在会话间保持上下文
 - **检查点（Checkpoints）**：代理更改的自动快照，便于轻松回滚
 
-**价格比较：**
-- **相似价位下更好的价值**：Kiro Pro（$19）提供 1000 次 Sonnet 请求，而 Cursor Pro（$20）仅提供约 225 次 Sonnet 请求 - 以更低成本提供超过 4 倍的请求次数
-- **高级套餐优势**：Kiro Pro+（$39）提供 3000 次 Sonnet 请求，相比 Cursor Pro+（$60）的约 675 次 Sonnet 请求 - 以低 35% 的成本提供近 5 倍的请求次数
-- 两者的付费计划都提供无限制的内联补全
-
 
 ## 功能对比
 
@@ -399,81 +394,4 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 </table>
 
 
-## 价格对比
 
-{{% hint info %}}
-Kiro 在预览期间免费提供，并有慷慨的使用限制。
-{{% /hint %}}
-
-<table>
-<thead>
-<tr>
-<th>产品</th>
-<th>计划</th>
-<th>费用（每月每用户）</th>
-<th>内联补全</th>
-<th>代理交互</th>
-<th>超出限制后的额外费用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3"><strong>Kiro</strong></td>
-<td>免费</td>
-<td>$0</td>
-<td>无限制</td>
-<td>50 次 Sonnet</td>
-<td>升级到其他计划</td>
-</tr>
-<tr>
-<td>Pro</td>
-<td>$19</td>
-<td>无限制</td>
-<td>1000 次 Sonnet</td>
-<td>未知</td>
-</tr>
-<tr>
-<td>Pro+</td>
-<td>$39</td>
-<td>无限制</td>
-<td>3000 次 Sonnet</td>
-<td>未知</td>
-</tr>
-<tr>
-<td rowspan="5"><strong>Cursor</strong></td>
-<td>Hobby</td>
-<td>$0</td>
-<td>有限制</td>
-<td>有限制</td>
-<td>升级到其他计划</td>
-</tr>
-<tr>
-<td>Pro</td>
-<td>$20</td>
-<td>无限制</td>
-<td>约 225 次 Sonnet 4 请求，约 550 次 Gemini 请求，或约 650 次 GPT 4.1 请求</td>
-<td>使用自动模式或支付模型提供商的额外 API 费用</td>
-</tr>
-<tr>
-<td>Pro+</td>
-<td>$60</td>
-<td>无限制</td>
-<td>约 675 次 Sonnet 4 请求，约 1,650 次 Gemini 请求，或约 1,950 次 GPT 4.1 请求</td>
-<td>使用自动模式或支付模型提供商的额外 API 费用</td>
-</tr>
-<tr>
-<td>Ultra</td>
-<td>$200</td>
-<td>无限制</td>
-<td>约 4,500 次 Sonnet 4 请求，约 11,000 次 Gemini 请求，或约 13,000 次 GPT 4.1 请求</td>
-<td>使用自动模式或支付模型提供商的额外 API 费用</td>
-</tr>
-<tr>
-<td>Teams</td>
-<td>$40</td>
-<td>无限制</td>
-<td>500 次代理请求（启用思考功能时 Sonnet 消耗两次请求）</td>
-<td>$0.04/请求</td>
-</tr>
-</tbody>
-</table>
