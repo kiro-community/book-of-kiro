@@ -14,22 +14,20 @@ translationKey: vs-cursor
 Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它们在AI辅助编程方面采用了不同的方法。以下是主要区别：
 
 **Kiro 的独特优势：**
-- **规格模式（Spec Mode）**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
-- **代理钩子（Agent Hooks）**：当IDE中发生特定事件时执行预定义代理操作的自动触发器
-- **灵活的自主性**：既有自动驾驶模式（自主修改）也有监督模式（应用更改前审查）
-- **更大的上下文窗口**：Sonnet 支持 200K tokens，而 Cursor 的 128K（需要额外付费才能获得 200K）
+- **Spec-driven development**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
+- **Agent Hooks**：当IDE中发生特定事件时执行预定义 Agent 操作的自动触发器
+- **灵活的自主性**：既有 Autopilot 模式（自主完成端到端任务）也有 Supervised 模式（应用更改前人工审查）
 
 **Cursor 的独特优势：**
 - **更多模型选择**：支持多个提供商（Anthropic、Google、OpenAI、xAI）并具有自动选择功能
 - **预测下一次编辑**：Tab-tab 功能，基于最近的更改预测您的下一次编辑
-- **记忆功能（Memories）**：基于对话自动生成的规则，在会话间保持上下文
-- **检查点（Checkpoints）**：代理更改的自动快照，便于轻松回滚
+- **记忆功能（Memories）& 检查点（Checkpoints）**：基于对话自动生成的规则，在会话间保持上下文；Agent 更改的自动快照，便于轻松回滚
 
 
 ## 功能对比
 
 {{% hint info %}}
-**最后对比日期**：2025年7月14日
+**最后对比日期**：2025年8月2日
 {{% /hint %}}
 
 <table>
@@ -89,12 +87,12 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 <td></td>
 </tr>
 <tr>
-<td rowspan="6"><strong>代理</strong></td>
-<td>代理模式</td>
+<td rowspan="6"><strong>Agent</strong></td>
+<td>Agent 模式</td>
 <td>自主编程任务、终端命令和代码编辑</td>
 <td>✅</td>
 <td>✅</td>
-<td>Kiro 的代理支持自动驾驶模式和监督模式。自动驾驶模式允许 Kiro 在打开的工作区内自主修改文件。监督模式允许用户在应用更改前审查和批准更改</td>
+<td>Kiro 的 Agent 支持 Autopilot 模式和 Supervised 模式。Autopilot 模式允许 Kiro 在打开的工作区内自主修改文件。Supervised 模式允许用户在应用更改前审查和批准更改</td>
 </tr>
 <tr>
 <td>规格模式</td>
@@ -105,14 +103,14 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 </tr>
 <tr>
 <td>检查点</td>
-<td>代理对代码库更改的自动快照。让您可以撤销代理修改。</td>
+<td>Agent 对代码库更改的自动快照。让您可以撤销 Agent 修改。</td>
 <td>❌</td>
 <td>✅</td>
 <td></td>
 </tr>
 <tr>
 <td>规划</td>
-<td>代理通过待办事项和队列规划和管理复杂任务</td>
+<td>Agent 通过待办事项和队列规划和管理复杂任务</td>
 <td>❌</td>
 <td>✅</td>
 <td></td>
@@ -120,14 +118,14 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 
 <tr>
 <td>差异和审查</td>
-<td>审查和管理 AI 代理生成的代码更改</td>
+<td>审查和管理 AI Agent 生成的代码更改</td>
 <td>✅</td>
 <td>✅</td>
 <td></td>
 </tr>
 <tr>
-<td>钩子</td>
-<td>当IDE中发生特定事件时执行预定义代理操作的自动触发器</td>
+<td>Hooks</td>
+<td>当IDE中发生特定事件时执行预定义 Agent 操作的自动触发器</td>
 <td>✅</td>
 <td>❌</td>
 <td></td>
@@ -341,15 +339,15 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 </tr>
 <tr>
 <td rowspan="2"><strong>其他</strong></td>
-<td>远程代理</td>
-<td>在云端运行的异步远程代理</td>
+<td>远程 Agent</td>
+<td>在云端运行的异步远程 Agent</td>
 <td>❌</td>
-<td>✅ Cursor 中的后台代理。需要额外收费。</td>
+<td>✅ Cursor 中的后台 Agent。需要额外收费。</td>
 <td>这不关键。</td>
 </tr>
 <tr>
 <td>网页门户</td>
-<td>从网页门户运行编程代理</td>
+<td>从网页门户运行编程 Agent</td>
 <td>❌</td>
 <td>✅ 需要额外收费。</td>
 <td>这不关键。</td>
@@ -357,7 +355,7 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 <tr>
 <td rowspan="5"><strong>用户体验</strong></td>
 <td>并行会话</td>
-<td>允许打开多个标签页，并行运行代理/聊天</td>
+<td>允许打开多个标签页，并行运行 Agent/聊天</td>
 <td>✅</td>
 <td>✅</td>
 <td>两款工具都可以并行运行多个会话。</td>
@@ -393,5 +391,140 @@ Kiro 和 Cursor 都是AI驱动的IDE，能够提升开发者生产力，但它�
 </tbody>
 </table>
 
+
+## 价格对比
+
+{{% hint info %}}
+**最后更新日期**：2025年8月2日。如需最新定价信息，请查询 Kiro 和 Cursor 官网。
+{{% /hint %}}
+
+
+### 个人版
+
+- Kiro 价格套餐包含**固定次数**的 Vibe 请求和 Spec Task 请求。
+- Cursor 价格套餐包含**按模型 API 价格**计算的每月 Agent 使用预算。
+
+{{% hint warning %}}
+**Pro版本试用**</br>
+Kiro 和 Cursor 都提供2周免费的 Pro 版本试用。试用期内，Kiro 提供额外的 100次 Spec Task 请求。Cursor 未明确给出 Agent 调用次数或模型API 使用额度。
+{{% /hint %}}
+
+
+<table>
+<thead>
+<tr>
+<th>Kiro 套餐</th>
+<th>Cursor 套餐</th>
+<th>费用（每月/每用户）</th>
+<th>Kiro</th>
+<th>Cursor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>Hobby</td>
+<td>$0</td>
+<td>• 50 x Vibe 请求</td>
+<td>Limited (官方无明确说明)</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>Pro</td>
+<td>$20</td>
+<td>• 225 x Vibe 请求<br>• 125 x Spec Task</td>
+<td>• ~225 Sonnet 4 请求，或<br>• ~550 Gemini 请求，或<br>• ~650 GPT 4.1 请求</td>
+</tr>
+<tr>
+<td>Pro+</td>
+<td>-</td>
+<td>$40</td>
+<td>• 450 x Vibe 请求<br>• 250 x Spec Task</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Pro+</td>
+<td>$60</td>
+<td>-</td>
+<td>• ~675 Sonnet 4 请求，或<br>• ~1,650 Gemini 请求，或<br>• ~1,950 GPT 4.1 请求</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Ultra</td>
+<td>$200</td>
+<td>• 2,250 x Vibe 请求<br>• 1,250 x Spec Task</td>
+<td>• ~4,500 Sonnet 4 请求，或<br>• ~11,000 Gemini 请求，或<br>• ~13,000 GPT 4.1 请求</td>
+</tr>
+</tbody>
+</table>
+
+{{% hint info %}}
+Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次。</br>Cursor 超出套餐后，选择 AUTO（自动选择模型），或按模型 API 费用计费，Sonnet 4 约为 $0.09/次。
+{{% /hint %}}
+
+**Kiro 的优势**:
+- 定价透明、计算简单：固定的费用和调用次数。
+- 超额费用便宜：超出额度后 Vibe $0.04/次，低于 Cursor ~$0.09/次 （按 Sonnet 4计价）。
+
+**Cursor 价格优势**：
+- AUTO 模式：超出额度后可选择 AUTO（不可选择模型），无额外费用。
+
+
+### 企业版
+
+{{% hint warning %}}
+企业版通常支持 SSO (单点登陆)、用户管理、用量统计和统一账单等功能。Kiro 暂未公布其三档付费套餐是否都适用于企业，以下内容仅为参考。
+{{% /hint %}}
+
+- Kiro 价格套餐包含**固定次数**的 Vibe 请求和 Spec Task 请求。
+- Cursor 价格套餐包含**固定次数**请求 (Sonnet 3.7 和 Sonnet 4 Thinking 模式请求记2次)。
+
+<table>
+<thead>
+<tr>
+<th>Kiro 套餐</th>
+<th>Cursor 套餐</th>
+<th>费用（每月/每用户）</th>
+<th>Kiro</th>
+<th>Cursor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pro</td>
+<td>-</td>
+<td>$20</td>
+<td>• 225 x Vibe 请求<br>• 125 x Spec Task 请求</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pro+</td>
+<td>Teams</td>
+<td>$40</td>
+<td>• 450 x Vibe 请求<br>• 250 x Spec Task 请求</td>
+<td>500 x Sonnet 请求<br>（Sonnet thinking 消耗两个请求）</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>-</td>
+<td>$200</td>
+<td>• 2,250 x Vibe 请求<br>• 1,250 x Spec Task 请求</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+{{% hint info %}}
+Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次。</br>Cursor 超出套餐后，选择 **AUTO**（自动选择模型）， 或按**模型API价格上浮20%计费**，支付额外费用（Sonnet 4 约为 $0.11/次）。
+{{% /hint %}}
+
+**Kiro 优势**:
+- 定价透明、计算简单：固定的费用和调用次数。
+- 更多调用次数：$40 套餐，Kiro 包含更多调用次数，高于 Cursor。
+- 超额费用便宜：超出额度后 Vibe $0.04/次，低于 Cursor ~$0.11/次 （按 Sonnet 4计价）。
+
+**Cursor 优势**：
+- AUTO 模式：超出额度后可选择 AUTO（不可选择模型），无额外费用。
 
 
