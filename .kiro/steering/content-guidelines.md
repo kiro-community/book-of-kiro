@@ -97,6 +97,7 @@ bookToc: false          # Disable TOC for comparison pages
 ### Terms That Should NOT Be Translated
 The following technical terms should remain in English in Chinese content:
 - **Steering** - Kiro's guidance system (不要翻译为"指导"或"引导")
+- **Agent** - AI assistant/autonomous coding system (不要翻译为"代理")
 - **Project Rules** - Amazon Q Developer's rule system (不要翻译为"项目规则")
 - **Prompt Library** - Amazon Q Developer's prompt storage system (不要翻译为"提示库")
 - **Spec Mode** / **Spec** - Kiro's structured development approach (不要翻译为"规格模式")
