@@ -2,38 +2,31 @@
 title: vs. Cursor
 weight: 1
 bookToc: false
+translationKey: vs-cursor
 ---
 
 # Kiro vs. Cursor
 
-[Cursor](https://cursor.com) is an AI-powered code editor made by [Anysphere](https://anysphere.inc/). [Kiro](https://kiro.dev) is an AI IDE made by [AWS](https://aws.amazon.com/). Both tools are designed to enhance developer productivities. Both tools are folks of Visual Studio Code, and intergrate advanced AI capabilities directly into the IDE. 
+[Cursor](https://cursor.com) is an AI-powered code editor developed by [Anysphere](https://anysphere.inc/). [Kiro](https://kiro.dev) is an AI IDE developed by [AWS](https://aws.amazon.com/). Both tools aim to enhance developer productivity. Both tools are forks of Visual Studio Code and integrate advanced AI capabilities directly into the IDE.
 
 ## Summary
 
-Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, but they take different approaches to AI-assisted coding. Here are the key differences:
+Both Kiro and Cursor are AI-powered IDEs that enhance developer productivity, but they take different approaches to AI-assisted programming. Here are the key differences:
 
 **Kiro's Unique Advantages:**
-- **Spec Mode**: Structured approach to complex development tasks that formalizes the software development process - a feature unique to Kiro
-- **Agent Hooks**: Automated triggers that execute predefined agent actions when specific events occur in your IDE
-- **Flexible Autonomy**: Both Autopilot mode (autonomous modifications) and Supervised mode (review before applying changes)
-- **Larger Context Window**: 200K tokens for Sonnet vs Cursor's 128K (requires extra payment for 200K)
+- **Spec-driven development**: Structured approach to complex development tasks that formalizes the software development process - this is unique to Kiro
+- **Agent Hooks**: Automated triggers that execute predefined agent actions when specific events occur in the IDE
+- **Flexible Autonomy**: Both Autopilot mode (autonomous end-to-end task completion) and Supervised mode (human review before applying changes)
 
 **Cursor's Unique Advantages:**
-- **More Model Options**: Supports multiple providers (Anthropic, Google, OpenAI, xAI) with auto-selection capabilities
-- **Predict Next Edit**: Tab-tab feature that anticipates your next edit based on recent changes
-- **Memories**: Automatically generated rules based on conversations that maintain context across sessions
-- **Checkpoints**: Automatic snapshots of agent changes for easy rollback
+- **More Model Choices**: Supports multiple providers (Anthropic, Google, OpenAI, xAI) with automatic selection capabilities
+- **Predict Next Edit**: Tab-tab functionality that predicts your next edit based on recent changes
+- **Memories & Checkpoints**: Automatically generated rules based on conversations that maintain context across sessions; automatic snapshots of agent changes for easy rollback
 
-**Pricing Comparison:**
-- **Better Value at Similar Price Points**: Kiro Pro ($19) offers 1000 Sonnet requests vs Cursor Pro ($20) with only ~225 Sonnet requests - over 4x more requests for less cost
-- **Higher Tier Advantage**: Kiro Pro+ ($39) provides 3000 Sonnet requests compared to Cursor Pro+ ($60) with ~675 Sonnet requests - nearly 5x more requests at 35% lower cost
-- Both offer unlimited inline completions on paid plans
-
-
-## Feature comparison
+## Feature Comparison
 
 {{% hint info %}}
-**Last comparsion date**: July 14, 2025
+**Last comparison date**: August 2, 2025
 {{% /hint %}}
 
 <table>
@@ -68,7 +61,7 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 <td>Use API keys to directly call model providers. Usually costs more than subscription. Features are usually restricted.</td>
 <td>❌</td>
 <td>✅</td>
-<td>This usually cost more than subscription. Core features like Agent are prohibited in Cursor if using API Keys.</td>
+<td>This usually costs more than subscription. Core features like Agent are prohibited in Cursor if using API Keys.</td>
 </tr>
 <tr>
 <td>Context window</td>
@@ -98,7 +91,7 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 <td>Autonomous coding tasks, terminal commands, and code editing</td>
 <td>✅</td>
 <td>✅</td>
-<td>Kiro's agent support Autopilot mode and Supervised mode. Autopilot mode allows Kiro to modify files within the opened workspace autonomously. Supervised mode allows users to review and approve changes before they are applied</td>
+<td>Kiro's agent supports Autopilot mode and Supervised mode. Autopilot mode allows Kiro to modify files within the opened workspace autonomously. Supervised mode allows users to review and approve changes before they are applied</td>
 </tr>
 <tr>
 <td>Spec mode</td>
@@ -121,7 +114,6 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 <td>✅</td>
 <td></td>
 </tr>
-
 <tr>
 <td>Diffs and Review</td>
 <td>Review and manage code changes generated by the AI agent</td>
@@ -240,7 +232,7 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 <tr>
 <td>@Rules</td>
 <td>Work with rules</td>
-<td>✅ Refer to steering.</td>
+<td>✅ Refer to steering rules.</td>
 <td>✅ Refer to Cursor rules.</td>
 <td></td>
 </tr>
@@ -284,14 +276,14 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 <td>Add files to the context without referencing</td>
 <td>❌</td>
 <td>✅</td>
-<td>Not important. Not even explicitly tell how to use this feature in Cursor on its UI.</td>
+<td>Not important. Cursor doesn't even explicitly explain how to use this feature in its UI.</td>
 </tr>
 <tr>
 <td>/ Commands</td>
 <td>Add open and active files to the context</td>
 <td>❌</td>
 <td>✅</td>
-<td>Not important. Not even explicitly tell how to use this feature in Cursor on its UI.</td>
+<td>Not important. Cursor doesn't even explicitly explain how to use this feature in its UI.</td>
 </tr>
 <tr>
 <td rowspan="7"><strong>MCP</strong></td>
@@ -397,84 +389,134 @@ Kiro and Cursor are both AI-powered IDEs that enhance developer productivity, bu
 </tbody>
 </table>
 
-
-## Price comparison
+## Price Comparison
 
 {{% hint info %}}
-Kiro is free with generous limits during the preview period.
+**Last updated**: August 2, 2025. For the latest pricing information, please check the official Kiro and Cursor websites.
+{{% /hint %}}
+
+### Personal Plans
+
+- Kiro pricing plans include **fixed numbers** of Vibe requests and Spec Task requests.
+- Cursor pricing plans include **monthly agent usage budget calculated by model API prices**.
+
+{{% hint warning %}}
+**Pro Plan Trial**<br>
+Both Kiro and Cursor offer a 2-week free Pro plan trial. During the trial period, Kiro provides an additional 100 Spec Task requests. Cursor doesn't explicitly specify the number of agent calls or model API usage quota.
 {{% /hint %}}
 
 <table>
 <thead>
 <tr>
-<th>Product</th>
-<th>Plan</th>
-<th>Cost (/mo. per user)</th>
-<th>Inline completions</th>
-<th>Agent interactions</th>
-<th>Additional cost after limits</th>
+<th>Kiro Plan</th>
+<th>Cursor Plan</th>
+<th>Cost (per month/per user)</th>
+<th>Kiro</th>
+<th>Cursor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td rowspan="3"><strong>Kiro</strong></td>
 <td>Free</td>
-<td>$0</td>
-<td>Unlimited</td>
-<td>50 Sonnet</td>
-<td>Upgrade to other plans</td>
-</tr>
-<tr>
-<td>Pro</td>
-<td>$19</td>
-<td>Unlimited</td>
-<td>1000 Sonnet</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Pro+</td>
-<td>$39</td>
-<td>Unlimited</td>
-<td>3000 Sonnet</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td rowspan="5"><strong>Cursor</strong></td>
 <td>Hobby</td>
 <td>$0</td>
-<td>Limited</td>
-<td>Limited</td>
-<td>Upgrade to other plans</td>
+<td>• 50 x Vibe requests</td>
+<td>Limited (no official specification)</td>
 </tr>
 <tr>
 <td>Pro</td>
+<td>Pro</td>
 <td>$20</td>
-<td>Unlimited</td>
-<td>~225 Sonnet 4 requests, ~550 Gemini requests, or ~650 GPT 4.1 requests</td>
-<td>Use Auto or pay additional API cost of model providers</td>
+<td>• 225 x Vibe requests<br>• 125 x Spec Task</td>
+<td>• ~225 Sonnet 4 requests, or<br>• ~550 Gemini requests, or<br>• ~650 GPT 4.1 requests</td>
 </tr>
 <tr>
 <td>Pro+</td>
-<td>$60</td>
-<td>Unlimited</td>
-<td>~675 Sonnet 4 requests, ~1,650 Gemini requests, or ~1,950 GPT 4.1 requests</td>
-<td>Use Auto or pay additional API cost of model providers</td>
+<td>-</td>
+<td>$40</td>
+<td>• 450 x Vibe requests<br>• 250 x Spec Task</td>
+<td>-</td>
 </tr>
 <tr>
+<td>-</td>
+<td>Pro+</td>
+<td>$60</td>
+<td>-</td>
+<td>• ~675 Sonnet 4 requests, or<br>• ~1,650 Gemini requests, or<br>• ~1,950 GPT 4.1 requests</td>
+</tr>
+<tr>
+<td>Power</td>
 <td>Ultra</td>
 <td>$200</td>
-<td>Unlimited</td>
-<td>~4,500 Sonnet 4 requests, ~11,000 Gemini requests, or ~13,000 GPT 4.1 requests</td>
-<td>Use Auto or pay additional API cost of model providers</td>
-</tr>
-<tr>
-<td>Teams</td>
-<td>$40</td>
-<td>Unlimited</td>
-<td>500 agent requests (Sonnet costs two requests when you enable thinking)</td>
-<td>$0.04/request</td>
+<td>• 2,250 x Vibe requests<br>• 1,250 x Spec Task</td>
+<td>• ~4,500 Sonnet 4 requests, or<br>• ~11,000 Gemini requests, or<br>• ~13,000 GPT 4.1 requests</td>
 </tr>
 </tbody>
 </table>
 
+{{% hint info %}}
+After exceeding the plan, Kiro charges $0.04/Vibe request and $0.2/Spec Task request.<br>After exceeding the plan, Cursor offers AUTO (automatic model selection) or charges based on model API fees, with Sonnet 4 approximately $0.09/request.
+{{% /hint %}}
 
+**Kiro's Advantages**:
+- Transparent pricing, simple calculation: Fixed costs and call counts.
+- Cheaper overage fees: After exceeding quota, Vibe costs $0.04/request, lower than Cursor's ~$0.09/request (based on Sonnet 4 pricing).
+
+**Cursor's Pricing Advantage**:
+- AUTO mode: After exceeding quota, can choose AUTO (no model selection), no additional fees.
+
+### Enterprise Plans
+
+{{% hint warning %}}
+Enterprise plans typically support SSO (Single Sign-On), user management, usage statistics, and unified billing. Kiro has not yet announced whether all three paid tiers apply to enterprises, so the following content is for reference only.
+{{% /hint %}}
+
+- Kiro pricing plans include **fixed numbers** of Vibe requests and Spec Task requests.
+- Cursor pricing plans include **fixed number** of requests (Sonnet 3.7 and Sonnet 4 Thinking mode requests count as 2).
+
+<table>
+<thead>
+<tr>
+<th>Kiro Plan</th>
+<th>Cursor Plan</th>
+<th>Cost (per month/per user)</th>
+<th>Kiro</th>
+<th>Cursor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pro</td>
+<td>-</td>
+<td>$20</td>
+<td>• 225 x Vibe requests<br>• 125 x Spec Task requests</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pro+</td>
+<td>Teams</td>
+<td>$40</td>
+<td>• 450 x Vibe requests<br>• 250 x Spec Task requests</td>
+<td>500 x Sonnet requests<br>(Sonnet thinking consumes two requests)</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>-</td>
+<td>$200</td>
+<td>• 2,250 x Vibe requests<br>• 1,250 x Spec Task requests</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+{{% hint info %}}
+After exceeding the plan, Kiro charges $0.04/Vibe request and $0.2/Spec Task request.<br>After exceeding the plan, Cursor offers **AUTO** (automatic model selection) or charges **model API prices with 20% markup**, paying additional fees (Sonnet 4 approximately $0.11/request).
+{{% /hint %}}
+
+**Kiro's Advantages**:
+- Transparent pricing, simple calculation: Fixed costs and call counts.
+- More call counts: $40 plan, Kiro includes more call counts than Cursor.
+- Cheaper overage fees: After exceeding quota, Vibe costs $0.04/request, lower than Cursor's ~$0.11/request (based on Sonnet 4 pricing).
+
+**Cursor's Advantage**:
+- AUTO mode: After exceeding quota, can choose AUTO (no model selection), no additional fees.
