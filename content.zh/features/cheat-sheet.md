@@ -279,13 +279,14 @@ But: 出于安全考虑，不显示具体错误原因
 
 2️⃣ **Design（设计）阶段** —— 规划「怎么实现」
 
-```yaml
+````md
 // Kiro 自动生成的技术设计文档示例
 
 ## 架构设计
 
 ### 前端结构
 
+```ts
 interface LoginSystem {
   // UI 组件
   components: {
@@ -333,13 +334,14 @@ interface LoginSystem {
     }
   }
 }
+```
 
 ### 后端结构
 - 使用 Node.js + Express
 - JWT 认证
 - 使用 bcrypt 进行密码哈希
 - 通过 PostgreSQL 管理用户信息
-```
+````
 
 它连技术设计都能自动帮你生成，而且还能根据你项目的技术栈量身定制！是不是超贴心？<br>
 
@@ -383,7 +385,7 @@ interface LoginSystem {
 
 ### 📋 **Specs 的实际用法是怎样的？**
 
-```yaml
+```md
 # 方法一：从 Kiro 面板操作
 1. 点击左侧边栏的 Kiro 图标
 2. 在 Specs 区域点击「+」按钮
@@ -621,7 +623,7 @@ Instructions: |
 
 ### 🛠️ **Hook 设置的实用技巧**
 
-```
+```md
 # 如何创建 Hook
 1. 打开 Kiro 面板 → Agent Hooks → 点击「+」按钮
 2. 用自然语言输入你想要实现的功能描述
@@ -659,7 +661,7 @@ Kiro 非常聪明，它会自动分析你的项目，帮你生成最基本的 St
 
 #### 1️⃣ product.md — 项目/产品的概览说明
 
-```
+```md
 # 此文件会生成在 .kiro/steering/product.md
 
 # 产品概览
@@ -707,7 +709,7 @@ MyAwesomeEC 购物平台
 
 #### 2️⃣ **tech.md —— 项目的技术栈说明文件**
 
-```
+```md
 # 此文件将生成在 .kiro/steering/tech.md
 
 # 技术栈说明
@@ -760,7 +762,7 @@ MyAwesomeEC 购物平台
 
 #### 3️⃣ **structure.md —— 项目结构说明文件**
 
-```
+````md
 # 此文件将生成在 .kiro/steering/structure.md
 
 # 项目结构说明
@@ -795,8 +797,6 @@ project-root/
 ├── public/             # 静态资源文件（图片、图标等）
 ├── tests/              # 测试文件目录（单元测试、集成测试）
 └── docs/               # 项目文档与说明文件
-
-```
 
 ### **命名规范**
 
@@ -852,8 +852,8 @@ import styles from './Product.module.css'
 ```
 
 ````
-# 这些文件会在你打开项目时被 AI 自动读取，
-# AI 会始终基于项目上下文理解并给出回答，超靠谱！
+这些文件会在你打开项目时被 AI 自动读取，
+AI 会始终基于项目上下文理解并给出回答，超靠谱！
 
 ### 自定义 Steering 文件的创建
 
@@ -864,7 +864,7 @@ import styles from './Product.module.css'
 #### 定义 API 设计规范的示例
 
 
-```markdown
+````markdown
 # .kiro/steering/api-standards.md
 
 ---
@@ -904,7 +904,7 @@ fileMatchPattern: "app/api/**/*"
     "requestId": "uuid-here"
   }
 }
-````
+```
 
 ### **错误响应（Error Responses）**
 
@@ -989,7 +989,7 @@ GET /api/products?page=1&limit=20&sort=createdAt:desc
 
 必须使用 Zod 对请求体进行校验：
 
-```
+```js
 const createProductSchema = z.object({
   name: z.string().min(1).max(100),
   price: z.number().positive(),
@@ -997,11 +997,13 @@ const createProductSchema = z.object({
   categoryId: z.string().uuid()
 })
 ```
+````
 
-````YAML
 有了这份 Steering 文件，AI 在生成 API 端点时会自动遵循这些规则，帮你写出合规的代码。
-定义测试策略示例
 
+#### 定义测试策略示例
+
+````md
 # .kiro/steering/testing-strategy.md
 
 ---
@@ -1052,12 +1054,12 @@ describe('功能名', () => {
     expect(result).toBe('expected')
   })
 })
-
+```
 ````
 
 ### **Steering 文件的高效使用方法**
 
-```
+```md
 # 包含模式的使用区分
 
 # 1. always（始终包含）
