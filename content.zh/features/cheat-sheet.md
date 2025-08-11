@@ -1561,6 +1561,19 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 ```
 
+### 为企业防火墙配置白名单
+
+可以参考[官方文档](https://kiro.dev/docs/reference/privacy-and-security/#general-urls-to-allowlist)为您的企业防火墙配置白名单。
+
+目前官方文档上的白名单地址不全，除了文档中的内容，您还需要将以下域名添加到白名单：
+
+- codewhisperer.us-east-1.amazonaws.com
+- prod.us-east-1.telemetry.kiro.aws.dev
+
+### 企业用户如何审计聊天信息
+
+可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
+
 ## 🚨 **故障排查完全指南**
 
 ### **常见错误及解决方案**
