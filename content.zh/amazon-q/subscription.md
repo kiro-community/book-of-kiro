@@ -62,6 +62,6 @@ bookToc: true
 **需要注意**: 已有的用户会被清空。Amazon Q Developer 中订阅的用户也需要清空并重新订阅。
 {{% /hint %}}
 
-### Q. 如何批量订阅？
+### Q. 如何使用 API 实现订阅或批量订阅？
 
 目前 Amazon Q Developer 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-batch-register/).
