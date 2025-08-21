@@ -1733,6 +1733,129 @@ cat .gitignore
 
 ```
 
+#### 6. **登录退出异常**
+
+以下是Windows环境排查登录退出异常的方法，Mac/Linux用户可以参考流程。
+
+````md
+## 1) 先用“官方建议”的方式打开日志
+
+1. 以**管理员**打开 *命令提示符*（CMD）。
+2. 运行（按你的安装路径替换）：
+
+```sh
+"%LocalAppData%\Programs\Kiro\Kiro.exe" --enable-logging
+```
+
+> 这是 Kiro 文档给 Windows 的排查方式，能看到认证时的错误信息（比如权限或回调失败）。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
+------
+
+## 2) 快速自检：默认浏览器能否被系统调用
+
+在同一个 CMD 里试：
+
+```sh
+start "" "https://example.com"
+```
+
+- 能打开：默认浏览器关联正常。
+- 打不开：去 **设置 → 应用 → 默认应用**，把 **HTTPS** 关联到 Edge/Chrome，然后再试一次。
+
+> Kiro 登录会“把你带到默认浏览器完成验证”。如果系统层面打不开浏览器，Kiro 自然不会弹。[Kiro](https://kiro.dev/docs/reference/auth-methods/)
+
+------
+
+## 3) 检查回调端口（重点：`localhost:3128`）
+
+Kiro 登录会在本地起一个回调监听，常见是 **`http://127.0.0.1:3128`**；浏览器登录成功后会重定向回这里。若这个端口被占用/被系统保留，浏览器就算打开了也**回不来**，或者根本起不来登录流程。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)[GitHub](https://github.com/kirodotdev/Kiro/issues/571)
+
+1. 看有没有程序占用 3128：
+
+```sh
+netstat -ano -p tcp | findstr :3128
+```
+
+- 如果看到 `LISTENING`/`ESTABLISHED`，记下 PID，在“任务管理器”结束它（或 `taskkill /PID <pid> /F`）。
+  - 常见占用者：代理/抓包工具（Fiddler、CNTLM、Zscaler 等）。
+
+1. 看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
+
+```sh
+netsh int ipv4 show excludedportrange protocol=tcp
+```
+
+- 如果输出范围里包含 3128，则该端口**不可绑定**，Kiro 无法启动回调服务（这会导致“打不开浏览器/卡登录”）。
+
+1. 释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
+
+```sh
+netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofports=1
+```
+
+> 有用户在 Windows 上遇到“登录不弹/不回跳”，确认与 **3128 端口冲突/被系统保留**有关；释放占位或避免冲突即可恢复。[GitHub](https://github.com/kirodotdev/Kiro/issues/571)[Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
+
+> ⚠️ 如果你改动过系统动态端口范围，请记录原值；Windows 默认动态端口一般为 `start=49152 num=16384`，可用
+>  `netsh int ipv4 show dynamicport tcp` 查看，必要时用
+>  `netsh int ipv4 set dynamicport tcp start=49152 num=16384` 恢复。
+
+------
+
+## 4) 清理“对登录有影响”的缓存（Windows 路径）
+
+先完全退出 Kiro（或 `taskkill /IM Kiro.exe /F`），然后删除：
+
+```
+rmdir /S /Q "%UserProfile%\.kiro"
+rmdir /S /Q "%UserProfile%\.aws\sso\cache"
+rmdir /S /Q "%AppData%\Kiro"
+rmdir /S /Q "%LocalAppData%\Kiro"
+```
+
+再启动 Kiro 重试登录。
+
+> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
+------
+
+## 5) 如果你用的是 **IAM Identity Center** 登录
+
+- **必须有 Q Developer Pro 订阅**才可用 Identity Center 登录方式；否则会报“签入错误”。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+- Kiro 目前 **默认使用 us-east-1** 做 Identity Center 登录；如果你的目录/配置在别的 Region，会导致无法登录。此时可暂时改用 **Builder ID / GitHub / Google** 登录，或把目录配到该 Region。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+- IAM Identity Center 的常见登录/会话问题可参考官方故障排查。[AWS 文档+1](https://docs.aws.amazon.com/singlesignon/latest/userguide/troubleshooting.html?utm_source=chatgpt.com)
+
+------
+
+## 6) 一键自检脚本（PowerShell）
+
+把下面内容粘到 **以管理员身份**运行的 PowerShell：
+
+```batch
+Write-Host "== Check default browser open =="
+Start-Process "https://example.com"
+
+Write-Host "`n== Check port 3128 usage =="
+netstat -ano -p tcp | Select-String ":3128"
+
+Write-Host "`n== Check excluded port ranges (tcp) =="
+netsh int ipv4 show excludedportrange protocol=tcp
+
+Write-Host "`n== Launch Kiro with logging =="
+$kiro = "$env:LocalAppData\Programs\Kiro\Kiro.exe"
+if (Test-Path $kiro) {
+  Start-Process $kiro -ArgumentList "--enable-logging"
+} else {
+  Write-Warning "Kiro.exe not found at $kiro"
+}
+```
+
+------
+
+### 成功后的验证
+
+- 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
+````
+
 ### **高级调试技巧**
 
 ```BASH
