@@ -14,10 +14,10 @@ Amazon Q Developer 是 AWS 推出的 AI 驱动的开发助手，为开发者提�
 
 ## Kiro 和 Amazon Q Developer
 
-Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。如果订阅了 Amazon Q Developer, 那么可以同时使用 Kiro 和 Amazon Q Developer.
+Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。
 
-- Kiro: Kiro 是一款 **Ageitic IDE**，基于 Visual Studio Code 开发，拥有增强的 AI 体验。
-- Amazon Q Developer: 主要包含两个产品：**Amazon Q Developer IDE 插件**和 **Amazon Q Developer CLI**.
+- Kiro: Kiro 是一款 **Agentic IDE**，基于 Visual Studio Code 开发，拥有增强的 AI 体验。
+- Amazon Q Developer 主要包含两个形态：**Amazon Q Developer IDE 插件** 和 **Amazon Q Developer CLI**.
 
 ## 文档结构
 
@@ -33,4 +33,3 @@ Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。如�
 {{% hint info %}}
 如果您是初次使用 Amazon Q Developer，建议先阅读[一般性问题](general/)了解基本概念和功能。
 {{% /hint %}}
-
