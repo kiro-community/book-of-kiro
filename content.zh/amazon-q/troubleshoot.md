@@ -53,6 +53,18 @@ bookToc: true
 2. 让 AI 生成正确的或更加准确的搜索 Pattern 后重试
 3. 让 AI 说出它的思路，人工编辑文件
 
+### E. Improperly formed request
+
+通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
+
+### E. An unexpected error occurred
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+
+### E. Dispatch failure
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+
 ## 问题上报
 
 ### Q. 如何在 Visual Studio Code 查看插件的日志？

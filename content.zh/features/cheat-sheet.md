@@ -1735,12 +1735,12 @@ cat .gitignore
 
 #### 6. **登录退出异常**
 
-以下是Windows环境排查登录退出异常的方法，Mac/Linux用户可以参考流程。
+以下是 Windows 环境排查登录退出异常的方法，Mac/Linux 用户可以参考流程。
 
 ````md
 ## 1) 先用“官方建议”的方式打开日志
 
-1. 以**管理员**打开 *命令提示符*（CMD）。
+1. 以**管理员**打开 _命令提示符_（CMD）。
 2. 运行（按你的安装路径替换）：
 
 ```sh
@@ -1749,7 +1749,7 @@ cat .gitignore
 
 > 这是 Kiro 文档给 Windows 的排查方式，能看到认证时的错误信息（比如权限或回调失败）。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
 
-------
+---
 
 ## 2) 快速自检：默认浏览器能否被系统调用
 
@@ -1764,7 +1764,7 @@ start "" "https://example.com"
 
 > Kiro 登录会“把你带到默认浏览器完成验证”。如果系统层面打不开浏览器，Kiro 自然不会弹。[Kiro](https://kiro.dev/docs/reference/auth-methods/)
 
-------
+---
 
 ## 3) 检查回调端口（重点：`localhost:3128`）
 
@@ -1796,10 +1796,10 @@ netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofport
 > 有用户在 Windows 上遇到“登录不弹/不回跳”，确认与 **3128 端口冲突/被系统保留**有关；释放占位或避免冲突即可恢复。[GitHub](https://github.com/kirodotdev/Kiro/issues/571)[Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
 
 > ⚠️ 如果你改动过系统动态端口范围，请记录原值；Windows 默认动态端口一般为 `start=49152 num=16384`，可用
->  `netsh int ipv4 show dynamicport tcp` 查看，必要时用
->  `netsh int ipv4 set dynamicport tcp start=49152 num=16384` 恢复。
+> `netsh int ipv4 show dynamicport tcp` 查看，必要时用
+> `netsh int ipv4 set dynamicport tcp start=49152 num=16384` 恢复。
 
-------
+---
 
 ## 4) 清理“对登录有影响”的缓存（Windows 路径）
 
@@ -1816,7 +1816,7 @@ rmdir /S /Q "%LocalAppData%\Kiro"
 
 > 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
 
-------
+---
 
 ## 5) 如果你用的是 **IAM Identity Center** 登录
 
@@ -1824,7 +1824,7 @@ rmdir /S /Q "%LocalAppData%\Kiro"
 - Kiro 目前 **默认使用 us-east-1** 做 Identity Center 登录；如果你的目录/配置在别的 Region，会导致无法登录。此时可暂时改用 **Builder ID / GitHub / Google** 登录，或把目录配到该 Region。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
 - IAM Identity Center 的常见登录/会话问题可参考官方故障排查。[AWS 文档+1](https://docs.aws.amazon.com/singlesignon/latest/userguide/troubleshooting.html?utm_source=chatgpt.com)
 
-------
+---
 
 ## 6) 一键自检脚本（PowerShell）
 
@@ -1849,12 +1849,24 @@ if (Test-Path $kiro) {
 }
 ```
 
-------
+---
 
 ### 成功后的验证
 
 - 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
 ````
+
+#### 7. **Improperly formed request**
+
+通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
+
+#### 8. **An unexpected error occurred**
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+
+#### 9. **Dispatch failure**
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
 ### **高级调试技巧**
 
