@@ -12,7 +12,7 @@ bookToc: true
 
 ### Q. Amazon Q Developer 提供用户级别的指标吗？
 
-提供。Amazon Q Developer 提供 user activity report，可以提供用户级别的指标。在 Amazon Q Developer 设置页面启用，并填写一个您可以管理的 S3 地址。用户级指标会被写入到对应的 S3 地址中。
+提供。Amazon Q Developer 提供 [user activity report](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/user-activity-metrics.html)，可以提供用户级别的指标。在 Amazon Q Developer 设置页面启用，并填写一个您可以管理的 S3 地址。用户级指标会被写入到对应的 S3 地址中。
 
 ![](/book-of-kiro/images/q_dev/user_activity_report.png)
 

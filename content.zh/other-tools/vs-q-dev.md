@@ -10,21 +10,24 @@ Amazon Q Developer 包含 Amazon Q Developer IDE 插件 （Visual Studio Code, J
 
 ## 总结
 
-Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用户体验而言，Kiro 更好， Amazon Q Developer 插件则支持不同的IDE，用户无需更换原有 IDE。以下是主要区别：
+Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用户体验而言，Kiro 更好， Amazon Q Developer 插件则支持不同的 IDE，用户无需更换原有 IDE。以下是主要区别：
 
 **Kiro 的独特优势：**
+
 - **Spec Mode**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
-- **Agent Hooks**：当IDE中发生特定事件时执行预定义代理操作的自动触发器
+- **Agent Hooks**：当 IDE 中发生特定事件时执行预定义代理操作的自动触发器
 - **灵活的自主性**：既有 Autopilot mode（自主修改）也有 Supervised mode（应用更改前审查）
 - **丰富的上下文引用**：支持 #Docs、#Git、#Rules、#Terminals、#Web 等多种上下文引用方式
 
 **Amazon Q Developer 的独特优势：**
+
 - **GUI 配置**：提供图形界面配置 MCP 服务器，相比 Kiro 的 JSON 文件配置更直观
 - **固定上下文项**：可以指定在聊天会话中添加到所有消息的上下文项
 - **Prompt Library**：内置提示库功能，可存储和重用常用提示
-- **Named Agent**：提供专门的安全审查（/review）和 Java 升级（/transform）代理
+- **Named Agent**：提供专门的 Java 升级（/transform）代理
 
 **核心差异：**
+
 - **开发方法**：Kiro 强调结构化的 Spec 驱动开发，而 Q Developer 更注重传统的 Agent 编程方式
 - **自主性控制**：Kiro 提供 Supervised 和 Autopilot 两种模式。
 - **上下文管理**：Kiro 的 Steering 系统提供更灵活的包含模式（始终/条件/手动），Q Developer 的 Project Rules 仅支持始终包含
@@ -32,7 +35,7 @@ Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用
 ## 功能对比
 
 {{% hint info %}}
-**最后对比日期**：2025年7月27日
+**最后对比日期**：2025 年 7 月 27 日
 {{% /hint %}}
 
 <table>
@@ -316,4 +319,3 @@ Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用
 </tr>
 </tbody>
 </table>
-

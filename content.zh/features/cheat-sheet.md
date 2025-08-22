@@ -34,7 +34,7 @@ Kiro 是 AWS 于 2025 年 7 月发布的划时代 AI 集成开发环境（IDE）
 {{% hint info %}}
 
 1. 下载
-   访问 https://kiro.dev/，点击「Download」按钮 #支持 macOS、Windows 和 Linux<br>
+   访问 https://kiro.dev/downloads #支持 macOS、Windows 和 Linux<br>
 
 2. 安装
    macOS：将下载的 Kiro.app 拖到 Applications 文件夹<br>
@@ -291,52 +291,53 @@ interface LoginSystem {
   // UI 组件
   components: {
     LoginForm: {
-      path: "components/auth/LoginForm.tsx"
+      path: "components/auth/LoginForm.tsx";
       props: {
-        onSubmit: (credentials: LoginCredentials) => Promise<void>
-        onForgotPassword: () => void
-      }
-    }
+        onSubmit: (credentials: LoginCredentials) => Promise<void>;
+        onForgotPassword: () => void;
+      };
+    };
 
     PasswordResetModal: {
-      path: "components/auth/PasswordResetModal.tsx"
+      path: "components/auth/PasswordResetModal.tsx";
       props: {
-        isOpen: boolean
-        onClose: () => void
-      }
-    }
-  }
+        isOpen: boolean;
+        onClose: () => void;
+      };
+    };
+  };
 
   // 状态管理
   stores: {
     AuthStore: {
       state: {
-        user: User | null
-        isAuthenticated: boolean
-        isLoading: boolean
-      }
+        user: User | null;
+        isAuthenticated: boolean;
+        isLoading: boolean;
+      };
       actions: {
-        login: (credentials: LoginCredentials) => Promise<void>
-        logout: () => void
-        resetPassword: (email: string) => Promise<void>
-      }
-    }
-  }
+        login: (credentials: LoginCredentials) => Promise<void>;
+        logout: () => void;
+        resetPassword: (email: string) => Promise<void>;
+      };
+    };
+  };
 
   // API 通信
   services: {
     AuthService: {
       endpoints: {
-        login: "POST /api/auth/login"
-        logout: "POST /api/auth/logout"
-        resetPassword: "POST /api/auth/reset-password"
-      }
-    }
-  }
+        login: "POST /api/auth/login";
+        logout: "POST /api/auth/logout";
+        resetPassword: "POST /api/auth/reset-password";
+      };
+    };
+  };
 }
 ```
 
 ### 后端结构
+
 - 使用 Node.js + Express
 - JWT 认证
 - 使用 bcrypt 进行密码哈希
@@ -387,18 +388,22 @@ interface LoginSystem {
 
 ```md
 # 方法一：从 Kiro 面板操作
+
 1. 点击左侧边栏的 Kiro 图标
 2. 在 Specs 区域点击「+」按钮
 3. 用自然语言输入你的需求
 
 # 方法二：通过聊天窗口生成
+
 1. 使用 Cmd/Ctrl + L 打开聊天面板
 2. 点击「Spec」按钮
 3. 输入你的需求内容
 
 # 实际输入示例
+
 "我想实现一个电商网站的购物车功能，
 需要包含以下几点：
+
 - 添加/删除商品
 - 修改商品数量
 - 检查库存
@@ -407,11 +412,11 @@ interface LoginSystem {
 - 运费计算"
 
 # Kiro 自动生成的内容结构如下
-.kiro/specs/shopping-cart/
-├── requirements.md  # 详细的需求定义
-├── design.md        # 技术设计文档
-└── tasks.md         # 实现任务清单
 
+.kiro/specs/shopping-cart/
+├── requirements.md # 详细的需求定义
+├── design.md # 技术设计文档
+└── tasks.md # 实现任务清单
 ```
 
 ## **Agent Hooks —— 自动化那些繁琐操作的魔法！**
@@ -625,20 +630,22 @@ Instructions: |
 
 ```md
 # 如何创建 Hook
+
 1. 打开 Kiro 面板 → Agent Hooks → 点击「+」按钮
 2. 用自然语言输入你想要实现的功能描述
 3. Kiro 会自动生成配置 → 你确认后保存即可 🎉
 
 # 设计高效 Hook 的小技巧
+
 - 一个 Hook 只做一件事（遵循单一职责原则）
-- 文件匹配规则要尽量具体（避免使用 "**/*" 这种全局匹配）
+- 文件匹配规则要尽量具体（避免使用 "\*_/_" 这种全局匹配）
 - 注意执行频率（每次保存触发可能会带来性能压力）
 - 在指令中加入错误处理逻辑，增强稳定性
 
 # 启用 / 禁用 Hook 的方法
+
 - 点击 👁️ 图标即可切换 ON / OFF 状态
 - 想临时停用某个 Hook 的时候非常方便
-
 ```
 
 ## 🎯 **Steering —— 把项目知识“教”给 AI 的秘密武器！**
@@ -667,12 +674,15 @@ Kiro 非常聪明，它会自动分析你的项目，帮你生成最基本的 St
 # 产品概览
 
 ## 产品名称
+
 MyAwesomeEC 购物平台
 
 ## 使命
+
 为中小型在线商家提供一个简单易用、功能强大的电商建站平台
 
 ## 目标用户
+
 - 个体经营者
 - 中小企业的电商负责人
 - 有意通过副业经营网店的个人用户
@@ -680,16 +690,19 @@ MyAwesomeEC 购物平台
 ## 核心功能
 
 1. 商品管理
+
    - 库存管理
    - 商品分类
    - 支持上传多张商品图片
 
 2. 订单管理
+
    - 订单状态跟踪
    - 配送进度查询
    - 退换货流程支持
 
 3. 客户管理
+
    - 用户注册与登录
    - 购买历史记录查看
    - 商品收藏与愿望清单功能
@@ -700,6 +713,7 @@ MyAwesomeEC 购物平台
    - 货到付款
 
 ## 业务目标
+
 - 月交易额突破 1 亿元
 - 实现 1,000 家以上活跃商户上线运营
 - 将平均订单金额稳定在 5,000 元左右
@@ -715,6 +729,7 @@ MyAwesomeEC 购物平台
 # 技术栈说明
 
 ## 前端
+
 - **框架**：Next.js 14.2.5（使用 App Router）
 - **语言**：TypeScript 5.5.4
 - **样式处理**：
@@ -725,23 +740,27 @@ MyAwesomeEC 购物平台
 - **数据验证**：Zod 3.23.8
 
 ## 后端
+
 - **运行时环境**：Node.js 20.x
 - **框架**：Express 4.19.2
 - **ORM 工具**：Prisma 5.17.0
 - **认证机制**：NextAuth.js 4.24.7
 
 ## 数据库
+
 - **生产环境**：PostgreSQL 15（托管于 AWS RDS）
 - **开发环境**：PostgreSQL 15（通过 Docker 本地运行）
 - **缓存服务**：Redis 7.2
 
 ## 基础设施 & 部署
+
 - **前端托管**：Vercel
 - **API 部署**：AWS Lambda + API Gateway
 - **图片分发**：Cloudinary
 - **监控系统**：Datadog
 
 ## 开发工具
+
 - **包管理器**：pnpm 8.15.6
 - **代码规范检查**：ESLint 8.57.0
 - **代码格式化工具**：Prettier 3.3.3
@@ -751,10 +770,10 @@ MyAwesomeEC 购物平台
   - Playwright（端到端测试）
 
 ## 注意事项
+
 - Node.js 版本通过 `.nvmrc` 进行管理
 - 必须使用 pnpm（禁止使用 npm 或 yarn）
 - 已通过 Husky 设置 pre-commit 钩子
-
 ```
 
 有了这份文件，AI 就能**完全掌握你项目的技术细节**，
@@ -768,35 +787,36 @@ MyAwesomeEC 购物平台
 # 项目结构说明
 
 ## 目录结构
+
 project-root/
-├── .kiro/              # Kiro 配置目录
-│   ├── steering/       # 项目信息（AI 使用的上下文）
-│   └── settings/       # Kiro 的运行设置
+├── .kiro/ # Kiro 配置目录
+│ ├── steering/ # 项目信息（AI 使用的上下文）
+│ └── settings/ # Kiro 的运行设置
 ├── src/
-│   ├── app/            # Next.js 的 App Router 页面目录
-│   │   ├── (auth)/     # 需要身份验证的页面
-│   │   ├── (public)/   # 公共访问页面
-│   │   ├── api/        # API 路由
-│   │   └── layout.tsx  # 根级布局组件
-│   ├── components/     # UI 组件目录
-│   │   ├── common/     # 通用组件（例如按钮、卡片等）
-│   │   ├── features/   # 按功能模块分类的组件
-│   │   └── ui/         # 基础 UI 元件（输入框、标签等）
-│   ├── hooks/          # 自定义 React Hooks
-│   ├── lib/            # 工具方法与模块集合
-│   │   ├── api/        # 封装的 API 客户端
-│   │   ├── utils/      # 通用工具函数
-│   │   └── constants/  # 常量定义
-│   ├── stores/         # Zustand 状态管理逻辑
-│   └── types/          # TypeScript 类型定义
+│ ├── app/ # Next.js 的 App Router 页面目录
+│ │ ├── (auth)/ # 需要身份验证的页面
+│ │ ├── (public)/ # 公共访问页面
+│ │ ├── api/ # API 路由
+│ │ └── layout.tsx # 根级布局组件
+│ ├── components/ # UI 组件目录
+│ │ ├── common/ # 通用组件（例如按钮、卡片等）
+│ │ ├── features/ # 按功能模块分类的组件
+│ │ └── ui/ # 基础 UI 元件（输入框、标签等）
+│ ├── hooks/ # 自定义 React Hooks
+│ ├── lib/ # 工具方法与模块集合
+│ │ ├── api/ # 封装的 API 客户端
+│ │ ├── utils/ # 通用工具函数
+│ │ └── constants/ # 常量定义
+│ ├── stores/ # Zustand 状态管理逻辑
+│ └── types/ # TypeScript 类型定义
 
 ├── prisma/
-│   ├── schema.prisma   # 数据库结构定义（Prisma Schema）
-│   └── migrations/     # 数据库迁移记录
+│ ├── schema.prisma # 数据库结构定义（Prisma Schema）
+│ └── migrations/ # 数据库迁移记录
 
-├── public/             # 静态资源文件（图片、图标等）
-├── tests/              # 测试文件目录（单元测试、集成测试）
-└── docs/               # 项目文档与说明文件
+├── public/ # 静态资源文件（图片、图标等）
+├── tests/ # 测试文件目录（单元测试、集成测试）
+└── docs/ # 项目文档与说明文件
 
 ### **命名规范**
 
@@ -850,8 +870,8 @@ import { ProductType } from './types'
 import styles from './Product.module.css'
 
 ```
-
 ````
+
 这些文件会在你打开项目时被 AI 自动读取，
 AI 会始终基于项目上下文理解并给出回答，超靠谱！
 
@@ -863,13 +883,14 @@ AI 会始终基于项目上下文理解并给出回答，超靠谱！
 
 #### 定义 API 设计规范的示例
 
-
 ````markdown
 # .kiro/steering/api-standards.md
 
 ---
+
 inclusion: fileMatch
-fileMatchPattern: "app/api/**/*"
+fileMatchPattern: "app/api/\*_/_"
+
 ---
 
 # API 设计标准
@@ -877,12 +898,14 @@ fileMatchPattern: "app/api/**/*"
 ## 接口设计
 
 ### URL 设计原则
+
 - 采用 RESTful 设计
 - 资源名称使用复数形式（例如 /users, /products）
 - 路径层级最多为三层
 - 使用 kebab-case（例如 /user-profiles）
 
 ### HTTP 方法使用规范
+
 - GET：获取资源（幂等）
 - POST：创建资源
 - PUT：整体更新资源
@@ -892,6 +915,7 @@ fileMatchPattern: "app/api/**/*"
 ## 响应格式
 
 ### 成功响应示例
+
 ```json
 {
   "success": true,
@@ -994,8 +1018,8 @@ const createProductSchema = z.object({
   name: z.string().min(1).max(100),
   price: z.number().positive(),
   description: z.string().optional(),
-  categoryId: z.string().uuid()
-})
+  categoryId: z.string().uuid(),
+});
 ```
 ````
 
@@ -1007,8 +1031,10 @@ const createProductSchema = z.object({
 # .kiro/steering/testing-strategy.md
 
 ---
+
 inclusion: fileMatch
-fileMatchPattern: "**/*.test.{ts,tsx}"
+fileMatchPattern: "\*_/_.test.{ts,tsx}"
+
 ---
 
 # 测试策略
@@ -1016,16 +1042,19 @@ fileMatchPattern: "**/*.test.{ts,tsx}"
 ## 测试类型与目标
 
 ### 单元测试
+
 - 覆盖率目标：80%以上
 - 对象：纯函数、自定义 Hook、工具函数
 - 工具：Jest
 
 ### 集成测试
+
 - 对象：API 端点、数据库操作
 - 工具：Jest + Supertest
 - 数据库：测试用 Docker 容器
 
 ### 端到端测试
+
 - 对象：主要用户流程
 - 工具：Playwright
 - 执行环境：CI/CD 流水线
@@ -1036,24 +1065,24 @@ fileMatchPattern: "**/*.test.{ts,tsx}"
 
 src/
 ├── components/
-│   ├── Button.tsx
-│   └── Button.test.tsx  # 与组件放在同目录
+│ ├── Button.tsx
+│ └── Button.test.tsx # 与组件放在同目录
 
 ### 测试结构（AAA 原则）
 
 ```typescript
-describe('功能名', () => {
-  it('期望行为', () => {
+describe("功能名", () => {
+  it("期望行为", () => {
     // Arrange（准备）
-    const input = 'test'
+    const input = "test";
 
     // Act（执行）
-    const result = functionToTest(input)
+    const result = functionToTest(input);
 
     // Assert（断言）
-    expect(result).toBe('expected')
-  })
-})
+    expect(result).toBe("expected");
+  });
+});
 ```
 ````
 
@@ -1063,19 +1092,25 @@ describe('功能名', () => {
 # 包含模式的使用区分
 
 # 1. always（始终包含）
+
 # 影响整个项目的配置
+
 - 编码规范
 - 安全策略
 - 基本设计原则
 
 # 2. fileMatch（条件匹配）
+
 # 仅对特定文件类型生效
-- API 端点规则 → "app/api/**/*"
-- React 组件规范 → "**/*.tsx"
-- 测试写法 → "**/*.test.*"
+
+- API 端点规则 → "app/api/\*_/_"
+- React 组件规范 → "\*_/_.tsx"
+- 测试写法 → "\*_/_.test.\*"
 
 # 3. manual（手动模式）
+
 # 偶尔才用的信息
+
 - 故障排查指南
 - 性能优化方法
 - 复杂部署流程
@@ -1563,7 +1598,7 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 ### 为企业防火墙配置白名单
 
-可以参考[官方文档](https://kiro.dev/docs/reference/privacy-and-security/#general-urls-to-allowlist)为您的企业防火墙配置白名单。
+可以参考[官方文档](https://kiro.dev/docs/privacy-and-security/firewalls/)为您的企业防火墙配置白名单。
 
 目前官方文档上的白名单地址不全，除了文档中的内容，您还需要将以下域名添加到白名单：
 
@@ -1654,7 +1689,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 
 ```
 
-#### 4.** MCP 服务器连接错误**
+#### 4. **MCP 服务器连接错误**
 
 ```bash
 # 常见错误及解决方法
@@ -1697,6 +1732,141 @@ cat .gitignore
 "@large-file.log:1000-2000"  # 指定行号范围部分读取
 
 ```
+
+#### 6. **登录退出异常**
+
+以下是 Windows 环境排查登录退出异常的方法，Mac/Linux 用户可以参考流程。
+
+````md
+## 1) 先用“官方建议”的方式打开日志
+
+1. 以**管理员**打开 _命令提示符_（CMD）。
+2. 运行（按你的安装路径替换）：
+
+```sh
+"%LocalAppData%\Programs\Kiro\Kiro.exe" --enable-logging
+```
+
+> 这是 Kiro 文档给 Windows 的排查方式，能看到认证时的错误信息（比如权限或回调失败）。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
+---
+
+## 2) 快速自检：默认浏览器能否被系统调用
+
+在同一个 CMD 里试：
+
+```sh
+start "" "https://example.com"
+```
+
+- 能打开：默认浏览器关联正常。
+- 打不开：去 **设置 → 应用 → 默认应用**，把 **HTTPS** 关联到 Edge/Chrome，然后再试一次。
+
+> Kiro 登录会“把你带到默认浏览器完成验证”。如果系统层面打不开浏览器，Kiro 自然不会弹。[Kiro](https://kiro.dev/docs/reference/auth-methods/)
+
+---
+
+## 3) 检查回调端口（重点：`localhost:3128`）
+
+Kiro 登录会在本地起一个回调监听，常见是 **`http://127.0.0.1:3128`**；浏览器登录成功后会重定向回这里。若这个端口被占用/被系统保留，浏览器就算打开了也**回不来**，或者根本起不来登录流程。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)[GitHub](https://github.com/kirodotdev/Kiro/issues/571)
+
+1. 看有没有程序占用 3128：
+
+```sh
+netstat -ano -p tcp | findstr :3128
+```
+
+- 如果看到 `LISTENING`/`ESTABLISHED`，记下 PID，在“任务管理器”结束它（或 `taskkill /PID <pid> /F`）。
+  - 常见占用者：代理/抓包工具（Fiddler、CNTLM、Zscaler 等）。
+
+1. 看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
+
+```sh
+netsh int ipv4 show excludedportrange protocol=tcp
+```
+
+- 如果输出范围里包含 3128，则该端口**不可绑定**，Kiro 无法启动回调服务（这会导致“打不开浏览器/卡登录”）。
+
+1. 释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
+
+```sh
+netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofports=1
+```
+
+> 有用户在 Windows 上遇到“登录不弹/不回跳”，确认与 **3128 端口冲突/被系统保留**有关；释放占位或避免冲突即可恢复。[GitHub](https://github.com/kirodotdev/Kiro/issues/571)[Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
+
+> ⚠️ 如果你改动过系统动态端口范围，请记录原值；Windows 默认动态端口一般为 `start=49152 num=16384`，可用
+> `netsh int ipv4 show dynamicport tcp` 查看，必要时用
+> `netsh int ipv4 set dynamicport tcp start=49152 num=16384` 恢复。
+
+---
+
+## 4) 清理“对登录有影响”的缓存（Windows 路径）
+
+先完全退出 Kiro（或 `taskkill /IM Kiro.exe /F`），然后删除：
+
+```
+rmdir /S /Q "%UserProfile%\.kiro"
+rmdir /S /Q "%UserProfile%\.aws\sso\cache"
+rmdir /S /Q "%AppData%\Kiro"
+rmdir /S /Q "%LocalAppData%\Kiro"
+```
+
+再启动 Kiro 重试登录。
+
+> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
+---
+
+## 5) 如果你用的是 **IAM Identity Center** 登录
+
+- **必须有 Q Developer Pro 订阅**才可用 Identity Center 登录方式；否则会报“签入错误”。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+- Kiro 目前 **默认使用 us-east-1** 做 Identity Center 登录；如果你的目录/配置在别的 Region，会导致无法登录。此时可暂时改用 **Builder ID / GitHub / Google** 登录，或把目录配到该 Region。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+- IAM Identity Center 的常见登录/会话问题可参考官方故障排查。[AWS 文档+1](https://docs.aws.amazon.com/singlesignon/latest/userguide/troubleshooting.html?utm_source=chatgpt.com)
+
+---
+
+## 6) 一键自检脚本（PowerShell）
+
+把下面内容粘到 **以管理员身份**运行的 PowerShell：
+
+```batch
+Write-Host "== Check default browser open =="
+Start-Process "https://example.com"
+
+Write-Host "`n== Check port 3128 usage =="
+netstat -ano -p tcp | Select-String ":3128"
+
+Write-Host "`n== Check excluded port ranges (tcp) =="
+netsh int ipv4 show excludedportrange protocol=tcp
+
+Write-Host "`n== Launch Kiro with logging =="
+$kiro = "$env:LocalAppData\Programs\Kiro\Kiro.exe"
+if (Test-Path $kiro) {
+  Start-Process $kiro -ArgumentList "--enable-logging"
+} else {
+  Write-Warning "Kiro.exe not found at $kiro"
+}
+```
+
+---
+
+### 成功后的验证
+
+- 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
+````
+
+#### 7. **Improperly formed request**
+
+通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
+
+#### 8. **An unexpected error occurred**
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+
+#### 9. **Dispatch failure**
+
+通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
 ### **高级调试技巧**
 
