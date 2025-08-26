@@ -1871,6 +1871,9 @@ if (Test-Path $kiro) {
 ### **高级调试技巧**
 
 ```BASH
+# 查看 Kiro 各服务的日志
+View -> Output
+
 # 启用 Kiro 日志
 kiro --enable-logging
 
@@ -1893,6 +1896,21 @@ curl -I https://api.github.com
 curl -I https://kiro.dev
 
 ```
+
+### 问题上报
+
+如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Kiro 在某个问题上能稳定复现，建议获取 Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
+
+**日志获取方式：**
+
+1. 打开 Kiro 的 OUTPUT。通过点击菜单栏的 View，再点击 Output 打开面板
+2. 下拉选择 Kiro 相关的日志，如 Kiro Logs。您可以看下哪个日志里面有报错
+3. 点击齿轮按钮，选择 Trace 类型的日志
+4. 可以点击选项按钮，在编辑器中打开日志以便复制和保存
+
+![](/book-of-kiro/images/kiro_log.png)
+
+点击 Kiro 底部栏的 "Report a bug / Suggest an idea" 按钮进行问题上报
 
 ## **实践使用示例与最佳实践**
 
