@@ -1,6 +1,6 @@
 ---
 title: "数据统计与指标"
-weight: 6
+weight: 60
 bookToc: true
 ---
 
