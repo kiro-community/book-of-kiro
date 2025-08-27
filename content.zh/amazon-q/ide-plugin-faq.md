@@ -1,6 +1,6 @@
 ---
-title: "Q Developer IDE 插件 FAQ"
-weight: 31
+title: "IDE 插件 FAQ"
+weight: 21
 bookToc: true
 ---
 

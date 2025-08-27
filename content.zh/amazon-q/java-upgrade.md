@@ -1,6 +1,6 @@
 ---
 title: "Java 升级"
-weight: 50
+weight: 40
 bookToc: true
 ---
 

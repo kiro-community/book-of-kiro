@@ -1,6 +1,6 @@
 ---
-title: "Q Developer CLI FAQ"
-weight: 41
+title: "CLI FAQ"
+weight: 31
 bookToc: true
 ---
 
