@@ -5,7 +5,7 @@ bookToc: true
 ---
 
 {{% hint info %}}
-本文档涵盖 Amazon Q Developer IDE 插件的安装、登录、使用和常见问题。
+本文档涵盖 Amazon Q Developer IDE 插件的常见问题。
 {{% /hint %}}
 
 ## IDE 插件的安装与登陆

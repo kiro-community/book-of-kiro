@@ -14,9 +14,9 @@ bookToc: true
 
 不同的功能会使用不同的模型：
 
-- **Q Developer CLI**: 目前支持 Claude Sonnet 3.5、3.7、4
-- **IDE 中的 Agentic Coding**: 目前支持 Claude Sonnet 3.7 和 4
-- **IDE Plugin 中的 inline suggestion**: 使用 AWS 自己训练的私有模型
+- **CLI**: 目前支持 Claude Sonnet 3.5、3.7、4
+- **IDE 插件 中的 Agentic Coding**: 目前支持 Claude Sonnet 3.7 和 4
+- **IDE 插件 中的 inline suggestion**: 使用 AWS 自己训练的私有模型
 
 ### Q. 是否支持模型选择？
 

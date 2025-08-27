@@ -12,7 +12,9 @@ bookToc: true
 
 ### Q. 为什么我在 Identity Center 里面创建了用户，不能在订阅界面搜索到？
 
-不要使用 username 或者邮箱搜索，请使用 Display name 搜索。
+不要使用 username 或者邮箱搜索，请使用 Display Name 搜索。
+
+如果还是搜不到，请在 Amazon Q Developer 控制台的设置页面，确认 Amazon Q Developer 关联的 IAM Identity Center 是正确的。
 
 ### Q. 必须开启 MFA（Multi Factor Authentication）吗？
 
@@ -59,3 +61,7 @@ bookToc: true
 ### Q. 如何使用 API 实现订阅或批量订阅？
 
 目前 Amazon Q Developer 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-batch-register/).
+
+### Q. 如何延长会话时间？
+
+默认情况下 Amazon Q Developer 每天都需要登录一次。您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。

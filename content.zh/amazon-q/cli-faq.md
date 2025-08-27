@@ -5,7 +5,7 @@ bookToc: true
 ---
 
 {{% hint info %}}
-本文档涵盖 Amazon Q Developer CLI 的安装、登录、使用和常见问题。
+本文档涵盖 Amazon Q Developer CLI 的常见问题。
 {{% /hint %}}
 
 ## Q CLI 的安装与登陆

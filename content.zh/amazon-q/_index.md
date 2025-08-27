@@ -31,10 +31,6 @@ Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。
 - **[Java 升级](java-upgrade/)** - Java 代码升级功能、费用和最佳实践
 - **[一般性问题](general/)** - 涵盖模型选择、功能特性、价格等基础问题
 
-{{% hint info %}}
-如果您是初次使用 Amazon Q Developer，建议先阅读[一般性问题](general/)了解基本概念和功能。
-{{% /hint %}}
-
 ## **管理员指南**
 
 - **[订阅与用户管理](subscription/)** - 用户订阅、身份认证和权限管理
