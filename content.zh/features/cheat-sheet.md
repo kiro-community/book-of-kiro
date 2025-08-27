@@ -3,7 +3,7 @@ title: "Kiro 完整 Cheat Sheet"
 weight: 1
 ---
 
-# Kiro 完整 Cheat Sheet
+# **Kiro 完整 Cheat Sheet**
 
 ## 📌 **前言：Kiro 是什么？为啥最近这么火？**
 
@@ -51,7 +51,7 @@ Kiro 是 AWS 于 2025 年 7 月发布的划时代 AI 集成开发环境（IDE）
 - **AWS Builder ID**：没有 AWS 账号？选这个就对了（而且完全免费）
 - **AWS IAM Identity Center**：适合在公司或团队环境中使用<br>
 
-#### ⚙️ 导入 VS Code 设置
+#### **⚙️ 导入 VS Code 设置**
 
 选择「**Import VS Code Settings**」可以直接继承你现在的编辑器配置，
 包括扩展插件、主题样式都能原样复用，真的很方便！
@@ -245,7 +245,7 @@ Cmd + /（Mac）/ Ctrl + /（Windows）
 它会让 AI 帮你**整理模糊需求**，变成一份结构清晰、条理清楚的**规范文档**。<br>
 ——不再边写边猜、不再回头大改，你的项目，从一开始就走在正轨上。✅<br>
 
-### 🛠️ Spec 的三大阶段（这真的很革命 🔥）
+### **🛠️ Spec 的三大阶段（这真的很革命 🔥）**
 
 1️⃣ Requirements（需求）阶段 —— 明确“要做什么”
 
@@ -666,7 +666,7 @@ Instructions: |
 
 Kiro 非常聪明，它会自动分析你的项目，帮你生成最基本的 Steering 文件，让 AI 从一开始就理解项目的全貌：
 
-#### 1️⃣ product.md — 项目/产品的概览说明
+#### **1️⃣ product.md — 项目/产品的概览说明**
 
 ```md
 # 此文件会生成在 .kiro/steering/product.md
@@ -875,13 +875,13 @@ import styles from './Product.module.css'
 这些文件会在你打开项目时被 AI 自动读取，
 AI 会始终基于项目上下文理解并给出回答，超靠谱！
 
-### 自定义 Steering 文件的创建
+### **自定义 Steering 文件的创建**
 
 默认的三个 Steering 文件不够用？<br>
 想更详细地告诉 AI 你的项目规则？<br>
 那就来创建自定义的 Steering 文件吧！<br>
 
-#### 定义 API 设计规范的示例
+#### **定义 API 设计规范的示例**
 
 ````markdown
 # .kiro/steering/api-standards.md
@@ -1025,7 +1025,7 @@ const createProductSchema = z.object({
 
 有了这份 Steering 文件，AI 在生成 API 端点时会自动遵循这些规则，帮你写出合规的代码。
 
-#### 定义测试策略示例
+#### **定义测试策略示例**
 
 ````md
 # .kiro/steering/testing-strategy.md
@@ -1155,7 +1155,7 @@ MCP 是给 Kiro 的 AI 加上“特殊技能”的机制。比如：
 
 实际使用示例：
 
-```
+```py
 # 只需在聊天中提问
 "S3 的生命周期策略是什么？"
 "Lambda 函数的冷启动如何优化？"
@@ -1166,7 +1166,7 @@ MCP 是给 Kiro 的 AI 加上“特殊技能”的机制。比如：
 
 必要的准备工作：
 
-```
+```sh
 # 安装 uv（首次使用时执行）
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -1195,7 +1195,7 @@ uv python install 3.10
 
 实际使用示例：
 
-```
+```py
 # 获取仓库信息
 "告诉我 facebook/react 仓库的最新发布信息"
 
@@ -1237,7 +1237,7 @@ GitHub 令牌的创建方法：
 
 实际使用示例：
 
-```
+```py
 # 最新技术资讯
 "帮我搜索一下 React 19 的新功能"
 
@@ -1355,18 +1355,16 @@ await server.connect(transport);
 
 添加到配置中：
 
-```yaml
+```json
 {
-  "mcpServers":
-    {
-      "company-tools":
-        {
-          "command": "node",
-          "args": ["./mcp-servers/my-company-mcp-server.js"],
-          "cwd": ".",
-          "env": { "COMPANY_API_KEY": "$COMPANY_API_KEY" },
-        },
-    },
+  "mcpServers": {
+    "company-tools": {
+      "command": "node",
+      "args": ["./mcp-servers/my-company-mcp-server.js"],
+      "cwd": ".",
+      "env": { "COMPANY_API_KEY": "$COMPANY_API_KEY" }
+    }
+  }
 }
 ```
 
@@ -1399,39 +1397,43 @@ echo $BRAVE_API_KEY
 
 #### **Autopilot 模式（默认）**
 
-```BASH
+```md
 # 适合人群
+
 - 重视开发速度
 - 信任 AI 的判断
 - 在本地开发环境工作
 
 # 工作机制
+
 - 自动执行文件的创建、编辑和删除
 - 自动执行命令（仅限信任列表内）
 - 随时可以通过“Stop”命令中断
 
 # 使用示例
+
 "帮我实现用户认证功能"
 → 自动创建所有必要文件并完成实现
-
 ```
 
 #### **Supervised 模式（适合谨慎派）**
 
-```
+```md
 # 适合人群
+
 - 在生产环境中工作
 - 重要项目
 - 想仔细确认 AI 每个动作
 
 # 工作机制
+
 - 每个操作前都会弹出确认对话框
 - “确定要创建这个文件吗？”
 - “确定要执行这个命令吗？”
 
 # 切换方法
-在聊天界面的 “Autopilot” 开关切换为关闭（OFF）
 
+在聊天界面的 “Autopilot” 开关切换为关闭（OFF）
 ```
 
 ### **受信任命令的管理**
@@ -1482,11 +1484,13 @@ eval
 
 #### **退出（Opt-out）方法**
 
-````BASH
-# 方法1：通过设置界面
+````md
+# 方法 1：通过设置界面
+
 Settings → Application → Telemetry and Content → 关闭（Disabled）
 
-# 方法2：通过 settings.json 配置
+# 方法 2：通过 settings.json 配置
+
 ```json
 {
   "telemetry": {
@@ -1494,8 +1498,7 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
   },
   "usageStatisticsEnabled": false
 }
-
-
+```
 ````
 
 #### **收集的数据**
@@ -1528,9 +1531,9 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 
 ### **安全最佳实践**
 
-#### 1. 使用环境变量管理 API 密钥
+#### **1. 使用环境变量管理 API 密钥**
 
-```BASH
+```json
 # ❌ 不好的例子：在 settings.json 中直接写入
 {
   "mcpServers": {
@@ -1558,9 +1561,9 @@ export GITHUB_TOKEN="ghp_xxxx"
 export BRAVE_API_KEY="BSA_xxxx"
 ```
 
-#### 2. 针对每个项目进行权限隔离
+#### **2. 针对每个项目进行权限隔离**
 
-```BASH
+```json
 # 生产项目
 .kiro/settings.json
 {
@@ -1579,7 +1582,7 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 ```
 
-#### 3. 设置 .gitignore 文件
+#### **3. 设置 .gitignore 文件**
 
 ```BASH
 # .gitignore
@@ -1596,7 +1599,7 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 ```
 
-### 为企业防火墙配置白名单
+### **为企业防火墙配置白名单**
 
 可以参考[官方文档](https://kiro.dev/docs/privacy-and-security/firewalls/)为您的企业防火墙配置白名单。
 
@@ -1605,7 +1608,7 @@ export BRAVE_API_KEY="BSA_xxxx"
 - codewhisperer.us-east-1.amazonaws.com
 - prod.us-east-1.telemetry.kiro.aws.dev
 
-### 企业用户如何审计聊天信息
+### **企业用户如何审计聊天信息**
 
 可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
 
@@ -1615,50 +1618,58 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 #### 1. **macOS：「Kiro 已损坏」错误**
 
-````bash
+````md
 # 错误信息
+
 "Kiro 已损坏，无法打开。你应该将它移到废纸篓。"
 
 # 原因
+
 macOS 的 Gatekeeper 误报导致
 
 # 解决方法（按简单顺序尝试）
 
-# 方法1：通过系统设置授权
+# 方法 1：通过系统设置授权
+
 1. 打开「系统设置」→「隐私与安全性」
 2. 在提示「无法确认开发者身份的 Kiro」旁点击「仍然允许」
 3. 重新打开 Kiro
 
-# 方法2：移动文件重置
+# 方法 2：移动文件重置
+
 1. 将 Kiro.app 拖到桌面
 2. 再从桌面拖回「应用程序」文件夹
 3. 尝试打开
 
-# 方法3：通过命令行删除属性
+# 方法 3：通过命令行删除属性
+
 ```bash
 sudo xattr -d com.apple.quarantine /Applications/Kiro.app
-
+```
 ````
 
 #### 2. **无法使用 Shell 集成**
 
-```bash
+````md
 # 错误信息
+
 "Shell 集成不可用"
 
 # 尝试自动修复
+
 1. 按 Cmd/Ctrl+Shift+P 打开命令面板
 2. 执行 "Kiro: Enable Shell Integration"
 3. 重启 Kiro
 
 # 手动修复方法
 
+```sh
 # Zsh（macOS 默认）
-echo '[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"' >> ~/.zshrc
+echo '[["$TERM_PROGRAM" == "kiro"]] && . "$(kiro --locate-shell-integration-path zsh)"' >> ~/.zshrc
 source ~/.zshrc
 
 # Bash
-echo '[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"' >> ~/.bashrc
+echo '[["$TERM_PROGRAM" == "kiro"]] && . "$(kiro --locate-shell-integration-path bash)"' >> ~/.bashrc
 source ~/.bashrc
 
 # Fish
@@ -1668,52 +1679,67 @@ echo 'and . (kiro --locate-shell-integration-path fish)' >> ~/.config/fish/confi
 # PowerShell（Windows）
 Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-shell-integration-path pwsh)" }'
 ```
+````
 
 #### 3. **认证错误（IAM Identity Center）**
 
-```BASH
+```md
 # 错误信息
+
 "登录时发生错误"
 
 # 原因与解决方法
 
-# 原因1：没有 Q Developer Pro 订阅
+# 原因 1：没有 Q Developer Pro 订阅
+
 → 请使用 Builder ID 或社交账号登录
 
-# 原因2：区域设置错误
+# 原因 2：区域设置错误
+
 → 默认区域为 us-east-1，请确认公司使用的区域
 
-# 原因3：Start URL 错误
-→ 请联系 IT 部门确认正确的 URL
-   示例：https://your-company.awsapps.com/start
+# 原因 3：Start URL 错误
 
+→ 请联系 IT 部门确认正确的 URL
+示例：https://your-company.awsapps.com/start
 ```
 
 #### 4. **MCP 服务器连接错误**
 
-```bash
+````md
 # 常见错误及解决方法
 
 # Error: Command not found
+
 → 未安装必要的工具
 
 # 针对 AWS Docs Server
+
+```sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv python install 3.10
+```
+
 # 针对 Error: Timeout
+
 → 增加超时时间
-"timeout": 30000  # 30秒
+"timeout": 30000 # 30 秒
 
 # 针对 Error: Permission denied
+
 → 检查 API 密钥和认证信息
+
+```sh
 echo $GITHUB_TOKEN
 echo $BRAVE_API_KEY
-
-#调试方法
-1.打开 Output → "Kiro - MCP Logs" 查看日志
-2.通过 /mcp 命令检查服务器状态
-3.手动执行服务器命令进行测试
 ```
+
+# 调试方法
+
+1. 打开 Output → "Kiro - MCP Logs" 查看日志
+2. 通过 /mcp 命令检查服务器状态
+3. 手动执行服务器命令进行测试
+````
 
 #### 5.**文件未找到或无法读取**
 
@@ -1805,7 +1831,7 @@ netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofport
 
 先完全退出 Kiro（或 `taskkill /IM Kiro.exe /F`），然后删除：
 
-```
+```sh
 rmdir /S /Q "%UserProfile%\.kiro"
 rmdir /S /Q "%UserProfile%\.aws\sso\cache"
 rmdir /S /Q "%AppData%\Kiro"
@@ -1990,52 +2016,70 @@ EOF
 
 ### **从零开始构建全栈应用**
 
-````BASH
+````md
 # 1. 从创建项目开始
+
+```sh
 mkdir my-saas-app && cd my-saas-app
 kiro .
+```
 
 # 2. 将需求转化为 Spec
+
 按 Cmd/Ctrl+L 打开聊天，输入：
+
+```md
 "SaaS 应用开发需求。
+
 功能：
+
 - 用户认证（邮箱/密码、Google OAuth）
 - 订阅管理（Stripe）
 - 仪表盘
 - API（REST + GraphQL）
+
 技术栈：
+
 - Next.js 14（App Router）
 - TypeScript
 - Prisma + PostgreSQL
 - TailwindCSS"
+```
 
 # 3. 执行 Spec
+
 从上到下执行生成的任务
 点击每个任务，AI 会帮你实现
 
 # 4. 启动开发服务器
+
 ```bash
 npm install
 npm run dev
+```
 
 # 5. 通过 Spec 添加新功能
+
 "我要添加邮件通知功能。
+
 - 用户注册时发送欢迎邮件
 - 密码重置邮件
 - 账单发送
-使用 SendGrid 服务"
+  使用 SendGrid 服务"
 ````
 
 ### **传统代码现代化**
 
-```BASH
+````md
 # 将 jQuery 时代的代码迁移到 React 的示例
 
 # 1. 现状分析
+
 "请分析 @src/legacy/ 目录下的代码，
 制定迁移到 React 的计划"
 
 # 2. 制定分阶段迁移的 Spec
+
 "传统代码分阶段迁移计划：
 Phase 1: 迁移共通组件
 Phase 2: 按页面单元迁移
@@ -2043,6 +2087,8 @@ Phase 3: 状态管理整合
 Phase 4: 路由迁移"
 
 # 3. 自动转换 Hook 设置
+
+```yml
 Trigger: Manual
 Name: "jQuery to React Converter"
 Instructions: |
@@ -2051,34 +2097,41 @@ Instructions: |
   2. 将事件处理器转换为 React 事件
   3. 将 DOM 操作转换为 state/props
   4. 将动画转换为 CSS 或 Framer Motion
+```
 
 # 4. 添加测试
+
 "@src/components/
 为所有组件添加测试。
 使用 React Testing Library，
 测试用户交互"
-
-```
+````
 
 ### **构建 CI/CD 流水线**
 
-```BASH
+````md
 # 与 AI 一起创建 GitHub Actions 配置
 
 # 1. 创建基础工作流
+
 创建 `.github/workflows/ci.yml`，在推送时执行：
+
 - 代码检查（ESLint、TypeScript）
 - 运行测试
 - 验证构建
 - 生成覆盖率报告
 
 # 2. 部署工作流
+
 创建 `.github/workflows/deploy.yml`，在合并到 main 分支时执行：
+
 - 构建项目
 - 部署到 Vercel
 - 发送 Slack 通知
 
 # 3. 监控工作流的 Hook
+
+```yml
 Trigger: File Save
 Target: ".github/workflows/*.yml"
 Instructions: |
@@ -2087,23 +2140,28 @@ Instructions: |
   2. 检查 Secret 的正确使用
   3. 优化并行执行建议
   4. 提议缓存使用
-
 ```
+````
 
 ### **性能优化**
 
-```BASH
+````md
 # 1. 现状分析
+
 "请分析 @src/ 目录下项目的性能瓶颈"
 
 # 2. 优化 Spec 制定
+
 "性能优化任务：
+
 - 使用 React.memo 防止重复渲染
 - 图片优化与懒加载
 - 减少打包体积
 - 优化数据库查询"
 
 # 3. 自动优化 Hook
+
+```yml
 Trigger: File Save
 Target: "src/components/**/*.tsx"
 Instructions: |
@@ -2112,12 +2170,13 @@ Instructions: |
   2. 提议使用 useCallback 和 useMemo
   3. 检测高开销计算并提出优化方案
   4. 建议使用动态 import
+```
 
 # 4. 监控设置
+
 "在 Datadog 中配置性能监控，
 追踪 Core Web Vitals 指标"
-
-```
+````
 
 ## 🎊 **总结 - Kiro 改变开发方式**
 
