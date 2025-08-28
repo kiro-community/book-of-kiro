@@ -8,6 +8,8 @@ bookToc: false
 
 Amazon Q Developer 包含 Amazon Q Developer IDE 插件 （Visual Studio Code, JetBrains, Eclipse, Visual Studio。以下主要对比 Kiro 和 Amazon Q Developer VS Code 插件的功能对比。
 
+关于应该选择 Kiro 还是 Amazon Q Developer，您可以参考 [决策树](/book-of-kiro/faq/to-q-dev-users/)。
+
 ## 总结
 
 Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用户体验而言，Kiro 更好， Amazon Q Developer 插件则支持不同的 IDE，用户无需更换原有 IDE。以下是主要区别：
