@@ -10,24 +10,24 @@ bookToc: true
 
 ## **📊 数据统计与指标**
 
-### **❓ Q. Amazon Q Developer 提供监控看板吗？**
+### **Q. Amazon Q Developer 提供监控看板吗？**
 
 提供。Amazon Q Developer 自带 [dashboard](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/dashboard.html)，包含账号级指标，您可以直接在 AWS 控制台启用并查看。
 
 如果您需要查看用户级指标，需要参考下文启动用户级指标。
 
-### **❓ Q. Amazon Q Developer 提供用户级别的指标吗？**
+### **Q. Amazon Q Developer 提供用户级别的指标吗？**
 
 提供。Amazon Q Developer 提供 [user activity report](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/user-activity-metrics.html)，可以提供用户级别的指标。在 Amazon Q Developer 设置页面启用，并填写一个您可以管理的 S3 地址。用户级指标会被写入到对应的 S3 地址中。
 
 ![](/book-of-kiro/images/q_dev/user_activity_report.png)
 
-### **❓ Q. 如何可视化用户级指标？**
+### **Q. 如何可视化用户级指标？**
 
 1. **使用 [Apache DevLake](https://devlake.apache.org/) 进行可视化** - 其官方提供了 Amazon Q Developer 插件。请参考[部署文档](https://amzn-chn.feishu.cn/docx/VkD7dXLq2oXEM5xz48qcUBmPnlh)
 2. **通过其它 BI 工具** - 解析 Amazon Q Developer [User Activity Log](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-user-telemetry.html) 来可视化用户级别指标
 
-### **❓ Q. 有审计功能吗？**
+### **Q. 有审计功能吗？**
 
 您可以在 Amazon Q Developer 设置页面启用 [prompt logging](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html) 并选择一个您可以管理的 S3 地址。
 
