@@ -10,6 +10,8 @@ bookToc: true
 
 请先检查您是否在登陆界面选择了企业版（Pro tier），并且提供了正确的 StartURL 和 Region（区域选择与 AWS Identity Center 所在的区域保持一致）。请注意区分登陆界面的企业版和个人版（AWS Builder ID）。
 
+如果上述信息无误，请检查您的系统时间是否正确。
+
 ### **E. 登录报错：Invalid Callback URL**
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
