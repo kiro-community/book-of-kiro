@@ -56,3 +56,7 @@ theme = 'hugo-book'
   BookComments = false
   BookPortableLinks = true
   BookServiceWorker = true
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-WNVR28Y6M5'
