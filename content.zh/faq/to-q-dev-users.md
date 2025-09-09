@@ -24,6 +24,23 @@ translationKey: "q-dev-faq"
 - Kiro 是一个专为 AI 辅助开发而从头构建的独立 IDE
 - Amazon Q Developer 作为插件/扩展在现有开发环境中工作
 
+**问：我该如何选择 Kiro 与 Amazon Q Developer？**
+
+Kiro 和 Amazon Q Developer 并不冲突，在不同的场景解决了不同的问题。您可以根据需求，参考如下决策树，来判断是否选择 Kiro，Amazon Q Developer，或二者都有。
+
+```mermaid
+flowchart TD
+    A[开始选择] --> B{使用场景?}
+    B -->|运维或自动化| C["选择 Amazon Q Developer<br/>#40;CLI#41;"]
+    B -->|研发/测试等场景| H{需要深度AI集成?}
+    H -->|使用Kiro特色的<br/>Spec、AgentHooks等能力<br/>提升工程化质量| J[选择 Kiro]
+    H -->|只需要基础的<br/>Vibe Coding能力| D{熟悉VSCode<br/>或其衍生品如Cursor?}
+    D -->|是，熟悉VSCode生态| F{Kiro支持所需插件?}
+    D -->|否，深度依赖JetBrains/<br/>Eclipse/Visual Studio等IDE| E["选择 Amazon Q Developer<br/>#40;IDE插件#41;"]
+    F -->|是| J
+    F -->|否| G["选择 Amazon Q Developer<br/>#40;VSCode 插件#41;"]
+```
+
 **问：我是 Amazon Q Developer Pro 用户。免费期结束后我还能使用 Kiro 吗？**
 
 在免费期结束后，需要选择订阅 Kiro 付费版本或保持 Free Tier （50 次 Vibe 每月）。
