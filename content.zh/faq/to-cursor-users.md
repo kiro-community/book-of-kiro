@@ -81,7 +81,7 @@ Kiro 提供具有竞争力的定价和慷慨的限制：
 
 **Kiro 定价：**
 
-- **免费版**：$0/月 - 无限内联补全，50 次 Vibe 请求 (Sonnet) + 100 次 Spec 请求 (Sonnet)
+- **免费版**：$0/月 - 无限内联补全，50 次 Vibe 请求 (Sonnet)
 - **专业版**：$20/月 - 无限内联补全，225 次 Vibe 请求 (Sonnet) + 125 次 Spec 请求 (Sonnet)
 - **专业增强版**：$40/月 - 无限内联补全，450 次 Vibe 请求 (Sonnet) + 250 次 Spec 请求 (Sonnet)
 - **超级版**：$200/月 - 无限内联补全，2250 次 Vibe 请求 (Sonnet) + 1250 次 Spec 请求 (Sonnet)
