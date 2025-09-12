@@ -141,6 +141,12 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 
 ```
 
+## **聊天历史记录位置**
+
+目前 Kiro 还没有聊天会话导出的能力，原始 JSON 格式的聊天信息保存在：
+
+- Windows: `~\AppData\Roaming\Kiro\User\globalStorage\kiro.kiroagent\<userid>\*.chat`
+
 ## **安全最佳实践**
 
 ### **1. 使用环境变量管理 API 密钥**

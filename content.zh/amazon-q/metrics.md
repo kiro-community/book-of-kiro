@@ -31,6 +31,17 @@ bookToc: true
 
 您可以在 Amazon Q Developer 设置页面启用 [prompt logging](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html) 并选择一个您可以管理的 S3 地址。
 
+### **Q. 本地聊天信息保存在哪里？**
+
+- CLI
+  - Linux: `~/.local/share/amazon-q/data.sqlite3`
+  - MacOS: `~/Library/Application Support/amazon-q/data.sqlite3`
+  - Windows: `~/AppData/Local/amazon-q/data.sqlite3`
+  - 导出 JSON 的工具：[Amazon Q CLI History Inspector](https://discretetom.github.io/q-cli-history-inspector/)
+  - 需要注意：目前 Q CLI 的历史记录是以 K/V 格式保存，Key 为目录路径，Value 为聊天历史记录的 JSON 原始数据。在相同目录启动 Q CLI 会话时，之前的同目录会话信息会被覆盖，所以并不能拿到所有的历史记录，只能拿到每个目录最新的聊天信息。 
+- IDE 插件
+  - 全平台：`~/.aws/amazonq/history`
+
 ## **⚙️ 配置指南**
 
 ### **📈 启用用户活动报告**
