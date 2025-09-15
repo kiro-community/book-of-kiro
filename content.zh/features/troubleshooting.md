@@ -7,12 +7,16 @@ weight: 99
 
 ## **常见错误及解决方案**
 
-### 1. **macOS：「Kiro 已损坏」错误**
+### **更新 Kiro**
+
+打开命令面板 (Cmd+Shift+P)，输入“Kiro: Check for Updates”，并在更新后重新启动 Kiro。
+
+### **macOS：「Kiro 已损坏」错误**
 
 ````md
 # 错误信息
 
-"Kiro 已损坏，无法打开。你应该将它移到废纸篓。"
+"Kiro 已损坏，无法打开。你应该将它移到废纸篓。" / "Kiro is damaged and can't be opened. You should move it to the Trash"
 
 # 原因
 
@@ -39,7 +43,7 @@ sudo xattr -d com.apple.quarantine /Applications/Kiro.app
 ```
 ````
 
-### 2. **无法使用 Shell 集成**
+### **无法使用 Shell 集成**
 
 ````md
 # 错误信息
@@ -72,7 +76,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 ```
 ````
 
-### 3. **认证错误（IAM Identity Center）**
+### **认证错误（IAM Identity Center）**
 
 ```md
 # 错误信息
@@ -95,7 +99,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 示例：https://your-company.awsapps.com/start
 ```
 
-### 4. **MCP 服务器连接错误**
+### **MCP 服务器连接错误**
 
 ````md
 # 常见错误及解决方法
@@ -132,7 +136,7 @@ echo $BRAVE_API_KEY
 3. 手动执行服务器命令进行测试
 ````
 
-### 5.**文件未找到或无法读取**
+### **文件未找到或无法读取**
 
 ```BASH
 # 确认 .gitignore 的影响
@@ -150,7 +154,7 @@ cat .gitignore
 
 ```
 
-### 6. **登录退出异常**
+### **登录退出异常**
 
 以下是 Windows 环境排查登录退出异常的方法，Mac/Linux 用户可以参考流程。
 
@@ -273,15 +277,15 @@ if (Test-Path $kiro) {
 - 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
 ````
 
-### 7. **Improperly formed request**
+### **Improperly formed request**
 
 通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
 
-### 8. **An unexpected error occurred**
+### **An unexpected error occurred**
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
-### 9. **Dispatch failure**
+### **Dispatch failure**
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
