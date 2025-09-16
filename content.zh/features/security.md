@@ -226,6 +226,12 @@ export BRAVE_API_KEY="BSA_xxxx"
 - codewhisperer.us-east-1.amazonaws.com
 - prod.us-east-1.telemetry.kiro.aws.dev
 
+## **内网访问**
+
+Kiro 提供了 VPC Endpoint 来使所有的 **数据流量（与大模型交互的流量）** 能够不出公网。但是其他流量（如登录、鉴权认证等）仍然需要走公网。
+
+您可以参考[官方网站的配置教程](https://kiro.dev/docs/privacy-and-security/vpc-endpoints/)来配置 VPC Endpoint。
+
 ## **企业用户如何审计聊天信息**
 
 可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
