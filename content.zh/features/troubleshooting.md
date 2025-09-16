@@ -191,7 +191,7 @@ start "" "https://example.com"
 
 Kiro 登录会在本地起一个回调监听，常见是 **`http://127.0.0.1:3128`**；浏览器登录成功后会重定向回这里。若这个端口被占用/被系统保留，浏览器就算打开了也**回不来**，或者根本起不来登录流程。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)[GitHub](https://github.com/kirodotdev/Kiro/issues/571)
 
-1. 看有没有程序占用 3128：
+看有没有程序占用 3128：
 
 ```sh
 netstat -ano -p tcp | findstr :3128
@@ -200,7 +200,7 @@ netstat -ano -p tcp | findstr :3128
 - 如果看到 `LISTENING`/`ESTABLISHED`，记下 PID，在“任务管理器”结束它（或 `taskkill /PID <pid> /F`）。
   - 常见占用者：代理/抓包工具（Fiddler、CNTLM、Zscaler 等）。
 
-1. 看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
+看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
 
 ```sh
 netsh int ipv4 show excludedportrange protocol=tcp
@@ -208,7 +208,7 @@ netsh int ipv4 show excludedportrange protocol=tcp
 
 - 如果输出范围里包含 3128，则该端口**不可绑定**，Kiro 无法启动回调服务（这会导致“打不开浏览器/卡登录”）。
 
-1. 释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
+释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
 
 ```sh
 netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofports=1
@@ -222,20 +222,28 @@ netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofport
 
 ---
 
-## 4) 清理“对登录有影响”的缓存（Windows 路径）
+## 4) 清理“对登录有影响”的缓存
+
+### Windows
 
 先完全退出 Kiro（或 `taskkill /IM Kiro.exe /F`），然后删除：
 
 ```sh
+rmdir /S /Q "%AppData%\Kiro"
 rmdir /S /Q "%UserProfile%\.kiro"
 rmdir /S /Q "%UserProfile%\.aws\sso\cache"
-rmdir /S /Q "%AppData%\Kiro"
 rmdir /S /Q "%LocalAppData%\Kiro"
 ```
 
+> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
 再启动 Kiro 重试登录。
 
-> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+### MacOS
+
+`rm ~/.aws/sso/cache/kiro-auth-token.json `
+
+再启动 Kiro 重试登录。
 
 ---
 
@@ -332,3 +340,30 @@ curl -I https://kiro.dev
 ![](/book-of-kiro/images/kiro_log.png)
 
 点击 Kiro 底部栏的 "Report a bug / Suggest an idea" 按钮进行问题上报
+
+## **清除本地文件**
+
+如果以上方法无法使 Kiro 正常工作，也可以尝试彻底清除本地文件后重新安装 Kiro。
+
+### Windows
+
+- 停止所有正在运行的 Kiro 进程
+  - `taskkill /f /im Kiro.exe`
+- 卸载（如果使用的是用户级安装）
+  - `rmdir /s /q "%LOCALAPPDATA%\Programs\kiro"`
+- 卸载（如果使用的是系统级安装）
+  - `if exist "%PROGRAMFILES%\kiro" rmdir /s /q "%PROGRAMFILES%\kiro"`
+- 删除所有用户数据和设置
+  - `rmdir /s /q "%APPDATA%\Kiro"`
+- 删除插件
+  - `rmdir /s /q "%USERPROFILE%\.kiro"`
+- 从 Program Files (x86) 中删除
+  - `if exist "%PROGRAMFILES(X86)%\kiro" rmdir /s /q "%PROGRAMFILES(X86)%\kiro"`
+- 从桌面图标和开始菜单中删除
+  - `if exist "%USERPROFILE%\Desktop\kiro.lnk" del /q "%USERPROFILE%\Desktop\kiro.lnk"`
+  - `if exist "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro" rmdir /s /q "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro"`
+
+### MacOS
+
+- 删除 `~/.kiro`
+- 删除 `Library/Application Support/Kiro`
