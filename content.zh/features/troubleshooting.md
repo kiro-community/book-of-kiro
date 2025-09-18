@@ -7,12 +7,16 @@ weight: 99
 
 ## **常见错误及解决方案**
 
-### 1. **macOS：「Kiro 已损坏」错误**
+### **更新 Kiro**
+
+打开命令面板 (Cmd+Shift+P)，输入“Kiro: Check for Updates”，并在更新后重新启动 Kiro。
+
+### **macOS：「Kiro 已损坏」错误**
 
 ````md
 # 错误信息
 
-"Kiro 已损坏，无法打开。你应该将它移到废纸篓。"
+"Kiro 已损坏，无法打开。你应该将它移到废纸篓。" / "Kiro is damaged and can't be opened. You should move it to the Trash"
 
 # 原因
 
@@ -39,7 +43,7 @@ sudo xattr -d com.apple.quarantine /Applications/Kiro.app
 ```
 ````
 
-### 2. **无法使用 Shell 集成**
+### **无法使用 Shell 集成**
 
 ````md
 # 错误信息
@@ -72,7 +76,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 ```
 ````
 
-### 3. **认证错误（IAM Identity Center）**
+### **认证错误（IAM Identity Center）**
 
 ```md
 # 错误信息
@@ -95,7 +99,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 示例：https://your-company.awsapps.com/start
 ```
 
-### 4. **MCP 服务器连接错误**
+### **MCP 服务器连接错误**
 
 ````md
 # 常见错误及解决方法
@@ -132,7 +136,7 @@ echo $BRAVE_API_KEY
 3. 手动执行服务器命令进行测试
 ````
 
-### 5.**文件未找到或无法读取**
+### **文件未找到或无法读取**
 
 ```BASH
 # 确认 .gitignore 的影响
@@ -150,7 +154,7 @@ cat .gitignore
 
 ```
 
-### 6. **登录退出异常**
+### **登录退出异常**
 
 以下是 Windows 环境排查登录退出异常的方法，Mac/Linux 用户可以参考流程。
 
@@ -187,7 +191,7 @@ start "" "https://example.com"
 
 Kiro 登录会在本地起一个回调监听，常见是 **`http://127.0.0.1:3128`**；浏览器登录成功后会重定向回这里。若这个端口被占用/被系统保留，浏览器就算打开了也**回不来**，或者根本起不来登录流程。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)[GitHub](https://github.com/kirodotdev/Kiro/issues/571)
 
-1. 看有没有程序占用 3128：
+看有没有程序占用 3128：
 
 ```sh
 netstat -ano -p tcp | findstr :3128
@@ -196,7 +200,7 @@ netstat -ano -p tcp | findstr :3128
 - 如果看到 `LISTENING`/`ESTABLISHED`，记下 PID，在“任务管理器”结束它（或 `taskkill /PID <pid> /F`）。
   - 常见占用者：代理/抓包工具（Fiddler、CNTLM、Zscaler 等）。
 
-1. 看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
+看 3128 是否被 Windows **保留为排除端口**（Excluded Port Range）：
 
 ```sh
 netsh int ipv4 show excludedportrange protocol=tcp
@@ -204,7 +208,7 @@ netsh int ipv4 show excludedportrange protocol=tcp
 
 - 如果输出范围里包含 3128，则该端口**不可绑定**，Kiro 无法启动回调服务（这会导致“打不开浏览器/卡登录”）。
 
-1. 释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
+释放 3128 的排除占位（需要管理员 CMD，**谨慎**执行）：
 
 ```sh
 netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofports=1
@@ -218,20 +222,28 @@ netsh int ipv4 delete excludedportrange protocol=tcp startport=3128 numberofport
 
 ---
 
-## 4) 清理“对登录有影响”的缓存（Windows 路径）
+## 4) 清理“对登录有影响”的缓存
+
+### Windows
 
 先完全退出 Kiro（或 `taskkill /IM Kiro.exe /F`），然后删除：
 
 ```sh
+rmdir /S /Q "%AppData%\Kiro"
 rmdir /S /Q "%UserProfile%\.kiro"
 rmdir /S /Q "%UserProfile%\.aws\sso\cache"
-rmdir /S /Q "%AppData%\Kiro"
 rmdir /S /Q "%LocalAppData%\Kiro"
 ```
 
+> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+
 再启动 Kiro 重试登录。
 
-> 这些是 Windows 上对应的本地状态目录；清理后常能恢复“卡住等待认证提供方”的问题。[Kiro](https://kiro.dev/docs/reference/troubleshooting/)
+### MacOS
+
+`rm ~/.aws/sso/cache/kiro-auth-token.json `
+
+再启动 Kiro 重试登录。
 
 ---
 
@@ -273,15 +285,15 @@ if (Test-Path $kiro) {
 - 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
 ````
 
-### 7. **Improperly formed request**
+### **Improperly formed request**
 
 通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
 
-### 8. **An unexpected error occurred**
+### **An unexpected error occurred**
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
-### 9. **Dispatch failure**
+### **Dispatch failure**
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
@@ -328,3 +340,30 @@ curl -I https://kiro.dev
 ![](/book-of-kiro/images/kiro_log.png)
 
 点击 Kiro 底部栏的 "Report a bug / Suggest an idea" 按钮进行问题上报
+
+## **清除本地文件**
+
+如果以上方法无法使 Kiro 正常工作，也可以尝试彻底清除本地文件后重新安装 Kiro。
+
+### Windows
+
+- 停止所有正在运行的 Kiro 进程
+  - `taskkill /f /im Kiro.exe`
+- 卸载（如果使用的是用户级安装）
+  - `rmdir /s /q "%LOCALAPPDATA%\Programs\kiro"`
+- 卸载（如果使用的是系统级安装）
+  - `if exist "%PROGRAMFILES%\kiro" rmdir /s /q "%PROGRAMFILES%\kiro"`
+- 删除所有用户数据和设置
+  - `rmdir /s /q "%APPDATA%\Kiro"`
+- 删除插件
+  - `rmdir /s /q "%USERPROFILE%\.kiro"`
+- 从 Program Files (x86) 中删除
+  - `if exist "%PROGRAMFILES(X86)%\kiro" rmdir /s /q "%PROGRAMFILES(X86)%\kiro"`
+- 从桌面图标和开始菜单中删除
+  - `if exist "%USERPROFILE%\Desktop\kiro.lnk" del /q "%USERPROFILE%\Desktop\kiro.lnk"`
+  - `if exist "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro" rmdir /s /q "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro"`
+
+### MacOS
+
+- 删除 `~/.kiro`
+- 删除 `Library/Application Support/Kiro`
