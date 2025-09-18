@@ -234,5 +234,4 @@ Kiro 提供了 VPC Endpoint 来使所有的 **数据流量（与大模型交互�
 
 ## **企业用户如何审计聊天信息**
 
-可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
-
+如果使用 Amazon Q Developer Pro 账号登录 Kiro，可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
