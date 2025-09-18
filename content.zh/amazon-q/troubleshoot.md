@@ -6,6 +6,19 @@ bookToc: true
 
 ## **🔐 常见登录问题**
 
+### **E. We couldn't load your Q Developer profiles**
+
+请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
+
+如果确认 StartURL 和 Region 无误，可以参考下文，查看 Q 的日志来排查问题。
+
+以下是日志中的报错示例
+
+```log
+WARN - software.aws.toolkits.jetbrains.services.amazonq.profile.QProfileResources - Failed to list Q profiles for region us-east-1
+software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException: The bearer token included in the request is invalid. (Service: CodeWhispererRuntime, Status Code: 403, Request ID: xxx)
+```
+
 ### **E. 登录报错：您没有问题，而是我们遇到了问题**
 
 请先检查您是否在登陆界面选择了企业版（Pro tier），并且提供了正确的 StartURL 和 Region（区域选择与 AWS Identity Center 所在的区域保持一致）。请注意区分登陆界面的企业版和个人版（AWS Builder ID）。
@@ -57,11 +70,13 @@ bookToc: true
 
 ### **E. Improperly formed request**
 
-通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
+通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试开启一个新会话。
 
 ### **E. An unexpected error occurred**
 
-通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+通常是网络不稳定导致，也可能是登录过期。可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，重新登录，或排查网络连接。
+
+可以参考下文查看日志来进一步确定问题原因。
 
 ### **E. Dispatch failure**
 
