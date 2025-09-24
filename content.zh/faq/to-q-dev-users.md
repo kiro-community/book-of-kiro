@@ -26,7 +26,7 @@ translationKey: "q-dev-faq"
 
 **问：我是 Amazon Q Developer Pro 用户。免费期结束后我还能使用 Kiro 吗？**
 
-在免费期结束后，需要选择订阅 Kiro 付费版本或保持 Free Tier （50 次 Vibe 每月）。
+在免费期结束后，需要选择订阅 Kiro 付费版本或保持 Free Tier （50 积分每月）。
 
 ## 通过 Amazon Q Developer Pro 订阅使用
 
