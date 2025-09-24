@@ -225,8 +225,10 @@ export BRAVE_API_KEY="BSA_xxxx"
 
 目前官方文档上的白名单地址不全，除了文档中的内容，您还需要将以下域名添加到白名单：
 
-- codewhisperer.us-east-1.amazonaws.com
-- prod.us-east-1.telemetry.kiro.aws.dev
+- `codewhisperer.us-east-1.amazonaws.com`
+- `prod.us-east-1.telemetry.kiro.aws.dev`
+
+下载 Kiro 时使用的域名为：`prod.download.desktop.kiro.dev`
 
 ## **内网访问**
 

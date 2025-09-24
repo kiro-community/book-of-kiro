@@ -18,6 +18,13 @@ bookToc: true
 
 可以参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/firewall.html)为您的企业防火墙配置白名单。
 
+除了以上域名，如果您需要用户联网更新 Q 的 IDE 的插件或 Q CLI，还需要开放如下域名：
+
+- IDE 插件：开放对应 IDE 插件市场的域名
+  - VSCode：参考 [VSCode 文档](https://code.visualstudio.com/docs/setup/network#_common-hostnames)
+  - JetBrains：参考 [JetBrains 文档](https://youtrack.jetbrains.com/articles/SUPPORT-A-288/Whats-the-IP-whitelist-of-IntelliJ-IDE-in-case-of-firewall-policy-or-restricted-network)
+- CLI：开放 `desktop-release.q.us-east-1.amazonaws.com`
+
 ## **内网访问**
 
 Amazon Q Developer 提供了 VPC Endpoint 来使所有的 **数据流量（与大模型交互的流量）** 能够不出公网。但是其他流量（如登录、鉴权认证等）仍然需要走公网。
