@@ -92,6 +92,8 @@ eval
 
 ```
 
+> 如果你真的要允许所有命令的执行，可以直接添加 `*` 从而信任所有命令。**请充分了解信任所有命令可能带来的风险**
+
 ## **数据隐私与遥测**
 
 ### **退出（Opt-out）方法**
@@ -140,6 +142,12 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 .kiro/settings.json  # 如果包含 API 密钥等敏感信息
 
 ```
+
+## **聊天历史记录位置**
+
+目前 Kiro 还没有聊天会话导出的能力，原始 JSON 格式的聊天信息保存在：
+
+- Windows: `~\AppData\Roaming\Kiro\User\globalStorage\kiro.kiroagent\<userid>\*.chat`
 
 ## **安全最佳实践**
 
@@ -220,7 +228,12 @@ export BRAVE_API_KEY="BSA_xxxx"
 - codewhisperer.us-east-1.amazonaws.com
 - prod.us-east-1.telemetry.kiro.aws.dev
 
+## **内网访问**
+
+Kiro 提供了 VPC Endpoint 来使所有的 **数据流量（与大模型交互的流量）** 能够不出公网。但是其他流量（如登录、鉴权认证等）仍然需要走公网。
+
+您可以参考[官方网站的配置教程](https://kiro.dev/docs/privacy-and-security/vpc-endpoints/)来配置 VPC Endpoint。
+
 ## **企业用户如何审计聊天信息**
 
-可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
-
+如果使用 Amazon Q Developer Pro 账号登录 Kiro，可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
