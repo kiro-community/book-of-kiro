@@ -297,6 +297,10 @@ if (Test-Path $kiro) {
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
 
+### **为什么每天都要登录一次？如何延长会话时间？**
+
+如果您使用 IAM Identity Center 进行登录，您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。参考[官方文档](https://docs.aws.amazon.com/singlesignon/latest/userguide/90-day-extended-session-duration.html)。
+
 ## **高级调试技巧**
 
 ```BASH
