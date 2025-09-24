@@ -62,6 +62,6 @@ bookToc: true
 
 目前 Amazon Q Developer 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-batch-register/).
 
-### **Q. 如何延长会话时间？**
+### **Q. 为什么每天都要登录一次？如何延长会话时间？**
 
-默认情况下 Amazon Q Developer 每天都需要登录一次。您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。
+如果您使用 IAM Identity Center 进行登录，您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。参考[官方文档](https://docs.aws.amazon.com/singlesignon/latest/userguide/90-day-extended-session-duration.html)。
