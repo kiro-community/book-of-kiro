@@ -395,17 +395,17 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 ## 价格对比
 
 {{% hint info %}}
-**最后更新日期**：2025 年 8 月 22 日。如需最新定价信息，请查询 Kiro 和 Cursor 官网。
+**最后更新日期**：2025 年 9 月 24 日。如需最新定价信息，请查询 Kiro 和 Cursor 官网。
 {{% /hint %}}
 
 ### 个人版
 
-- Kiro 价格套餐包含**固定次数**的 Vibe 请求和 Spec Task 请求。
+- Kiro 价格套餐包含**固定积分**。
 - Cursor 价格套餐包含**按模型 API 价格**计算的每月 Agent 使用预算。
 
 {{% hint warning %}}
 **Pro 版本试用**</br>
-Kiro 和 Cursor 都提供 2 周免费的 Pro 版本试用。试用期内，Kiro 提供额外的 100 次 Spec 请求与 100 次 Vibe 请求。Cursor 未明确给出 Agent 调用次数或模型 API 使用额度。
+Kiro 和 Cursor 都提供 2 周免费的 Pro 版本试用。试用期内，Kiro 提供额外 500 积分。Cursor 未明确给出 Agent 调用次数或模型 API 使用额度。
 {{% /hint %}}
 
 <table>
@@ -423,21 +423,21 @@ Kiro 和 Cursor 都提供 2 周免费的 Pro 版本试用。试用期内，Kiro 
 <td>Free</td>
 <td>Hobby</td>
 <td>$0</td>
-<td>• 50 x Vibe 请求</td>
+<td>• 50积分</td>
 <td>Limited (官方无明确说明)</td>
 </tr>
 <tr>
 <td>Pro</td>
 <td>Pro</td>
 <td>$20</td>
-<td>• 225 x Vibe 请求<br>• 125 x Spec Task</td>
+<td>• 1000积分</td>
 <td>• ~225 Sonnet 4 请求，或<br>• ~550 Gemini 请求，或<br>• ~500 GPT 5 请求</td>
 </tr>
 <tr>
 <td>Pro+</td>
 <td>-</td>
 <td>$40</td>
-<td>• 450 x Vibe 请求<br>• 250 x Spec Task</td>
+<td>• 2000积分</td>
 <td>-</td>
 </tr>
 <tr>
@@ -451,20 +451,20 @@ Kiro 和 Cursor 都提供 2 周免费的 Pro 版本试用。试用期内，Kiro 
 <td>Power</td>
 <td>Ultra</td>
 <td>$200</td>
-<td>• 2,250 x Vibe 请求<br>• 1,250 x Spec Task</td>
+<td>• 10000积分</td>
 <td>• ~4,500 Sonnet 4 请求，或<br>• ~11,000 Gemini 请求，或<br>• ~10,000 GPT 5 请求</td>
 </tr>
 </tbody>
 </table>
 
 {{% hint info %}}
-Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次。</br>Cursor 超出套餐后，AUTO 模式下 Input: $1.25 per 1M tokens，Output: $6.00 per 1M tokens; Cached Input: $0.25 per 1M tokens。或按模型 API 费用计费，Sonnet 4 约为 $0.09/次。
+Kiro 超过套餐后，费用为 $0.04/积分。</br>Cursor 超出套餐后，AUTO 模式下 Input: $1.25 per 1M tokens，Output: $6.00 per 1M tokens; Cached Input: $0.25 per 1M tokens。或按模型 API 费用计费，Sonnet 4 约为 $0.09/次。
 {{% /hint %}}
 
 **Kiro 的优势**:
 
 - 定价透明、计算简单：固定的费用和调用次数。
-- 超额费用便宜：超出额度后 Vibe $0.04/次，低于 Cursor ~$0.09/次 （按 Sonnet 4 计价）。
+- 超额费用便宜：超出额度后 $0.04/积分，低于 Cursor ~$0.09/次 （按 Sonnet 4 计价）。
 
 **Cursor 价格优势**：
 
@@ -476,7 +476,7 @@ Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次�
 企业版通常支持 SSO (单点登陆)、用户管理、用量统计和统一账单等功能。Kiro 暂未公布其三档付费套餐是否都适用于企业，以下内容仅为参考。
 {{% /hint %}}
 
-- Kiro 价格套餐包含**固定次数**的 Vibe 请求和 Spec Task 请求。
+- Kiro 价格套餐包含**固定积分**。
 - Cursor 价格套餐包含**固定次数**请求 (Sonnet 3.7 和 Sonnet 4 Thinking 模式请求记 2 次)。
 
 <table>
@@ -494,35 +494,35 @@ Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次�
 <td>Pro</td>
 <td>-</td>
 <td>$20</td>
-<td>• 225 x Vibe 请求<br>• 125 x Spec Task 请求</td>
+<td>• 1000积分</td>
 <td>-</td>
 </tr>
 <tr>
 <td>Pro+</td>
 <td>Teams</td>
 <td>$40</td>
-<td>• 450 x Vibe 请求<br>• 250 x Spec Task 请求</td>
+<td>• 2000积分</td>
 <td> 按 API token计价，且只包含 $20美金的 agent API token usage（ ~225 Sonnet 4 请求）。Cursor API 计价为 模型API 计价 +$0.25 per 1M tokens。</td>
 </tr>
 <tr>
 <td>Power</td>
 <td>-</td>
 <td>$200</td>
-<td>• 2,250 x Vibe 请求<br>• 1,250 x Spec Task 请求</td>
+<td>• 10000积分</td>
 <td>-</td>
 </tr>
 </tbody>
 </table>
 
 {{% hint info %}}
-Kiro 超过套餐后，Vibe 请求为 $0.04/次，Spec Task 请求为 $0.2/次。</br>Cursor 超出套餐后，AUTO 模式下 Input: $1.25 per 1M tokens，Output: $6.00 per 1M tokens; Cached Input: $0.25 per 1M tokens。或按模型 API 费用计费，Sonnet 4 约为 $0.09/次。Cursor API 计价为 模型 API 计价 +$0.25 per 1M tokens。
+Kiro 超过套餐后，费用为 $0.04/积分。</br>Cursor 超出套餐后，AUTO 模式下 Input: $1.25 per 1M tokens，Output: $6.00 per 1M tokens; Cached Input: $0.25 per 1M tokens。或按模型 API 费用计费，Sonnet 4 约为 $0.09/次。Cursor API 计价为 模型 API 计价 +$0.25 per 1M tokens。
 {{% /hint %}}
 
 **Kiro 优势**:
 
 - 定价透明、计算简单：固定的费用和调用次数。
 - 更多调用次数：$40 套餐，Kiro 包含更多调用次数，高于 Cursor。
-- 超额费用便宜：超出额度后 Vibe $0.04/次，低于 Cursor ~$0.11/次 （按 Sonnet 4 计价）。
+- 超额费用便宜：超出额度后 $0.04/积分，低于 Cursor ~$0.11/次 （按 Sonnet 4 计价）。
 
 **Cursor 优势**：
 
