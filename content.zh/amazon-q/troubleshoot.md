@@ -6,7 +6,7 @@ bookToc: true
 
 ## **🔐 常见登录问题**
 
-### **E. We couldn't load your Q Developer profiles**
+### **We couldn't load your Q Developer profiles**
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
 
@@ -21,21 +21,21 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 
 除此之外，在 JetBrains IDE 中，您可以使用 JetBrains IDE 的 Invalidate Caches 清除一下缓存再重试。参考 [JetBrains 官方文档](https://www.jetbrains.com/help/idea/invalidate-caches.html)。
 
-### **E. 登录报错：您没有问题，而是我们遇到了问题**
+### **登录报错：您没有问题，而是我们遇到了问题**
 
 请先检查您是否在登陆界面选择了企业版（Pro tier），并且提供了正确的 StartURL 和 Region（区域选择与 AWS Identity Center 所在的区域保持一致）。请注意区分登陆界面的企业版和个人版（AWS Builder ID）。
 
 如果上述信息无误，请检查您的系统时间是否正确。
 
-### **E. 登录报错：Invalid Callback URL**
+### **登录报错：Invalid Callback URL**
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
 
-### **E. 登录报错：有些内容无法计算**
+### **登录报错：有些内容无法计算**
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
 
-### **E. 错误：not authorized to make this call**
+### **错误：not authorized to make this call**
 
 登录成功后在 IDE 聊天面板中报错没有权限。
 
@@ -47,11 +47,11 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 
 ## **💻 IDE 常见错误**
 
-### **E. 错误：unable to get local issuer certificate**
+### **错误：unable to get local issuer certificate**
 
 通常是系统证书存在问题。您可以尝试在系统 shell 中（比如 Windows 的 cmd）执行 `curl https://baidu.com` 看看会不会有类似的证书问题。您需要联系您企业的 IT 服务来修复您本机的证书问题。
 
-### **E. 错误：编辑文件失败**
+### **错误：编辑文件失败**
 
 在 Agentic Coding 模式下自动编辑文件可能会失败，您可以将鼠标悬浮在红色错误图标上查看具体的错误信息。
 
@@ -70,19 +70,43 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 2. 让 AI 生成正确的或更加准确的搜索 Pattern 后重试
 3. 让 AI 说出它的思路，人工编辑文件
 
-### **E. Improperly formed request**
+### **Improperly formed request**
 
 通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试开启一个新会话。
 
-### **E. An unexpected error occurred**
+### **An unexpected error occurred**
 
 通常是网络不稳定导致，也可能是登录过期。可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，重新登录，或排查网络连接。
 
 可以参考下文查看日志来进一步确定问题原因。
 
-### **E. Dispatch failure**
+### **Dispatch failure**
 
 通常是网络不稳定导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话，或排查网络连接。
+
+### **无法自动补全**
+
+首先，确认自动补全是否开启。确认的方法为：在 VSCode 或 JetBrains IDE 的底部栏会有 Amazon Q 的按钮，点击后可以确认 Auto Suggestion 是否为启用的状态。
+
+如果确认自动补全已经开启，仍然无法使用，请查看日志，在日志中搜索 `GenerateCompletion`，查看相关报错。以下是 JetBrains 中的报错示例：
+
+```log
+2025-09-25 11:02:10,730 [1391649]   INFO - software.aws.toolkits.jetbrains.services.amazonq.lsp.AmazonQLanguageClientImpl - [2025-09-25T03:02:10.727Z] lserver: GenerateCompletion activity:
+@@request metadata@@
+    "endpoint": https://codewhisperer.us-east-1.amazonaws.com/,
+    "predictionType": Not specified (COMPLETIONS),
+    "filename": xxx.java,
+    "leftContextLength": 412,
+    rightContextLength: 34,
+    "language": java,
+    "supplementalContextCount": 3,
+    "request.nextToken": xxx,
+    "recentEdits": No recent edits
+error: read ECONNRESET
+2025-09-25 11:02:10,730 [1391649]   INFO - software.aws.toolkits.jetbrains.services.amazonq.lsp.AmazonQLanguageClientImpl - [2025-09-25T03:02:10.727Z] lserver: Recommendation failure: TimeoutError: read ECONNRESET
+```
+
+如果是上述网络相关报错，请确保您本地可以正常访问 `https://codewhisperer.us-east-1.amazonaws.com/`
 
 ## **📋 问题上报**
 
