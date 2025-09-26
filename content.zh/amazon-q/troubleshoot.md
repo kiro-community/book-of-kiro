@@ -19,6 +19,8 @@ WARN - software.aws.toolkits.jetbrains.services.amazonq.profile.QProfileResource
 software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException: The bearer token included in the request is invalid. (Service: CodeWhispererRuntime, Status Code: 403, Request ID: xxx)
 ```
 
+除此之外，在 JetBrains IDE 中，您可以使用 JetBrains IDE 的 Invalidate Caches 清除一下缓存再重试。参考 [JetBrains 官方文档](https://www.jetbrains.com/help/idea/invalidate-caches.html)。
+
 ### **E. 登录报错：您没有问题，而是我们遇到了问题**
 
 请先检查您是否在登陆界面选择了企业版（Pro tier），并且提供了正确的 StartURL 和 Region（区域选择与 AWS Identity Center 所在的区域保持一致）。请注意区分登陆界面的企业版和个人版（AWS Builder ID）。
