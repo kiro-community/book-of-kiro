@@ -43,6 +43,32 @@ sudo xattr -d com.apple.quarantine /Applications/Kiro.app
 ```
 ````
 
+### **Timed out waiting for authentication provider 'kiro' to register**
+
+参考下文 [登录退出异常](#登录退出异常)，排查系统浏览器是否可以被正常唤起，以及回调端口是否被占用
+
+### **Kiro access not available for this account**
+
+- 如果使用个人账号（GitHub / Google / AWS Builder ID），请确保已获得激活码激活账号。在 Kiro 预览阶段，AWS Builder ID 不需要激活码即可进入应用，但是需要付费订阅才可以正常使用。
+- 如果使用企业账号，使用 Identity Center 进行登录，请确认是否用户是通过【组】进行订阅，如果是通过【组】进行订阅，则需要等待最长 24 小时的激活时间。
+
+### **编辑文件失败**
+
+**原理**: Agent 在编辑文件时会先搜索一个 pattern，然后替换它为新的代码块。如果这个 pattern 在文件中有多个匹配或者没有匹配，agent 就会无法替换代码块从而报错。
+
+**通常导致这些问题的原因包括：**
+
+1. 文件被人类或其他工具修改后没有被 AI 重新读取
+2. 文件太长，导致简单的 pattern 在同一个文件中出现多次
+3. 需要搜索的 pattern 过于复杂或存在特殊字符，导致 LLM 生成的 search pattern 不合法或不存在
+4. LLM 自身的幻觉导致 search pattern 不存在或格式错误
+
+**缓解方式：**
+
+1. 告诉 AI 使用 shell 命令或脚本进行文件编辑
+2. 让 AI 生成正确的或更加准确的搜索 Pattern 后重试
+3. 让 AI 说出它的思路，人工编辑文件
+
 ### **无法使用 Shell 集成**
 
 ````md
