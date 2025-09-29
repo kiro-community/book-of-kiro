@@ -110,6 +110,16 @@ error: read ECONNRESET
 
 如果是上述网络相关报错，请确保您本地可以正常访问 `https://codewhisperer.us-east-1.amazonaws.com/`
 
+### **Inline Chat 生成代码异常**
+
+Inline Chat 功能 （快捷键：Cmd+I 或 Ctrl+I）需要选中代码后使用，AI 生成的代码会覆盖选中的代码。所以此功能主要用来定点编辑选中的代码，除此之外的场景建议使用聊天面板来进行交互。
+
+如果不选中代码，直接使用快捷键触发 Inline Chat，那么 AI 很可能在光标处插入一个全新的文件。仅适合在创建新文件的时候使用。
+
+除此之外，Inline Chat 默认情况下包含的上下文远少于普通聊天面板，所以仅建议进行上下文不太相关的编辑。
+
+Inline Chat 在编辑完毕后，需要点击 Accept / Reject （或使用快捷键）进行接受/拒绝，否则无法进行下一次的 Inline Chat 交互。
+
 ## **📋 问题上报**
 
 ### **Q. 如何在 Visual Studio Code 查看插件的日志？**
