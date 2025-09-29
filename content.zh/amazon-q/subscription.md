@@ -12,7 +12,7 @@ bookToc: true
 
 ### **Q. 为什么我在 Identity Center 里面创建了用户，不能在订阅界面搜索到？**
 
-不要使用 username 或者邮箱搜索，请使用 Display Name 搜索。
+不要使用 username 或者邮箱搜索，请使用 Display Name 搜索。网页控制台的搜索框为【前缀匹配】，所以请尽量使用 Display Name 的前缀进行搜索。
 
 如果还是搜不到，请在 Amazon Q Developer 控制台的设置页面，确认 Amazon Q Developer 关联的 IAM Identity Center 是正确的。
 
@@ -65,3 +65,5 @@ bookToc: true
 ### **Q. 为什么每天都要登录一次？如何延长会话时间？**
 
 如果您使用 IAM Identity Center 进行登录，您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。参考[官方文档](https://docs.aws.amazon.com/singlesignon/latest/userguide/90-day-extended-session-duration.html)。
+
+如果您的 IAM Identity Center 对接了您自己的 IDP 或 SSO 系统，请延长您的 IDP 或 SSO 系统的会话超时时间
