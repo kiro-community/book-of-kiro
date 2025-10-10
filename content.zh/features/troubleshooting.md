@@ -105,7 +105,7 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 ### **认证错误（IAM Identity Center）**
 
 - 没有 Q Developer Pro 订阅 → 请使用 Builder ID 或社交账号登录
-- 区域设置错误 → 默认区域为 us-east-1，请确认公司使用的 IAM Identity Center 的区域（不是 Amazon Q Developer 订阅的区域）。
+- 区域设置错误 → 请确认公司使用的 IAM Identity Center 的区域（不是 Amazon Q Developer 订阅的区域）。
 - Kiro 目前仅支持 us-east-1 区域的订阅，请确保 Amazon Q Developer 的订阅在 us-east-1。
 - Start URL 错误 → 请联系 IT 部门确认正确的 URL。示例：https://your-company.awsapps.com/start
 

@@ -183,8 +183,8 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 <span style="color:red;"> 使用步骤</span>
 
 1. 选择 “Sign in with AWS IAM Identity Center”
-2. 输入 Start URL，例如：https://your-company.awsapps.com/start
-3. 选择 Region（区域）：一般是 us-east-1（具体以公司为准）
+2. 输入 Start URL，例如：https://your-company.awsapps.com/start，请联系您的管理员获取
+3. 选择 Region（区域）：请联系您的管理员获取
 4. 联系公司 IT 部门完成相关设置
    {{% /hint %}}
 
