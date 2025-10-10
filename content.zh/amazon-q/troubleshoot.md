@@ -122,6 +122,14 @@ Inline Chat 功能 （快捷键：Cmd+I 或 Ctrl+I）需要选中代码后使用
 
 Inline Chat 在编辑完毕后，需要点击 Accept / Reject （或使用快捷键）进行接受/拒绝，否则无法进行下一次的 Inline Chat 交互。
 
+### **无法启动 Language Server**
+
+IDE 插件会启动一个 Language Server 进程来解析工作目录下的源代码。Language Server 会被下载并保存在用户目录的 `AppData\Local\aws\toolkits\language-servers` 目录下。
+
+如果无法启动 Language Server，可尝试清空如上目录以便重新下载 Language Server。
+
+另外，由于 Language Server 是一个 NodeJS 进程，请确保上述目录的父级目录中不存在 `package.json` 文件。特别是要检查一下用户目录下是否存在 `package.json` 文件，如果有，请删除后再尝试重启 IDE 插件。
+
 ## **📋 问题上报**
 
 ### **Q. 如何在 Visual Studio Code 查看插件的日志？**

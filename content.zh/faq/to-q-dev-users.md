@@ -42,8 +42,8 @@ translationKey: "q-dev-faq"
 
 2. 在使用 AWS Identity Center 登录页面上：
 
-   - 输入起始 URL（例如，`xxxx.awsapps.com/start`）
-   - 选择配置您的 AWS Identity Center 的 AWS 区域（例如，`us-east-1`）
+   - 输入起始 URL（例如，`https://your-company.awsapps.com/start`），请联系您的管理员获取
+   - 选择配置您的 AWS Identity Center 的 AWS 区域，请联系您的管理员获取
 
 3. 选择**Continue**并按照屏幕上的说明完成身份验证过程。
 
