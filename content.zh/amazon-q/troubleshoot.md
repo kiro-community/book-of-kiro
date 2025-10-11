@@ -132,7 +132,7 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 ## **📋 问题上报**
 
-### **Q. 如何在 Visual Studio Code 查看插件的日志？**
+### **如何在 Visual Studio Code 查看插件的日志？**
 
 如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Amazon Q Developer 在某个问题上能稳定复现，建议获取 Amazon Q Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
 
@@ -152,7 +152,7 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 ![](/book-of-kiro/images/q_dev/vscode_log.png)
 
-### **Q. 如何在 JetBrains IDE 中查看插件日志？**
+### **如何在 JetBrains IDE 中查看插件日志？**
 
 如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Amazon Q Developer 在某个问题上能稳定复现，建议获取 Amazon Q Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
 
@@ -168,27 +168,44 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 除此之外，也可以使用 "Collect Logs and Diagnostic Data" 收集更详细的信息。
 ![](/book-of-kiro/images/q_dev/jetbrains_log_2.png)
 
-### **Q. 我有 IDE Plugin 问题希望上报给产品团队，请问需要提供哪些信息？**
+### **如何查看 Q CLI 日志**
+
+您可以使用 `-vvv` 参数启动 Q CLI 来生成日志，如 `q -vvv chat`。
+
+不同操作系统的日志存储路径不同：
+
+- MacOS
+  - `$TMPDIR/qlog/`
+- Linux
+  - `$XDG_RUNTIME_DIR/qlog/`
+  - `$TMPDIR/qlog/`
+  - `/tmp/qlog/`
+- Windows
+  - `%TEMP%\qlog\`
+
+参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/troubleshooting-q-logs.html#cli-logs)。
+
+### **我有 IDE Plugin 问题希望上报给产品团队，请问需要提供哪些信息？**
 
 为加速我们排查您遇到的问题，我们建议您复现问题，并提供如下信息给 AWS Support 或者 AWS 解决方案架构师：
 
 **必须项：**
 
-1. 日志信息（建议去除敏感信息）
-2. 插件的版本信息
-3. IDE 的版本信息
-4. 操作系统版本信息
+1. 日志信息（建议去除敏感信息）。请参考上文获取 IDE 插件中的日志
+2. 插件的版本信息，在 IDE 的插件面板中可以查看当前版本。如果不是最新版，您可以尝试通过插件市场升级到最新版后，再看下问题是否还存在
+3. IDE 的版本信息，在 IDE 的帮助菜单中可以查看当前 IDE 的版本
+4. 操作系统版本信息，如 Windows 11
 
 **可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
 
-### **Q. 我有 Q CLI 问题希望上报给产品团队，请问需要提供哪些信息？**
+### **我有 Q CLI 问题希望上报给产品团队，请问需要提供哪些信息？**
 
 为加速我们排查您遇到的问题，我们建议您复现问题，并提供如下信息给 AWS Support 或者 AWS 解决方案架构师：
 
 **必须项：**
 
-1. 日志信息（建议去除敏感信息）
-2. CLI 的版本信息
-3. 操作系统版本信息
+1. 日志信息（建议去除敏感信息）。请参考上文获取 CLI 的日志
+2. CLI 的版本信息，使用 `q --version` 可以查看当前版本。如果不是最新版，您可以尝试执行 `q update` 升级到最新版后，再看下问题是否还存在
+3. 操作系统版本信息，如 Windows 11
 
 **可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
