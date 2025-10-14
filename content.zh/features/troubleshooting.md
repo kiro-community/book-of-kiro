@@ -7,6 +7,12 @@ weight: 99
 
 ## **常见错误及解决方案**
 
+### **使用快捷键 Ctrl+L 添加代码后无法输入中文**
+
+此问题在 [GitHub Issue](https://github.com/kirodotdev/Kiro/issues/1505) 中有跟进。
+
+暂时的解决方案是：使用 `Ctrl+L` 后，在输入框敲一个空格就可以输入中文了。
+
 ### **更新 Kiro**
 
 打开命令面板 (Cmd+Shift+P)，输入“Kiro: Check for Updates”，并在更新后重新启动 Kiro。
