@@ -4,7 +4,7 @@ weight: 99
 bookToc: true
 ---
 
-## **🔐 常见登录问题**
+## **常见登录问题**
 
 ### **We couldn't load your Q Developer profiles**
 
@@ -49,7 +49,7 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 如果您着急使用，请通过 User 的方式添加用户！
 {{% /hint %}}
 
-## **💻 IDE 常见错误**
+## **IDE 常见错误**
 
 ### **错误：unable to get local issuer certificate**
 
@@ -126,11 +126,27 @@ Inline Chat 在编辑完毕后，需要点击 Accept / Reject （或使用快捷
 
 IDE 插件会启动一个 Language Server 进程来解析工作目录下的源代码。Language Server 会被下载并保存在用户目录的 `AppData\Local\aws\toolkits\language-servers` 目录下。
 
-如果无法启动 Language Server，可尝试清空如上目录以便重新下载 Language Server。
+如果无法启动 Language Server，可尝试清空如上目录以便重新下载 Language Server。下载时会请求 `https://aws-language-servers.us-east-1.amazonaws.com` 的子路径，请确保您的网络可以访问此 URL
 
 另外，由于 Language Server 是一个 NodeJS 进程，请确保上述目录的父级目录中不存在 `package.json` 文件。特别是要检查一下用户目录下是否存在 `package.json` 文件，如果有，请删除后再尝试重启 IDE 插件。
 
-## **📋 问题上报**
+### **连接超时/连接被重置/ConnectionTimeout/ConnectionReset**
+
+请参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/firewall.html)验证您能否【从 IDE 中】访问这些 URL 地址。验证方法：
+
+1. 打开 IDE 的集成终端（VSCode 可以使用快捷键 Ctrl+J 展开底部面板后选择终端，JetBrains IDE 可以在左下角的按钮中展开终端）
+2. 对于 Windows 用户，确保使用 cmd 而非 powershell
+3. 执行 `curl <URL>`，如 `curl https://codewhisperer.us-east-1.amazonaws.com` 来验证网络是否通畅。如果报错 connection timeout 则说明网络不通畅，如果报错 404/401 等正常的 HTTP 报错，则说明服务器可达，网络没问题。
+
+如果网络确实不通畅，请检查 IDE 的网络代理设置、系统网络代理设置等网络配置
+
+## **CLI 常见错误**
+
+### **无法升级**
+
+配置 VPC Endpoint 后，可能无法使用 `q update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing-ssh-setup-autocomplete.html)，从公网下载 zip 安装包后手动安装。
+
+## **问题上报**
 
 ### **如何在 Visual Studio Code 查看插件的日志？**
 
@@ -156,9 +172,11 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Amazon Q Developer 在某个问题上能稳定复现，建议获取 Amazon Q Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
 
+以下以 JetBrains IntelliJ IDEA 为例：
+
 **日志获取方式 1：**
 
-登录后，聊天窗口右上角有导出日志的按钮。
+登录后，聊天窗口右上角有导出日志的按钮。此方式会导出一个 zip 格式的压缩包，解压后请关注里面的 idea.log 文件
 
 **日志获取方式 2（适用于无法登陆的场景）：**
 
@@ -167,6 +185,12 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 除此之外，也可以使用 "Collect Logs and Diagnostic Data" 收集更详细的信息。
 ![](/book-of-kiro/images/q_dev/jetbrains_log_2.png)
+
+## **如何阅读 JetBrains IDE 插件日志**
+
+以下以 JetBrains IntelliJ IDEA 为例：
+
+通过上文导出的 idea.log 日志文件包含了所有的日志，请搜索 `software.aws.toolkits.jetbrains.services.amazonq` 查看与 Amazon Q 插件相关的日志行，关注其中的报错信息（如 ERROR, WARN）
 
 ### **如何查看 Q CLI 日志**
 
@@ -195,6 +219,7 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 2. 插件的版本信息，在 IDE 的插件面板中可以查看当前版本。如果不是最新版，您可以尝试通过插件市场升级到最新版后，再看下问题是否还存在
 3. IDE 的版本信息，在 IDE 的帮助菜单中可以查看当前 IDE 的版本
 4. 操作系统版本信息，如 Windows 11
+5. 问题描述，以及已经进行过哪些排查
 
 **可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
 
@@ -207,5 +232,6 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 1. 日志信息（建议去除敏感信息）。请参考上文获取 CLI 的日志
 2. CLI 的版本信息，使用 `q --version` 可以查看当前版本。如果不是最新版，您可以尝试执行 `q update` 升级到最新版后，再看下问题是否还存在
 3. 操作系统版本信息，如 Windows 11
+4. 问题描述，以及已经进行过哪些排查
 
 **可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
