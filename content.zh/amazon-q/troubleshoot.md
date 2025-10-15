@@ -186,7 +186,7 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 除此之外，也可以使用 "Collect Logs and Diagnostic Data" 收集更详细的信息。
 ![](/book-of-kiro/images/q_dev/jetbrains_log_2.png)
 
-## **如何阅读 JetBrains IDE 插件日志**
+### **如何阅读 JetBrains IDE 插件日志**
 
 以下以 JetBrains IntelliJ IDEA 为例：
 
