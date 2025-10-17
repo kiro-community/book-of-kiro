@@ -179,6 +179,7 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 - 需要有 Amazon Q Developer Pro 的付费订阅
 - 需要公司 IT 部门协助进行配置
 - 不适合个人用户使用
+- 在 Kiro 企业付费推出之前，使用 Amazon Q Developer Pro 的付费订阅来使用 Kiro，只能享受 Kiro 的免费额度，无法充值提升额度
 
 <span style="color:red;"> 使用步骤</span>
 

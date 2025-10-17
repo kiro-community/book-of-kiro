@@ -28,7 +28,15 @@ weight: 80
 
 ## **Steering Docs**
 
-以下是社区提供的参考 Steering Docs
+以下是社区提供的参考 Steering Docs 和技巧
+
+### **AGENTS.md**
+
+可以使用文件引用语法，把 [AGENTS.md](https://agents.md) 纳入 steering docs:
+
+```md
+#[[file:AGENTS.md]]
+```
 
 ### **No Assumptions Policy**
 

@@ -18,6 +18,7 @@ Amazon Q Developer 支持以下主流 IDE，选择你使用的 IDE 查看具体�
 **功能特点**：功能最完整，更新最及时
 
 **安装步骤**：
+
 1. 打开 Visual Studio Code
 2. 点击左侧活动栏的扩展图标（或按 `Ctrl+Shift+X`）
 3. 在搜索框中输入 "Amazon Q"
@@ -32,12 +33,15 @@ Amazon Q Developer 支持以下主流 IDE，选择你使用的 IDE 查看具体�
 **支持的 IDE**：IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand 等
 
 **安装步骤**：
+
 1. 打开你的 JetBrains IDE
 2. 进入 `File` → `Settings`（Windows/Linux）或 `Preferences`（macOS）
 3. 选择 `Plugins`
 4. 点击 `Marketplace` 标签
-5. 搜索 "Amazon Q" 并点击 `Install`
+5. 搜索 "AWS Core" 并点击 `Install`
 6. 重启 IDE
+7. 搜索 "Amazon Q" 并点击 `Install`
+8. 重启 IDE
 
 ![JetBrains 安装](/book-of-kiro/images/q_dev/jetbrains-install.png)
 
@@ -47,10 +51,13 @@ Amazon Q Developer 支持以下主流 IDE，选择你使用的 IDE 查看具体�
 **特别说明**：需要额外配置才能正常使用
 
 **安装步骤**：
+
 1. 打开 Android Studio
 2. 进入 `File` → `Settings` → `Plugins`
-3. 搜索 "Amazon Q" 并安装
+3. 搜索 "AWS Core" 并安装
 4. 重启 Android Studio
+5. 搜索 "Amazon Q" 并安装
+6. 重启 Android Studio
 
 **重要配置**：
 直接安装后可能无法正常使用聊天面板，需要进行以下配置：
@@ -67,10 +74,12 @@ Amazon Q Developer 支持以下主流 IDE，选择你使用的 IDE 查看具体�
 {{% tab "其他 IDE" %}}
 
 **Eclipse**
+
 - 功能：基础功能支持
 - 安装：通过 Eclipse Marketplace 搜索 "Amazon Q"
 
 **Visual Studio**
+
 - 平台：Windows 平台
 - 安装：通过 Visual Studio Marketplace 搜索 "Amazon Q"
 
@@ -106,16 +115,19 @@ Amazon Q Developer 支持以下主流 IDE，选择你使用的 IDE 查看具体�
 {{% tab "macOS" %}}
 
 **下载安装包安装（推荐）**：
+
 1. 访问 [官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html)
 2. 下载适合 macOS 的安装包
 3. 按照说明完成安装
 
-**通过Homebrew安装**:
+**通过 Homebrew 安装**:
+
 ```
 brew install --cask amazon-q
 ```
 
 **验证安装**：
+
 ```bash
 q --version
 ```
@@ -124,6 +136,7 @@ q --version
 {{% tab "Linux" %}}
 
 **Ubuntu**：
+
 ```bash
 # 下载并安装 deb 包
 wget https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.deb
@@ -135,6 +148,7 @@ sudo apt-get install -f
 参考 [官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html) 获取详细步骤
 
 **验证安装**：
+
 ```bash
 q --version
 ```
@@ -143,15 +157,18 @@ q --version
 {{% tab "Windows" %}}
 
 **WSL 方式**（推荐）：
+
 1. 安装 WSL2 和 Ubuntu
 2. 在 WSL 中按照 Linux 安装步骤进行
 
 **原生 Windows**：
+
 1. 访问 [详细教程](https://amzn-chn.feishu.cn/docx/YI5xdNBtRozbjkx5H3McqRm5nNg)
 2. 下载 Windows 安装包
 3. 按照教程完成安装和配置
 
 **验证安装**：
+
 ```cmd
 q --version
 ```
@@ -170,13 +187,15 @@ q --version
 {{% tabs %}}
 {{% tab "macOS" %}}
 
-**（选项1）GUI 登录**（推荐）：
+**（选项 1）GUI 登录**（推荐）：
 会打开图形界面进行登录配置
 
-**（选项2）命令行登录**：
+**（选项 2）命令行登录**：
+
 ```bash
 q login
 ```
+
 然后按提示输入：
 
 Start URL：从管理员获取
@@ -186,11 +205,13 @@ Region：AWS Identity Center 所在区域
 {{% tab "Linux" %}}
 
 **命令行登录**：
+
 ```bash
 q login
 ```
 
 然后按提示输入：
+
 - **Start URL**：从管理员获取
 - **Region**：AWS Identity Center 所在区域
 
@@ -198,11 +219,13 @@ q login
 {{% tab "Windows" %}}
 
 **WSL 环境**：
+
 ```bash
 q login
 ```
 
 **原生 Windows**：
+
 ```cmd
 q login
 ```
@@ -213,12 +236,14 @@ q login
 {{% /tabs %}}
 
 **登录信息说明**：
+
 - **Start URL**：从您的管理员处获取，可以在 AWS Identity Center 中修改默认登录地址
 - **Region**：从您的管理员处获取，选择 **AWS Identity Center 所在区域**（不是 Amazon Q Developer 所在区域）
 
 ![CLI 登录界面](/book-of-kiro/images/q_dev/cli-login.png)
 
 **验证登录**：
+
 ```bash
 q whoami
 ```
