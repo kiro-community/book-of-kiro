@@ -51,6 +51,20 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 
 ## **IDE 常见错误**
 
+### **Android Studio 无法展开聊天面板**
+
+参考 [安装与登录](https://kiro-community.github.io/book-of-kiro/amazon-q/installation/) 中的 Android Studio 章节，安装带有 JCEF 的 boot runtime
+
+### **JetBrains IDE 安装报错 Requires plugin 'aws.toolkit.core' to be installed**
+
+参考 [安装与登录](https://kiro-community.github.io/book-of-kiro/amazon-q/installation/) 中的 JetBrains IDE 章节，先安装 AWS Core 插件
+
+### **Too much context loaded**
+
+说明上下文内容太多，可以尝试使用 `/compact` 指令压缩当前会话的上下文，或新开一个会话。
+
+如果新开会话，立刻出现此报错，通常原因为：1）README 文件以及 `.amazonq/rules/` 文件夹内的内容太多。Amazon Q 会自动加载这些文件到上下文，如果内容太多，会把上下文撑满。2）MCP 配置过多，导致 MCP 工具描述占满上下文，请尝试禁用一些 MCP 服务器。
+
 ### **错误：unable to get local issuer certificate**
 
 通常是系统证书存在问题。您可以尝试在系统 shell 中（比如 Windows 的 cmd）执行 `curl https://baidu.com` 看看会不会有类似的证书问题。您需要联系您企业的 IT 服务来修复您本机的证书问题。
@@ -146,6 +160,14 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 配置 VPC Endpoint 后，可能无法使用 `q update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing-ssh-setup-autocomplete.html)，从公网下载 zip 安装包后手动安装。
 
+### **byte index is not a char boundary**
+
+Q CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求。此报错说明 Q CLI 处理了非法的 UTF-8 字符串，请检查本地文件是否包含非法 UTF-8 字符
+
+### **Prompt 如何定义和传递参数**
+
+目前只有 MCP Prompt 支持参数。可以使用 [shinkuro](https://github.com/DiscreteTom/shinkuro) 或类似的 MCP 服务器，把文件提示词转为 MCP 提示词，从而支持参数
+
 ## **问题上报**
 
 ### **如何在 Visual Studio Code 查看插件的日志？**
@@ -193,6 +215,12 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 通过上文导出的 idea.log 日志文件包含了所有的日志，请搜索 `software.aws.toolkits.jetbrains.services.amazonq` 查看与 Amazon Q 插件相关的日志行，关注其中的报错信息（如 ERROR, WARN）
 
 ### **如何查看 Q CLI 日志**
+
+**方法 1（推荐）**
+
+最新版本 Q CLI 可以使用 `/logdump` 命令把日志保存为一个 ZIP 文件。
+
+**方法 2**
 
 您可以使用 `-vvv` 参数启动 Q CLI 来生成日志，如 `q -vvv chat`。
 
