@@ -156,6 +156,10 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 ## **CLI 常见错误**
 
+### **如何还原默认 Agent**
+
+使用 Q CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `q settings --delete chat.defaultAgent` 删除设置来还原默认 Agent
+
 ### **无法升级**
 
 配置 VPC Endpoint 后，可能无法使用 `q update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing-ssh-setup-autocomplete.html)，从公网下载 zip 安装包后手动安装。
