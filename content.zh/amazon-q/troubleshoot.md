@@ -156,6 +156,12 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 ## **CLI 常见错误**
 
+### **使用苹果原生 Terminal 时崩溃**
+
+建议使用 iTerm2 作为 Terminal 来使用 Q CLI。
+
+如果需要排查崩溃原因，可以尝试使用[此脚本](https://gist.github.com/DiscreteTom/601bdd428ccb4079eb5e01fb914769fd)收集 Terminal 日志后交给 Q CLI 来排查
+
 ### **如何还原默认 Agent**
 
 使用 Q CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `q settings --delete chat.defaultAgent` 删除设置来还原默认 Agent

@@ -71,9 +71,7 @@ uv python install 3.10
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_TOKEN"
-      },
-      "timeout": 10000,  // 10秒超时
-      "trust": false     // 运行前需确认
+      }
     }
   }
 }
@@ -248,8 +246,7 @@ await server.connect(transport);
     "company-tools": {
       "command": "node",
       "args": ["./mcp-servers/my-company-mcp-server.js"],
-      "cwd": ".",
-      "env": { "COMPANY_API_KEY": "$COMPANY_API_KEY" }
+      "env": { "COMPANY_API_KEY": "${COMPANY_API_KEY}" }
     }
   }
 }
@@ -277,4 +274,3 @@ echo $BRAVE_API_KEY
 "timeout": 30000  # 设置为 30 秒
 
 ```
-
