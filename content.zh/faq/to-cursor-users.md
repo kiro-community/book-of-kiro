@@ -57,7 +57,7 @@ Kiro 目前不支持使用忽略文件来控制文件访问。但是，您可以
 
 **问：Kiro 是否支持 SSE 和可流式 HTTP 传输？**
 
-Kiro 目前支持 MCP 服务器的 `stdio` 传输。虽然尚不支持 SSE 和可流式 HTTP，但您可以使用 [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) 作为远程 MCP 服务器的替代方案。大多数 MCP 用例在 stdio 传输下都能很好地工作。
+支持
 
 **问：Kiro 中是否有 MCP 市场？**
 

@@ -313,16 +313,16 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 <tr>
 <td><code>SSE</code> 传输</td>
 <td></td>
-<td>❌</td>
 <td>✅</td>
-<td>不关键。可以使用 `mcp-remote` 替代方案。</td>
+<td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>Streamable HTTP</code> 传输</td>
 <td></td>
-<td>❌</td>
 <td>✅</td>
-<td>不关键。可以使用 `mcp-remote` 替代方案。</td>
+<td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td>自动批准可信工具</td>

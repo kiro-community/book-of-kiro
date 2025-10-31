@@ -46,7 +46,7 @@ IDE 插件和 Q CLI 都支持。IDE 插件可以在聊天面板右上角配置 M
 
 ### **Q. 支持哪些 MCP Transport？**
 
-CLI 目前仅支持 stdio transport。IDE 插件支持 stdio 和 streamable HTTP，不支持 SSE。
+所有 MCP Transport (Stdio / SSE / Streamable HTTP)
 
 ### **Q. 是否支持知识库？**
 
