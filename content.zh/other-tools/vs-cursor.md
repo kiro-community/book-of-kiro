@@ -334,9 +334,9 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 <tr>
 <td>MCP 市场</td>
 <td>一键安装 MCP 服务器</td>
-<td>❌</td>
 <td>✅</td>
-<td>这不关键。客户可以从第三方市场安装 MCP 服务器。</td>
+<td>✅</td>
+<td>Kiro 提供了和 Cursor 类似的 Add to Kiro 按钮来实现一键安安装/td>
 </tr>
 <tr>
 <td rowspan="2"><strong>其他</strong></td>
