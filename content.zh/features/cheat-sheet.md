@@ -935,13 +935,13 @@ describe("功能名", () => {
 
 ### **如何设置全局 Steering 文档**
 
-目前 Kiro 无法设置全局 Steering 文档，只能在工作目录设置，以便进行更好的版本管理。
+Kiro v0.5.0 支持了全局 Steering 文档，只需要在 Steering 面板中点击加号，创建全局 Steering 文档即可。
 
-如果您确实有设置全局 Steering 文档的需求，可用的 workaround 为：在一个全局位置（比如用户目录、HTTP 服务器）创建 steering 文档，然后在项目 steering 文档中引用它，比如：
+全局 Steering 文档会被保存在 `~/.kiro/steering/` 目录下
 
-```md
-在进行任何操作之前，先读取 ~/steering/ 目录下的所有最佳实践
-```
+### **AGENTS.md**
+
+从 v0.5.0 开始，Kiro 默认会把 [AGENTS.md](https://agents.md/) 加入到 Steering 中
 
 ## **实践使用示例与最佳实践**
 
