@@ -361,7 +361,9 @@ curl -I https://kiro.dev
 
 ![](/book-of-kiro/images/kiro_log.png)
 
-点击 Kiro 底部栏的 "Report a bug / Suggest an idea" 按钮进行问题上报
+除了上述 OUTPUT 面板中的日志，还可以尝试查看页面日志。顶部栏点击 Help -> Toggle Developer Tools 即可打开开发者工具，点击其中的 Console 面板即可查看日志。
+
+日志收集完毕后，点击 Kiro 底部栏的 "Report issue" 按钮进行问题上报
 
 ## **清除本地文件**
 
