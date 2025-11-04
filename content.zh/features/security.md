@@ -170,7 +170,7 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
   "mcpServers": {
     "github": {
       "env": {
-        "GITHUB_TOKEN": "$GITHUB_TOKEN"  # 从环境变量读取
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"  # 从环境变量读取
       }
     }
   }
