@@ -70,7 +70,7 @@ uv python install 3.10
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_TOKEN"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
       }
     }
   }
@@ -111,7 +111,7 @@ GitHub 令牌的创建方法：
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-bravesearch"],
       "env": {
-        "BRAVE_API_KEY": "$BRAVE_API_KEY"
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       },
       "autoApprove": ["brave_search"]  // 搜索自动执行
     }
@@ -246,7 +246,9 @@ await server.connect(transport);
     "company-tools": {
       "command": "node",
       "args": ["./mcp-servers/my-company-mcp-server.js"],
-      "env": { "COMPANY_API_KEY": "${COMPANY_API_KEY}" }
+      "env": {
+        "COMPANY_API_KEY": "${COMPANY_API_KEY}"
+      }
     }
   }
 }

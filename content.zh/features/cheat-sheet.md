@@ -997,7 +997,7 @@ cat > .kiro/settings/mcp.json << 'EOF'
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-bravesearch"],
       "env": {
-        "BRAVE_API_KEY": "$BRAVE_API_KEY"
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       }
     }
   }
