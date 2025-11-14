@@ -24,15 +24,7 @@ translationKey: "q-dev-faq"
 - Kiro 是一个专为 AI 辅助开发而从头构建的独立 IDE
 - Amazon Q Developer 作为插件/扩展在现有开发环境中工作
 
-**问：我是 Amazon Q Developer Pro 用户。免费期结束后我还能使用 Kiro 吗？**
-
-在免费期结束后，需要选择订阅 Kiro 付费版本或保持 Free Tier （50 积分每月）。
-
 ## 通过 Amazon Q Developer Pro 订阅使用
-
-{{% hint info %}}
-**注意**：Kiro 和 Amazon Q Developer 为两个独立的产品。预览期间，目前开发者可以通过 Q Developer Pro 账号登陆体验 Kiro。 等 Kiro 发布后，产品上可能会有调整，敬请关注。
-{{% /hint %}}
 
 **问：如何使用我的 Amazon Q Developer Pro 账户登录 Kiro？**
 

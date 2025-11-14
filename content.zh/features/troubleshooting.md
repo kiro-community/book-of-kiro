@@ -15,6 +15,32 @@ weight: 99
 
 v0.5.0 版本以后，Kiro 会自动在 `Ctrl+L` 后添加一个空格，此时可以输入中文。但是如果用户删除了这个空格，就要手动添加空格了
 
+### **如何生成中文的 Commit Message**
+
+目前在版本管理界面的 🪄 按钮无法自定义语言，只能生成英文，也不会受到 Steering 文件影响。
+
+缓解的方案是：通过聊天面板，告诉 Kiro：“提交当前修改，使用中文 Commit Message”，让 Kiro 通过 git 命令行实现提交。
+
+为了让使用更加丝滑，您可以创建一个手动触发的 Agent Hooks，参考内容(`.kiro\hooks\manual-git-commit.kiro.hook`)：
+
+```json
+{
+  "enabled": true,
+  "name": "Git提交",
+  "description": "手动触发的钩子，用于将当前修改提交到Git，使用中文提交信息",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "查看当前的git修改，使用git status和git diff命令。创建一个有意义的中文提交信息来描述这些修改。然后执行：git add -A && git commit -m \"[你的中文提交信息]\"。提交信息应该清晰、简洁，遵循良好的提交信息规范，完全使用中文书写。"
+  }
+}
+```
+
+这样，当需要提交的时候，点击触发 Agent Hook 即可
+
 ### **更新 Kiro**
 
 打开命令面板 (Cmd+Shift+P)，输入“Kiro: Check for Updates”，并在更新后重新启动 Kiro。

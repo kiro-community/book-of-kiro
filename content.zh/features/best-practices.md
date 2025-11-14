@@ -5,7 +5,7 @@ weight: 80
 
 # **社区实践参考**
 
-本文内容引用自[官方 Discord 社区](https://discord.gg/kirodotdev)中的 [best practice 频道](https://discord.com/channels/1374034175430230016/1395754118378815558)
+本文内容引用自[官方 Discord 社区](https://discord.gg/kirodotdev)中的 [best practice 频道](https://discord.com/channels/1374034175430230016/1395754118378815558)与[飞书社区](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=813p0c86-3a7d-45b1-82a3-bc02f743369d)中的讨论
 
 ## **kiro-best-practices 仓库**
 
@@ -29,6 +29,19 @@ weight: 80
 ## **Steering Docs**
 
 以下是社区提供的参考 Steering Docs 和技巧
+
+### **中文回复**
+
+默认情况下 Kiro 的回复以及生成的各种文档都是英文的。可以通过创建全局 Steering 文档的方式让 Kiro 默认使用中文回复。具体方法：
+
+1. 展开左侧 Kiro 面板
+2. 点击 Agent Steering 面板的加号
+3. 选择 Global Agent Steering，也就是全局 Steering 文档
+4. 清空默认的文件内容后，输入以下内容
+
+```md
+使用中文回复，使用中文编写代码注释
+```
 
 ### **No Assumptions Policy**
 
