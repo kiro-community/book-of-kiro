@@ -4,13 +4,15 @@ weight: 999
 bookToc: true
 ---
 
+# **迁移到 Kiro**
+
 如果您已经订阅 Amazon Q Developer Pro，并且想要迁移到 Kiro，可以参考以下步骤。
 
-## 管理员操作
+## **管理员操作**
 
-### 升级订阅
+### **升级订阅**
 
-首先，登录 Amazon Q Developer 控制台，在订阅界面，点击 Upgrade to Kiro
+首先，[登录 Kiro 控制台](https://console.aws.amazon.com/amazonq/developer/home?region=us-east-1)，在左侧面板选择 Amazon Q Developer 订阅界面，然后点击 Upgrade to Kiro
 
 ![upgrade-button](/book-of-kiro/images/q_dev/upgrade-button.png)
 
@@ -28,13 +30,13 @@ bookToc: true
 
 至此即完成了订阅的升级。原本 Amazon Q Developer Pro 的订阅已被取消，被升级为了 Kiro 订阅。
 
-### 启用数据统计和指标
+### **启用数据统计和指标**
 
 由于 Kiro 的数据指标和 Amazon Q Developer 的数据指标是两套不同的系统，您还需要为 Kiro 启动 Dashboard, Prompt Logging 和 用户级指标 (User Activity Report)。
 
 ![upgrade-settings](/book-of-kiro/images/q_dev/upgrade-settings.png)
 
-## 用户操作
+## **用户操作**
 
 管理员完成上述步骤后，用户只需要退出 Kiro 客户端并重新启动，即可刷新登录状态，对话中也可以看到消耗的 Credit 以及耗时
 
