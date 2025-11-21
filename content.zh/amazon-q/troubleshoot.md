@@ -33,11 +33,13 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
 
-### **登录报错：有些内容无法计算**
+### **登录报错：有些内容无法计算(Something doesn't compute)**
 
 请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
 
 如果报错信息是：“有些内容无法计算：我们无法验证您的登录凭证，请重试”，说明您的用户名或密码填写有误。
+
+如果上述信息无误，请检查您的系统时间是否正确。
 
 ### **错误：not authorized to make this call**
 

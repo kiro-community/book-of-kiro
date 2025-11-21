@@ -42,6 +42,8 @@ bookToc: true
 
 管理员完成上述步骤后，用户只需要退出 Kiro 客户端并重新启动，即可刷新登录状态，对话中也可以看到消耗的 Credit 以及耗时
 
+> 登陆凭证的更新有延迟。如果重启客户端、重新登录，还是无法查看到 Credit 用量，请等待最大 24 小时后重试
+
 ![credit-usage](/book-of-kiro/images/q_dev/credit-usage.png)
 
 ### **迁移 Q CLI 到 Kiro CLI**
