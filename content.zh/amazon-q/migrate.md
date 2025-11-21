@@ -16,7 +16,7 @@ bookToc: true
 
 ![upgrade-button](/book-of-kiro/images/q_dev/upgrade-button.png)
 
-选择要进行升级的用户，然后点击右上角选择 Kiro Plan，然后点击下一步
+选择要进行升级的用户或组，然后点击右上角选择 Kiro Plan，然后点击下一步
 
 ![select-user-to-upgrade](/book-of-kiro/images/q_dev/select-user-to-upgrade.png)
 
@@ -41,3 +41,9 @@ bookToc: true
 管理员完成上述步骤后，用户只需要退出 Kiro 客户端并重新启动，即可刷新登录状态，对话中也可以看到消耗的 Credit 以及耗时
 
 ![credit-usage](/book-of-kiro/images/q_dev/credit-usage.png)
+
+## **FAQ**
+
+### **升级 Kiro 的订阅后还可以使用 Amazon Q Developer 吗？**
+
+可以，IDE 插件和 CLI 都可以继续使用
