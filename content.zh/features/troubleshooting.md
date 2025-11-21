@@ -5,7 +5,25 @@ weight: 99
 
 # **故障排查完全指南**
 
-## **常见错误及解决方案**
+## **IDE 常见错误及解决方案**
+
+### **CPU/内存占用过高**
+
+1. 确保升级到 v0.6.0 版本以上
+2. 确保设置中 Codebase Indexing 已禁用
+
+原因：Codebase Indexing 功能会对项目文件进行索引，可能会占用较多的 CPU 和内存资源，特别在项目较大时，资源占用尤为明显。如果不需要该功能，建议禁用以提升性能。v0.6.0 版本默认禁用了此功能，并在设置中提供了开关选项。
+
+### **上下文菜单中没有 `#Codebase` 和 `#Repository Map` 选项**
+
+这两个选项需要在设置中启用 Codebase Indexing 才能激活。但是需要注意：启用 Codebase Indexing 后可能会导致 CPU/内存占用过高。
+
+Agentic Coding 时代基于 Local RAG 的 Codebase indexing 不再是必选项，它会消耗额外性能（CPU 和内存），召回效果不稳定，并且可以使用 fs_search tool 或类似的 CLI 代替，甚至效果更好。所以并不建议使用
+
+建议的 workaround:
+
+- 直接通过聊天告诉 AI “在代码库中搜索 XXX”，利用 fs_search tool 进行搜索
+- 使用 [ast-grep](https://github.com/ast-grep/ast-grep) 等专用 CLI 工具实现相关代码搜索
 
 ### **使用快捷键 Ctrl+L 添加代码后无法输入中文**
 
@@ -140,7 +158,6 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 
 - 没有 Q Developer Pro 订阅 → 请使用 Builder ID 或社交账号登录
 - 区域设置错误 → 请确认公司使用的 IAM Identity Center 的区域（不是 Amazon Q Developer 订阅的区域）。
-- Kiro 目前仅支持 us-east-1 区域的订阅，请确保 Amazon Q Developer 的订阅在 us-east-1。
 - Start URL 错误 → 请联系 IT 部门确认正确的 URL。示例：https://your-company.awsapps.com/start
 
 ### **MCP 服务器连接错误**
@@ -345,7 +362,7 @@ if (Test-Path $kiro) {
 
 如果您使用 IAM Identity Center 进行登录，您可以在 IAM Identity Center 中设置会话有效时间为 90 天，来避免频繁登录。参考[官方文档](https://docs.aws.amazon.com/singlesignon/latest/userguide/90-day-extended-session-duration.html)。
 
-## **高级调试技巧**
+### **高级调试技巧**
 
 ```BASH
 # 查看 Kiro 各服务的日志
@@ -374,28 +391,11 @@ curl -I https://kiro.dev
 
 ```
 
-## **问题上报**
-
-如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Kiro 在某个问题上能稳定复现，建议获取 Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
-
-**日志获取方式：**
-
-1. 打开 Kiro 的 OUTPUT。通过点击菜单栏的 View，再点击 Output 打开面板
-2. 下拉选择 Kiro 相关的日志，如 Kiro Logs。您可以看下哪个日志里面有报错
-3. 点击齿轮按钮，选择 Trace 类型的日志
-4. 可以点击选项按钮，在编辑器中打开日志以便复制和保存
-
-![](/book-of-kiro/images/kiro_log.png)
-
-除了上述 OUTPUT 面板中的日志，还可以尝试查看页面日志。顶部栏点击 Help -> Toggle Developer Tools 即可打开开发者工具，点击其中的 Console 面板即可查看日志。
-
-日志收集完毕后，点击 Kiro 底部栏的 "Report issue" 按钮进行问题上报
-
-## **清除本地文件**
+### **清除本地文件**
 
 如果以上方法无法使 Kiro 正常工作，也可以尝试彻底清除本地文件后重新安装 Kiro。
 
-### Windows
+#### Windows
 
 - 停止所有正在运行的 Kiro 进程
   - `taskkill /f /im Kiro.exe`
@@ -413,7 +413,73 @@ curl -I https://kiro.dev
   - `if exist "%USERPROFILE%\Desktop\kiro.lnk" del /q "%USERPROFILE%\Desktop\kiro.lnk"`
   - `if exist "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro" rmdir /s /q "%APPDATA%\Microsoft\Windows\Start Menu\Programs\kiro"`
 
-### MacOS
+#### MacOS
 
 - 删除 `~/.kiro`
 - 删除 `Library/Application Support/Kiro`
+
+## **CLI 常见错误**
+
+### **使用苹果原生 Terminal 时崩溃**
+
+建议使用 iTerm2 作为 Terminal 来使用 Kiro CLI。
+
+如果需要排查崩溃原因，可以尝试使用[此脚本](https://gist.github.com/DiscreteTom/601bdd428ccb4079eb5e01fb914769fd)收集 Terminal 日志后交给 Kiro CLI 来排查
+
+### **如何还原默认 Agent**
+
+使用 Kiro CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `kiro-cli settings --delete chat.defaultAgent` 删除设置来还原默认 Agent
+
+### **无法升级**
+
+配置 VPC Endpoint 后，可能无法使用 `kiro-cli update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://kiro.dev/docs/cli/installation/#with-a-zip-file)，从公网下载 zip 安装包后手动安装。
+
+### **byte index is not a char boundary**
+
+Kiro CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求。此报错说明 Kiro CLI 处理了非法的 UTF-8 字符串，请检查本地文件是否包含非法 UTF-8 字符
+
+### **Prompt 如何定义和传递参数**
+
+目前只有 MCP Prompt 支持参数。可以使用 [shinkuro](https://github.com/DiscreteTom/shinkuro) 或类似的 MCP 服务器，把文件提示词转为 MCP 提示词，从而支持参数
+
+## **用户管理**
+
+### **如何使用 API 实现订阅或批量订阅？**
+
+目前 Kiro 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-management-api).
+
+## **问题上报**
+
+### **IDE 问题上报**
+
+如果是偶发性的问题（例如，AI 幻觉、命令参数不正确）是正常现象。如果 Kiro 在某个问题上能稳定复现，建议获取 Logs 提供给 AWS Support 或者 AWS 解决方案架构师。
+
+**日志获取方式：**
+
+1. 打开 Kiro 的 OUTPUT。通过点击菜单栏的 View，再点击 Output 打开面板
+2. 下拉选择 Kiro 相关的日志，如 Kiro Logs。您可以看下哪个日志里面有报错
+3. 点击齿轮按钮，选择 Trace 类型的日志
+4. 可以点击选项按钮，在编辑器中打开日志以便复制和保存
+
+![](/book-of-kiro/images/kiro_log.png)
+
+除了上述 OUTPUT 面板中的日志，还可以尝试查看页面日志。顶部栏点击 Help -> Toggle Developer Tools 即可打开开发者工具，点击其中的 Console 面板即可查看日志。
+
+日志收集完毕后，点击 Kiro 底部栏的 "Report issue" 按钮进行问题上报
+
+### **如何查看 Kiro CLI 日志**
+
+最新版本 Kiro CLI 可以使用 `/logdump` 命令把日志保存为一个 ZIP 文件。
+
+### **我有 Kiro CLI 问题希望上报给产品团队，请问需要提供哪些信息？**
+
+为加速我们排查您遇到的问题，我们建议您复现问题，并提供如下信息给 AWS Support 或者 AWS 解决方案架构师：
+
+**必须项：**
+
+1. 日志信息（建议去除敏感信息）。请参考上文获取 CLI 的日志
+2. CLI 的版本信息，使用 `kiro-cli --version` 可以查看当前版本。如果不是最新版，您可以尝试执行 `kiro-cli update` 升级到最新版后，再看下问题是否还存在
+3. 操作系统版本信息，如 Windows 11
+4. 问题描述，以及已经进行过哪些排查
+
+**可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
