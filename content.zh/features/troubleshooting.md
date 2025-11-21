@@ -7,6 +7,24 @@ weight: 99
 
 ## **常见错误及解决方案**
 
+### **CPU/内存占用过高**
+
+1. 确保升级到 v0.6.0 版本以上
+2. 确保设置中 Codebase Indexing 已禁用
+
+原因：Codebase Indexing 功能会对项目文件进行索引，可能会占用较多的 CPU 和内存资源，特别在项目较大时，资源占用尤为明显。如果不需要该功能，建议禁用以提升性能。v0.6.0 版本默认禁用了此功能，并在设置中提供了开关选项。
+
+### **上下文菜单中没有 `#Codebase` 和 `#Repository Map` 选项**
+
+这两个选项需要在设置中启用 Codebase Indexing 才能激活。但是需要注意：启用 Codebase Indexing 后可能会导致 CPU/内存占用过高。
+
+Agentic Coding 时代基于 Local RAG 的 Codebase indexing 不再是必选项，它会消耗额外性能（CPU 和内存），召回效果不稳定，并且可以使用 fs_search tool 或类似的 CLI 代替，甚至效果更好。所以并不建议使用
+
+建议的 workaround:
+
+- 直接通过聊天告诉 AI “在代码库中搜索 XXX”，利用 fs_search tool 进行搜索
+- 使用 [ast-grep](https://github.com/ast-grep/ast-grep) 等专用 CLI 工具实现相关代码搜索
+
 ### **使用快捷键 Ctrl+L 添加代码后无法输入中文**
 
 此问题在 [GitHub Issue](https://github.com/kirodotdev/Kiro/issues/1505) 中有跟进。
@@ -140,7 +158,6 @@ Add-Content $PROFILE 'if ($env:TERM_PROGRAM -eq "kiro") { . "$(kiro --locate-she
 
 - 没有 Q Developer Pro 订阅 → 请使用 Builder ID 或社交账号登录
 - 区域设置错误 → 请确认公司使用的 IAM Identity Center 的区域（不是 Amazon Q Developer 订阅的区域）。
-- Kiro 目前仅支持 us-east-1 区域的订阅，请确保 Amazon Q Developer 的订阅在 us-east-1。
 - Start URL 错误 → 请联系 IT 部门确认正确的 URL。示例：https://your-company.awsapps.com/start
 
 ### **MCP 服务器连接错误**
