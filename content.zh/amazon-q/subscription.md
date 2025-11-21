@@ -60,7 +60,7 @@ bookToc: true
 
 ### **Q. 如何使用 API 实现订阅或批量订阅？**
 
-目前 Amazon Q Developer 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-batch-register/).
+目前 Amazon Q Developer 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/amazon-q-developer-batch-register/).
 
 ### **Q. 为什么每天都要登录一次？如何延长会话时间？**
 

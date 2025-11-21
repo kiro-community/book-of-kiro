@@ -442,6 +442,12 @@ Kiro CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要�
 
 目前只有 MCP Prompt 支持参数。可以使用 [shinkuro](https://github.com/DiscreteTom/shinkuro) 或类似的 MCP 服务器，把文件提示词转为 MCP 提示词，从而支持参数
 
+## **用户管理**
+
+### **如何使用 API 实现订阅或批量订阅？**
+
+目前 Kiro 并没有公开 API/SDK ，但是有社区方案通过手动构造 SigV4 签名的方式实现了批量订阅（或基于 API 自动订阅），详见此 [GitHub Repo](https://github.com/DiscreteTom/kiro-management-api).
+
 ## **问题上报**
 
 ### **IDE 问题上报**
