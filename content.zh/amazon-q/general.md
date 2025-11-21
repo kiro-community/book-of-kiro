@@ -42,7 +42,7 @@ bookToc: true
 
 ### **Q. 是否支持 MCP？**
 
-IDE 插件和 Q CLI 都支持。IDE 插件可以在聊天面板右上角配置 MCP Server，目前没有 MCP marketplace。两者的具体配置手册请[查看文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/qdev-mcp.html)。
+支持。IDE 插件可以在聊天面板右上角配置 MCP Server，目前没有 MCP marketplace。两者的具体配置手册请[查看文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/qdev-mcp.html)。
 
 ### **Q. 支持哪些 MCP Transport？**
 
@@ -58,7 +58,7 @@ CLI 和 IDE 插件都支持将图片加入上下文。
 
 ### **Q. 是否支持 Rules？**
 
-IDE 插件和 Q CLI 都支持。目录为 `.amazonq/rules/**/*.md`。任何放置在 `.amazonq/rules` 下的 Markdown 文件都会自动作为上下文加载到对话中。请[参考文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/context-project-rules.html)。
+支持。目录为 `.amazonq/rules/**/*.md`。任何放置在 `.amazonq/rules` 下的 Markdown 文件都会自动作为上下文加载到对话中。请[参考文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/context-project-rules.html)。
 
 ### **Q. Agentic Coding 上下文大小是多少？**
 

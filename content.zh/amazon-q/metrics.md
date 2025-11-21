@@ -33,12 +33,6 @@ bookToc: true
 
 ### **Q. 本地聊天信息保存在哪里？**
 
-- CLI
-  - Linux: `~/.local/share/amazon-q/data.sqlite3`
-  - MacOS: `~/Library/Application Support/amazon-q/data.sqlite3`
-  - Windows: `~/AppData/Local/amazon-q/data.sqlite3`
-  - 导出 JSON 的工具：[Amazon Q CLI History Inspector](https://discretetom.github.io/q-cli-history-inspector/)
-  - 需要注意：目前 Q CLI 的历史记录是以 K/V 格式保存，Key 为目录路径，Value 为聊天历史记录的 JSON 原始数据。在相同目录启动 Q CLI 会话时，之前的同目录会话信息会被覆盖，所以并不能拿到所有的历史记录，只能拿到每个目录最新的聊天信息。 
 - IDE 插件
   - 全平台：`~/.aws/amazonq/history`
 

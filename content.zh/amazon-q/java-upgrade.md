@@ -17,7 +17,7 @@ Amazon Q Developer 提供强大的 Java 代码升级功能，帮助开发者自�
 {{% tabs %}}
 {{% tab "使用 qct-cli（推荐）" %}}
 
-Amazon Q Developer 对于 Java 升级的功能，还提供了一个专用的命令行工具 qct-cli （不是 q cli 或 aws cli）。如果您不希望 IDE 中的 Java 升级占用本地过多资源，可以在服务器或一些自动化环境中使用 qct-cli 实现 Java 代码升级。
+Amazon Q Developer 对于 Java 升级的功能，还提供了一个专用的命令行工具 qct-cli （不是 kiro cli 或 aws cli）。如果您不希望 IDE 中的 Java 升级占用本地过多资源，可以在服务器或一些自动化环境中使用 qct-cli 实现 Java 代码升级。
 
 qct-cli 是一个基于 Python 编写的程序，需要独立安装，安装与登录流程详见[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/run-CLI-transformations.html)。目前 qct-cli 仅支持 macOS/Linux，如果您需要在 Windows 上完成 Java 升级，请继续使用 IDE 插件的方式。
 

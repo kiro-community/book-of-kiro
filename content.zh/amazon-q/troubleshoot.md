@@ -154,30 +154,6 @@ IDE 插件会启动一个 Language Server 进程来解析工作目录下的源�
 
 如果网络确实不通畅，请检查 IDE 的网络代理设置、系统网络代理设置等网络配置
 
-## **CLI 常见错误**
-
-### **使用苹果原生 Terminal 时崩溃**
-
-建议使用 iTerm2 作为 Terminal 来使用 Q CLI。
-
-如果需要排查崩溃原因，可以尝试使用[此脚本](https://gist.github.com/DiscreteTom/601bdd428ccb4079eb5e01fb914769fd)收集 Terminal 日志后交给 Q CLI 来排查
-
-### **如何还原默认 Agent**
-
-使用 Q CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `q settings --delete chat.defaultAgent` 删除设置来还原默认 Agent
-
-### **无法升级**
-
-配置 VPC Endpoint 后，可能无法使用 `q update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing-ssh-setup-autocomplete.html)，从公网下载 zip 安装包后手动安装。
-
-### **byte index is not a char boundary**
-
-Q CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求。此报错说明 Q CLI 处理了非法的 UTF-8 字符串，请检查本地文件是否包含非法 UTF-8 字符
-
-### **Prompt 如何定义和传递参数**
-
-目前只有 MCP Prompt 支持参数。可以使用 [shinkuro](https://github.com/DiscreteTom/shinkuro) 或类似的 MCP 服务器，把文件提示词转为 MCP 提示词，从而支持参数
-
 ## **问题上报**
 
 ### **如何在 Visual Studio Code 查看插件的日志？**
@@ -224,29 +200,6 @@ Q CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求�
 
 通过上文导出的 idea.log 日志文件包含了所有的日志，请搜索 `software.aws.toolkits.jetbrains.services.amazonq` 查看与 Amazon Q 插件相关的日志行，关注其中的报错信息（如 ERROR, WARN）
 
-### **如何查看 Q CLI 日志**
-
-**方法 1（推荐）**
-
-最新版本 Q CLI 可以使用 `/logdump` 命令把日志保存为一个 ZIP 文件。
-
-**方法 2**
-
-您可以使用 `-vvv` 参数启动 Q CLI 来生成日志，如 `q -vvv chat`。
-
-不同操作系统的日志存储路径不同：
-
-- MacOS
-  - `$TMPDIR/qlog/`
-- Linux
-  - `$XDG_RUNTIME_DIR/qlog/`
-  - `$TMPDIR/qlog/`
-  - `/tmp/qlog/`
-- Windows
-  - `%TEMP%\qlog\`
-
-参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/troubleshooting-q-logs.html#cli-logs)。
-
 ### **浏览器登录页面无法加载，白屏，如何反馈**
 
 如果您为浏览器配置了网络代理，或配置了系统代理，请尝试关闭/开启代理后重试。
@@ -266,18 +219,5 @@ Q CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求�
 3. IDE 的版本信息，在 IDE 的帮助菜单中可以查看当前 IDE 的版本
 4. 操作系统版本信息，如 Windows 11
 5. 问题描述，以及已经进行过哪些排查
-
-**可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
-
-### **我有 Q CLI 问题希望上报给产品团队，请问需要提供哪些信息？**
-
-为加速我们排查您遇到的问题，我们建议您复现问题，并提供如下信息给 AWS Support 或者 AWS 解决方案架构师：
-
-**必须项：**
-
-1. 日志信息（建议去除敏感信息）。请参考上文获取 CLI 的日志
-2. CLI 的版本信息，使用 `q --version` 可以查看当前版本。如果不是最新版，您可以尝试执行 `q update` 升级到最新版后，再看下问题是否还存在
-3. 操作系统版本信息，如 Windows 11
-4. 问题描述，以及已经进行过哪些排查
 
 **可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
