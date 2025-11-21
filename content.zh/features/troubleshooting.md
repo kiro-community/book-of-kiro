@@ -33,6 +33,10 @@ Agentic Coding 时代基于 Local RAG 的 Codebase indexing 不再是必选项�
 
 v0.5.0 版本以后，Kiro 会自动在 `Ctrl+L` 后添加一个空格，此时可以输入中文。但是如果用户删除了这个空格，就要手动添加空格了
 
+### **如何启用自动代码补全**
+
+默认情况下 Kiro 的自动代码补全就是启用的状态。可以点击底部栏的 Autocomplete 按钮来查看和修改自动补全的设置
+
 ### **如何生成中文的 Commit Message**
 
 目前在版本管理界面的 🪄 按钮无法自定义语言，只能生成英文，也不会受到 Steering 文件影响。
@@ -345,6 +349,14 @@ if (Test-Path $kiro) {
 
 - 浏览器弹出后，完成授权应自动回到 Kiro；若浏览器地址栏出现 `http://127.0.0.1:3128/...`，说明回调端口正常。 [Hacker News](https://news.ycombinator.com/item?id=44562163&utm_source=chatgpt.com)
 ````
+
+### **登录报错：有些内容无法计算(Something doesn't compute)**
+
+请首先确认登录时 StartURL 和 Region 是否选择正确。如有需要，请联系您的管理员获取正确的 StartURL 和 Region。
+
+如果报错信息是：“有些内容无法计算：我们无法验证您的登录凭证，请重试”，说明您的用户名或密码填写有误。
+
+如果上述信息无误，请检查您的系统时间是否正确。
 
 ### **Improperly formed request**
 
