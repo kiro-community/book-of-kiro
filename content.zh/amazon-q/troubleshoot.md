@@ -51,7 +51,7 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 如果您着急使用，请通过 User 的方式添加用户！
 {{% /hint %}}
 
-## **IDE 常见错误**
+## **IDE 插件常见错误**
 
 ### **Android Studio 无法展开聊天面板**
 

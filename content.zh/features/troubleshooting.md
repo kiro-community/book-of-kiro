@@ -33,6 +33,12 @@ Agentic Coding 时代基于 Local RAG 的 Codebase indexing 不再是必选项�
 
 v0.5.0 版本以后，Kiro 会自动在 `Ctrl+L` 后添加一个空格，此时可以输入中文。但是如果用户删除了这个空格，就要手动添加空格了
 
+### **执行 MCP Tool 时报错**
+
+报错：Improperly formed request 或 An unexpected error occurred
+
+通常是 MCP Tool 的描述格式不规范，特别是 `input_schema` 字段，需要严格保证为合法的 JSON Schema。请检查您的 MCP Server 是否为最新版本
+
 ### **如何启用自动代码补全**
 
 默认情况下 Kiro 的自动代码补全就是启用的状态。可以点击底部栏的 Autocomplete 按钮来查看和修改自动补全的设置
@@ -358,6 +364,10 @@ if (Test-Path $kiro) {
 
 如果上述信息无误，请检查您的系统时间是否正确。
 
+### **如何清除本地登录缓存**
+
+请删除此文件：`~/.aws/sso/cache/kiro-auth-token.json`
+
 ### **Improperly formed request**
 
 通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
@@ -431,6 +441,14 @@ curl -I https://kiro.dev
 - 删除 `Library/Application Support/Kiro`
 
 ## **CLI 常见错误**
+
+### **执行 MCP Tool 时报错**
+
+报错：Improperly formed request 或 An unexpected error occurred
+
+通常是 MCP Tool 的描述格式不规范，特别是 `input_schema` 字段，需要严格保证为合法的 JSON Schema
+
+可以使用 `/tools schema` 子命令查看 MCP Tool 的描述，确认 `input_schema` 字段是否合法
 
 ### **使用苹果原生 Terminal 时崩溃**
 
