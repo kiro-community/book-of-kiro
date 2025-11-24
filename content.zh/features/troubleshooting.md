@@ -364,6 +364,10 @@ if (Test-Path $kiro) {
 
 如果上述信息无误，请检查您的系统时间是否正确。
 
+### **如何清除本地登录缓存**
+
+请删除此文件：`~/.aws/sso/cache/kiro-auth-token.json`
+
 ### **Improperly formed request**
 
 通常是由于 LLM 的幻觉导致，可以告诉 AI “重试” 或者 “继续” 或者 “go on”，如果多次重试仍然失败，可以尝试重新开始会话。
