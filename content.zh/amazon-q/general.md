@@ -14,20 +14,16 @@ bookToc: true
 
 不同的功能会使用不同的模型：
 
-- **CLI**: 目前支持 Claude Sonnet 3.5、3.7、4
-- **IDE 插件 中的 Agentic Coding**: 目前支持 Claude Sonnet 3.7 和 4
+- **IDE 插件 中的 Agentic Coding**: 目前支持 Claude 家族的模型
 - **IDE 插件 中的 inline suggestion**: 使用 AWS 自己训练的私有模型
 
 ### **Q. 是否支持模型选择？**
 
-支持。用户可以在 IDE Plugin 或者 CLI 中选择使用不同的模型，目前支持 Anthropic Claude 系列的模型。
+支持。用户可以在 IDE Plugin 中选择使用不同的模型，目前支持 Anthropic Claude 系列的模型。
 
 ### **Q. 有没有 API 的调用方式？**
 
-暂时没有。有两种功能方式：
-
-1. **使用 [Strands SDK](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjE7-SopZuPAxXExDgGHfN9GgoQFnoECAkQAQ&url=https%3A%2F%2Fstrandsagents.com%2Flatest%2F&usg=AOvVaw2mh9JxMjfarfKN-OGfvxn2&opi=89978449) 来构建类似的 Agent** - 按 token 收取费用。
-2. **将 Q Developer CLI 运行于虚拟机或者容器中** - 触发运行，请参考[相关博客](https://aws.amazon.com/cn/blogs/china/using-amazon-q-developer-to-build-an-enterprise-automated-code-review-process/)
+暂时没有
 
 ### **Q. 一个 Pro tier 账号可以登陆多个设备吗？**
 
@@ -36,7 +32,6 @@ bookToc: true
 ### **Q. 如何确认当前使用的是 Pro Tier 还是 Free Tier？**
 
 - **Q Developer IDE Plugin 中**: 您可以在登出按钮处查看登录状态
-- **Terminal 中**: 可以使用 `q whoami` 来确认登录状态
 
 ## **⚙️ 功能性问题**
 
@@ -54,7 +49,7 @@ bookToc: true
 
 ### **Q. 是否支持图片？**
 
-CLI 和 IDE 插件都支持将图片加入上下文。
+支持
 
 ### **Q. 是否支持 Rules？**
 

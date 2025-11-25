@@ -18,17 +18,18 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 - **Spec-driven development**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
 - **Agent Hooks**：当 IDE 中发生特定事件时执行预定义 Agent 操作的自动触发器
 - **灵活的自主性**：既有 Autopilot 模式（自主完成端到端任务）也有 Supervised 模式（应用更改前人工审查）
+- **Property Based Testing**：进一步提升代码质量的自动化测试方法
 
 **Cursor 的独特优势：**
 
 - **更多模型选择**：支持多个提供商（Anthropic、Google、OpenAI、xAI）并具有自动选择功能
 - **预测下一次编辑**：Tab-tab 功能，基于最近的更改预测您的下一次编辑
-- **记忆功能（Memories）& 检查点（Checkpoints）**：基于对话自动生成的规则，在会话间保持上下文；Agent 更改的自动快照，便于轻松回滚
+- **记忆功能（Memories**：基于对话自动生成的规则，在会话间保持上下文
 
 ## 功能对比
 
 {{% hint info %}}
-**最后对比日期**：2025 年 8 月 2 日
+**最后对比日期**：2025 年 11 月 25 日
 {{% /hint %}}
 
 <table>
@@ -47,14 +48,14 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 <td rowspan="4"><strong>模型</strong></td>
 <td>模型提供商</td>
 <td>LLM 模型提供商</td>
-<td>Anthropic: Claude Sonnet 3.7/4</td>
-<td>Anthropic: Claude Sonnet 3.5/3.7/4<br>Google: Gemini 2.5<br>OpenAI: GPT 4.1; GPT-4o; o3<br>xAI: Grok 3 Beta; Grok 3 Min</td>
-<td>Claude 4 是最佳编程模型</td>
+<td>Anthropic: Claude Sonnet</td>
+<td>Anthropic: Claude Sonnet<br>Google: Gemini<br>OpenAI: GPT<br>xAI: Grok</td>
+<td>Claude 是最佳编程模型</td>
 </tr>
 <tr>
 <td>自动模式</td>
 <td>基于容量和性能自动选择模型</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td></td>
 </tr>
@@ -105,7 +106,7 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 <tr>
 <td>检查点</td>
 <td>Agent 对代码库更改的自动快照。让您可以撤销 Agent 修改。</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td></td>
 </tr>
@@ -395,7 +396,7 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 ## 价格对比
 
 {{% hint info %}}
-**最后更新日期**：2025 年 9 月 24 日。如需最新定价信息，请查询 Kiro 和 Cursor 官网。
+**最后更新日期**：2025 年 11 月 25 日。如需最新定价信息，请查询 Kiro 和 Cursor 官网。
 {{% /hint %}}
 
 ### 个人版
@@ -473,7 +474,7 @@ Kiro 超过套餐后，费用为 $0.04/积分。</br>Cursor 超出套餐后，AU
 ### 企业版
 
 {{% hint warning %}}
-企业版通常支持 SSO (单点登陆)、用户管理、用量统计和统一账单等功能。Kiro 暂未公布其三档付费套餐是否都适用于企业，以下内容仅为参考。
+企业版通常支持 SSO (单点登陆)、用户管理、用量统计和统一账单等功能
 {{% /hint %}}
 
 - Kiro 价格套餐包含**固定积分**。

@@ -172,11 +172,10 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 
 - 想在公司内部正式部署 Kiro
 - 对安全性有严格要求的企业环境
-- 已经购买了 Amazon Q Developer Pro 的团队
 
 <span style="color:red;"> 注意事项</span>
 
-- 需要有 Amazon Q Developer Pro 的付费订阅
+- 需要有 [Kiro 企业级订阅](https://kiro.dev/enterprise/) 或 Amazon Q Developer Pro 的付费订阅
 - 需要公司 IT 部门协助进行配置
 - 不适合个人用户使用
 

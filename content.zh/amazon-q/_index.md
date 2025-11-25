@@ -17,20 +17,21 @@ Amazon Q Developer 是 AWS 推出的 AI 驱动的开发助手，为开发者提�
 {{% columns %}}
 
 ### **🆕 新手用户**
+
 如果你是第一次使用 Amazon Q Developer：
 
-1. **[5分钟快速入门](quick-start/)** - 从零开始，快速上手
+1. **[5 分钟快速入门](quick-start/)** - 从零开始，快速上手
 2. **[安装与登录](installation/)** - 详细的安装配置指南
 3. **[一般性问题](general/)** - 了解基本概念和定价
 
 <--->
 
 ### **🚀 进阶用户**
+
 如果你想深入使用 Amazon Q Developer：
 
-1. **[CLI 使用技巧](cli/)** - 命令行高级功能
-2. **[自定义配置](ide-plugin/#指定代码规范)** - 项目规则和提示词
-3. **[故障排查](troubleshoot/)** - 解决常见问题
+1. **[自定义配置](ide-plugin/#指定代码规范)** - 项目规则和提示词
+2. **[故障排查](troubleshoot/)** - 解决常见问题
 
 {{% /columns %}}
 
@@ -41,16 +42,15 @@ Amazon Q Developer 是 AWS 推出的 AI 驱动的开发助手，为开发者提�
 {{% columns %}}
 
 **基础使用**
-- **[安装与登录](installation/)** - IDE 插件和 CLI 的安装配置
-- **[IDE 插件功能介绍与FAQ](ide-plugin/)** - 在 IDE 中使用 Q Developer 插件
-- **[CLI 功能介绍与FAQ](cli/)** - 在命令行中使用 Q Developer CLI
 
+- **[安装与登录](installation/)** - IDE 插件的安装配置
+- **[IDE 插件功能介绍与 FAQ](ide-plugin/)** - 在 IDE 中使用 Q Developer 插件
 
 <--->
 
 **进阶功能**
-- **[Java 升级](java-upgrade/)** - Java 代码升级功能和费用
 
+- **[Java 升级](java-upgrade/)** - Java 代码升级功能和费用
 
 {{% /columns %}}
 

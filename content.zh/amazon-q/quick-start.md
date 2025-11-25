@@ -4,42 +4,23 @@ weight: 5
 bookToc: true
 ---
 
-# **⚡ 5分钟快速入门 Amazon Q Developer**
+# **⚡ 5 分钟快速入门 Amazon Q Developer**
 
 本指南帮助你在 5 分钟内开始使用 Amazon Q Developer，体验 AI 驱动的代码开发。
 
-## **第一步：选择你的使用方式**
-
-{{% columns %}}
-
-### **🖥️ IDE 插件（推荐新手）**
-
 **适合场景**：
+
 - 日常代码开发
 - 可视化操作
 - 团队协作
 
 **支持的 IDE**：
+
 - Visual Studio Code
 - JetBrains 全家桶
 - Eclipse、Visual Studio
 
-<--->
-
-### **⌨️ 命令行 CLI**
-
-**适合场景**：
-- 自动化脚本
-- 服务器环境
-- 高级定制
-
-**支持系统**：
-- macOS、Linux、Windows
-- 容器和虚拟机环境
-
-{{% /columns %}}
-
-## **第二步：快速安装**
+## **快速安装**
 
 {{% tabs %}}
 {{% tab "VS Code" %}}
@@ -62,21 +43,9 @@ bookToc: true
 ![JetBrains 安装](/book-of-kiro/images/q_dev/jetbrains-install.png)
 
 {{% /tab %}}
-{{% tab "CLI" %}}
-
-**macOS/Linux**：
-```bash
-# 使用官方安装脚本
-curl -sSL https://install.q.aws.dev | bash
-```
-
-**Windows**：
-参考[详细教程](https://amzn-chn.feishu.cn/docx/YI5xdNBtRozbjkx5H3McqRm5nNg)
-
-{{% /tab %}}
 {{% /tabs %}}
 
-## **第三步：登录账号**
+## **登录账号**
 
 {{% hint info %}}
 **需要准备**：从管理员获取 Start URL 和 Region 信息
@@ -89,19 +58,21 @@ curl -sSL https://install.q.aws.dev | bash
 
 ![登录流程](/book-of-kiro/images/q_dev/company_account.png)
 
-## **第四步：开始你的第一次对话**
+## **开始你的第一次对话**
 
 ### **🎯 推荐的第一次尝试**
 
 {{% columns %}}
 
 **代码生成**
+
 ```
 帮我创建一个 Python 函数，
 计算两个数字的最大公约数
 ```
 
 **代码解释**
+
 ```
 解释一下这段代码的作用：
 [粘贴你的代码]
@@ -110,12 +81,14 @@ curl -sSL https://install.q.aws.dev | bash
 <--->
 
 **代码优化**
+
 ```
 优化这个函数的性能：
 [粘贴你的代码]
 ```
 
 **添加测试**
+
 ```
 为这个函数生成单元测试：
 [粘贴你的代码]
@@ -181,7 +154,6 @@ curl -sSL https://install.q.aws.dev | bash
 ### **接下来可以探索**
 
 - **[IDE 插件高级技巧](ide-plugin/)** - 深入了解所有功能
-- **[CLI 自定义智能体](cli/)** - 创建专属的 AI 助手
 - **[故障排查](troubleshoot/)** - 解决使用中的问题
 
 ### **需要帮助？**
