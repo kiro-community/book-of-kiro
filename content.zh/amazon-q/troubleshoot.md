@@ -48,7 +48,7 @@ software.amazon.awssdk.services.codewhispererruntime.model.AccessDeniedException
 通常是由于用户是通过 AWS Identity Center Group 的方式添加的，这种情况下需要等待一段时间用户才能生效，不超过 24 小时。详情请查看文档。
 
 {{% hint info %}}
-如果您着急使用，请通过 User 的方式添加用户！
+如果您着急使用，请通过 User 的方式添加用户
 {{% /hint %}}
 
 ## **IDE 插件常见错误**

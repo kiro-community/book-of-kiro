@@ -9,15 +9,11 @@ translationKey: "q-dev-faq"
 
 本常见问题作为官方 [Kiro FAQ](https://kiro.dev/faq/) 的补充指南，专门针对 Amazon Q Developer 用户。
 
-{{% hint info %}}
-**注意**：目前 Kiro 正在预览期，快速发展中，信息可能不是最新的。
-{{% /hint %}}
-
 ## 一般问题
 
 **问：什么是 Kiro，Kiro 与 Amazon Q Developer 有什么区别？**
 
-**Kiro** 是一个具有高级 AI 功能和增强用户体验的 Agentic IDE（集成开发环境）。**Amazon Q Developer** 与您现有的 IDE（如 Visual Studio Code、JetBrains、Eclipse、Visual Studio）和终端集成。
+**Kiro** 是一个具有高级 AI 功能和增强用户体验的 Agentic IDE（集成开发环境）和 CLI（命令行程序）。**Amazon Q Developer** 与您现有的 IDE（如 Visual Studio Code、JetBrains、Eclipse、Visual Studio）集成。
 
 主要区别：
 
@@ -27,6 +23,8 @@ translationKey: "q-dev-faq"
 ## 通过 Amazon Q Developer Pro 订阅使用
 
 **问：如何使用我的 Amazon Q Developer Pro 账户登录 Kiro？**
+
+> 现阶段我们建议使用 [Kiro 企业级订阅](https://kiro.dev/enterprise/)来使用 Kiro，您可以[将您的 Amazon Q Developer Pro 订阅升级到 Kiro 订阅](https://kiro-community.github.io/book-of-kiro/amazon-q/migrate/)
 
 按照以下步骤使用您的 Amazon Q Developer Pro 账户登录：
 
