@@ -706,51 +706,62 @@ inclusion: manual
 
 ## ⚡ **Kiro Powers — 扩展生态系统的无限可能**
 
-### ⚡ **什么是 Kiro Powers？为什么它这么强大？**
+### ⚡ **什么是 Kiro Powers？**
 
-想象一下，如果 Kiro 不仅仅是一个 AI IDE，还能直接连接到你日常使用的各种开发工具和服务，会是什么样的体验？
+Kiro Powers 将 MCP（Model Context Protocol）、Steering 和 Hooks 打包成可重用的能力包，让你能够轻松扩展 Kiro 的功能。Powers 封装了来自开发工具提供商和领域专家的最佳实践，为设计、开发、部署和可观测性等各种用例提供智能指导。
 
-- "帮我在 Figma 中查看这个组件的设计稿"
-- "直接从 Kiro 部署到 Netlify"
-- "查询 Datadog 中的生产环境日志"
-- "在 Supabase 中创建新的数据表"
+{{% hint info %}}
+Kiro Powers 功能在 Kiro IDE 0.7+ 版本中可用。
+{{% /hint %}}
 
-这就是 **Kiro Powers** 的魔力！它通过 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 将 Kiro 与外部服务无缝集成，让你在一个界面中完成整个开发流程。🔌✨
+### 🚀 **Powers 的工作原理**
 
-### 🛠️ **丰富的 Powers 生态系统**
+#### **1️⃣ 发现或创建 Power**
+浏览来自合作伙伴或社区的精选 Powers，或者构建你自己的 Power。Powers 将 MCP、Steering 和 Hooks 打包成可重用的能力。
 
-Kiro Powers 涵盖了开发者日常工作的各个方面：
+#### **2️⃣ 一键安装**
+从网站或 IDE 中即时添加 Powers。Kiro 自动处理配置和设置，让专业能力在几秒钟内就能使用。
+
+#### **3️⃣ 按需激活**
+Powers 根据你的对话上下文动态加载。Kiro 评估已安装的 Powers 并仅激活相关的那些，保持你的 Agent 专注。
+
+### 🛠️ **官方 Powers 生态系统**
+
+基于 [kiro.dev/powers](https://kiro.dev/powers/) 的真实信息，当前可用的 Powers 包括：
 
 #### **🎨 设计与前端开发**
-- **Figma Power**：连接设计稿与代码组件，自动生成设计系统规则，保持设计与代码的一致性
-- **Netlify Power**：一键部署 React、Next.js、Vue 等现代 Web 应用到全球 CDN
+- **Design to Code with Figma** (by Figma)：连接 Figma 设计到代码组件，自动生成设计系统规则，映射 UI 组件到 Figma 设计，保持设计与代码的一致性
+- **Deploy web apps with Netlify** (by Netlify)：部署 React、Next.js、Vue 和其他现代 Web 应用到 Netlify 的全球 CDN，支持自动构建
 
 #### **🗄️ 数据库与后端服务**
-- **Supabase Power**：管理 Postgres 数据库、身份验证、存储和实时订阅功能
-- **Supabase Local Power**：本地开发环境的 Supabase 集成，支持完整的离线开发体验
-- **Neon Power**：无服务器 Postgres，支持数据库分支、自动扩缩容和零扩展
-- **Aurora DSQL Power**：AWS 的无服务器分布式 SQL 数据库，处理模式管理和查询执行
+- **Build a backend with Supabase** (by Supabase)：使用 Supabase 的 Postgres 数据库、身份验证、存储和实时订阅功能构建应用
+- **Build a backend (local) with Supabase** (by Supabase)：本地 Supabase 开发，让你在本地机器上的自包含环境中工作项目
+- **Build a database with Neon** (by Neon)：无服务器 Postgres，支持数据库分支、自动扩缩容和零扩展，完美适配现代开发工作流程
 
 #### **🏗️ 基础设施与部署**
-- **Terraform Power**：基础设施即代码，访问 Registry 提供商、模块、策略和 HCP Terraform 工作流管理
-- **AWS CDK Python Power**：使用 Python 构建 AWS 基础设施，遵循 AWS Well-Architected 框架最佳实践
+- **Deploy infrastructure with Terraform** (by HashiCorp)：使用 Terraform 构建和管理基础设施即代码，访问 Registry 提供商、模块、策略和 HCP Terraform 工作流管理
+- **Build infrastructure on AWS** (by Christian Bonzelet)：使用 Python 的 CDK 构建 AWS 基础设施，遵循 AWS Well-Architected 框架最佳实践
+- **Deploy a distributed SQL database on AWS** (by Rolf Koski)：针对 PostgreSQL 兼容的无服务器分布式 SQL 数据库 Aurora DSQL，管理模式、执行查询并处理具有 DSQL 特定约束的迁移
 
-#### **🔍 监控与调试**
-- **Datadog Power**：查询日志、指标、链路追踪、RUM 事件、事故和监控器，用于生产环境调试和性能分析
-- **Dynatrace Power**：使用 DQL 查询日志、指标、链路追踪、问题和 Kubernetes 事件
+#### **🔍 监控与可观测性**
+- **Datadog Observability** (by Datadog)：查询 Datadog 的日志、指标、链路追踪、RUM 事件、事故和监控器，用于生产环境调试和性能分析
+- **Dynatrace Observability** (by Dynatrace)：使用 DQL 查询 Dynatrace 的日志、指标、链路追踪、问题和 Kubernetes 事件，用于生产环境调试和性能分析
 
 #### **💳 支付与商务**
-- **Stripe Power**：构建支付集成，接受付款、管理订阅、处理账单和退款
+- **Stripe Payments** (by Stripe)：构建 Stripe 支付集成，接受付款、管理订阅、处理账单和退款
 
 #### **🧪 测试与 API 管理**
-- **Postman Power**：自动化 API 测试和集合管理，创建工作空间、集合、环境并程序化运行测试
+- **API Testing with Postman** (by Postman)：使用 Postman 自动化 API 测试和集合管理，创建工作空间、集合、环境并程序化运行测试
 
 #### **🤖 AI 与智能体开发**
-- **Strands Agent SDK Power**：使用 Bedrock、Anthropic、OpenAI、Gemini 或 Llama 模型构建 AI 智能体
-- **Amazon Bedrock AgentCore Power**：用于构建、部署和操作有效智能体的代理平台
+- **Build an agent with Strands** (by AWS)：使用 Strands Agent SDK 和 Bedrock、Anthropic、OpenAI、Gemini 或 Llama 模型构建 AI 智能体
+- **Build an agent with Amazon Bedrock AgentCore** (by AWS)：Amazon Bedrock AgentCore 是一个用于构建、部署和操作有效智能体的代理平台
 
 #### **🏢 企业级解决方案**
-- **SaaS Builder Power**：构建生产就绪的多租户 SaaS 应用，集成无服务器架构、计费系统和企业级安全
+- **SaaS Builder** (by Allen Helton)：构建生产就绪的多租户 SaaS 应用，集成无服务器架构、计费系统和企业级安全
+
+#### **🛠️ 开发者工具**
+- **Build a Power** (by Kiro Team)：构建和测试新 Kiro Powers 的完整指南，包含模板、最佳实践和验证
 
 ### 🚀 **Powers 的实际使用场景**
 
@@ -807,85 +818,84 @@ Kiro Powers 涵盖了开发者日常工作的各个方面：
 
 #### **安装和配置**
 ```md
-# 方法一：通过 Kiro Powers 市场
+# 方法一：通过 Kiro Powers 市场（推荐）
 1. 访问 https://kiro.dev/powers/
-2. 找到需要的 Power
+2. 浏览可用的 Powers
 3. 点击 "Add to Kiro" 按钮一键安装
 
 # 方法二：通过 Kiro IDE
-1. 打开 Kiro 设置面板
-2. 进入 "Powers" 或 "MCP" 配置页面
-3. 添加所需的 Power 配置
+1. 打开 Kiro IDE
+2. 在 Powers 面板中浏览和安装
+3. Kiro 自动处理配置和设置
 
-# 方法三：手动配置 MCP
+# 方法三：手动配置（高级用户）
 1. 编辑 .kiro/settings/mcp.json 文件
 2. 添加 Power 的配置信息
 3. 重启 Kiro 或重新连接 MCP 服务器
 ```
 
-#### **在聊天中使用 Powers**
+#### **在对话中使用 Powers**
 ```md
-# 直接在聊天中调用 Power 功能
+# Powers 会根据对话上下文自动激活
 
-"使用 Figma Power 获取登录页面的设计规范"
+"帮我设计一个登录页面" → 自动激活 Figma Power
 
-"通过 Supabase Power 创建一个新的产品表"
+"创建一个新的数据表" → 自动激活 Supabase Power
 
-"用 Datadog Power 查询过去24小时的错误日志"
+"查询生产环境的错误日志" → 自动激活 Datadog Power
 
-"使用 Netlify Power 部署当前项目到生产环境"
+"部署当前项目" → 自动激活 Netlify Power
 ```
 
 ### 🌟 **Powers 的独特优势**
 
-#### **🔗 无缝集成**
-- 不需要切换工具或打开多个窗口
-- 所有操作都在 Kiro 中完成
-- 上下文信息自动传递
+#### **🎯 智能激活**
+- Powers 根据对话上下文动态加载
+- 只激活相关的 Powers，保持 Agent 专注
+- 无需手动选择或切换工具
 
-#### **🤖 AI 驱动**
-- AI 理解你的意图，自动选择合适的 Power
-- 智能参数填充和错误处理
-- 基于项目上下文提供个性化建议
+#### **📦 封装最佳实践**
+- 来自工具提供商和领域专家的最佳实践
+- 标准化的工作流程和配置
+- 减少学习成本和配置复杂度
 
-#### **⚡ 高效协作**
-- 团队成员可以共享 Power 配置
-- 标准化的工作流程和最佳实践
-- 减少工具切换带来的认知负担
+#### **🔌 无缝集成**
+- 基于 MCP 协议的标准化集成
+- 一键安装，自动配置
+- 与 Kiro 的 Steering 和 Hooks 系统深度集成
 
-#### **🔒 安全可控**
-- 细粒度的权限控制
-- 可信工具的自动批准机制
-- 敏感操作的确认提示
+#### **🌍 开放生态**
+- 支持社区贡献的 Powers
+- 企业可以创建内部专用 Powers
+- 持续增长的 Powers 生态系统
 
 ### 🎯 **开发者生态**
 
 #### **创建自定义 Power**
-```md
-# 如果现有的 Powers 不满足需求，你可以：
+如果现有的 Powers 不满足需求，你可以：
 
-1. 📚 使用 Power Builder Power
-   "帮我创建一个连接 GitHub Issues 的自定义 Power"
+1. **使用 "Build a Power" Power**：Kiro 团队提供的完整指南，包含模板、最佳实践和验证工具
 
-2. 🛠️ 基于 MCP 协议开发
+2. **基于 MCP 协议开发**：
    - 遵循 Model Context Protocol 标准
-   - 使用 TypeScript/Python/Go 等语言
-   - 发布到社区供其他开发者使用
+   - 使用 TypeScript、Python、Go 等语言
+   - 将 MCP、Steering 和 Hooks 打包成可重用的能力
 
-3. 🌍 贡献到开源社区
-   - 提交到 Kiro Powers 市场
+3. **贡献到社区**：
+   - 提交到 [Kiro Powers 提交页面](https://kiro.dev/powers/submit/)
    - 与全球开发者分享你的创新
-```
+   - 帮助扩展 Kiro 生态系统
 
 #### **企业级定制**
-```md
-# 企业可以创建内部专用的 Powers：
-
+企业可以创建内部专用的 Powers：
 - 连接内部 API 和服务
 - 集成企业级安全和合规要求
 - 定制化的工作流程和审批机制
 - 与现有 DevOps 工具链无缝对接
-```
+
+{{% hint info %}}
+想要了解更多 Powers 或提交你自己的 Power？访问 [kiro.dev/powers](https://kiro.dev/powers/) 或查看 [Powers 提交页面](https://kiro.dev/powers/submit/)。
+{{% /hint %}}
 
 ---
 
