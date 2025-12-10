@@ -1,6 +1,6 @@
 ---
 title: "vs. Cursor"
-weight: 10
+weight: 60
 bookToc: false
 ---
 
@@ -565,3 +565,78 @@ Kiro 超过套餐后，费用为 $0.04/积分。</br>Cursor 超出套餐后，AU
 **Cursor 优势**：
 
 - 使用非 Claude 模型会更便宜
+
+## Cursor 用户常见问题
+
+### 🎯 **Kiro 的独特优势**
+
+**问：Kiro 相比 Cursor 有什么独特功能？**
+
+Kiro 提供了 Cursor 所缺乏的几个独特功能：
+
+- **Spec Mode**：结构化处理复杂开发任务的方法，将软件开发过程正式化
+- **Agent Hooks**：针对特定 IDE 事件的自动化触发器，当 IDE 中发生特定事件时执行预定义 Agent 操作
+- **完整平台方案**：IDE + CLI + Autonomous Agent 三位一体，提供全方位的开发体验
+- **灵活的 Agent 控制**：可在 Autopilot 模式和 Supervised 模式之间选择
+
+### 🤖 **Agent 功能**
+
+**问：什么是 Autopilot 模式？**
+
+Kiro 的 Agent 支持 Autopilot 模式和 Supervised 模式。Autopilot 模式允许 Kiro 在打开的工作区内自主修改文件。Supervised 模式允许用户在应用更改之前审查和批准更改。
+
+**问：Kiro 是否像 Cursor 一样有检查点功能？**
+
+是的，Kiro 支持检查点功能，可以自动创建代码库更改的快照，让您可以撤销 Agent 修改。
+
+**问：Kiro 是否支持带有待办事项和队列的 Agent 规划？**
+
+Kiro 没有像 Cursor 那样内置的带有待办事项和队列的 Agent 规划功能。但是，Kiro 提供了 **Spec Mode** - 一种独特的结构化方法来处理复杂的开发任务，将软件开发过程正式化。这为复杂项目提供了比简单待办事项列表更好的组织方式。
+
+Spec Mode 执行的任务，以及 Agent Hooks 执行的任务，会被放置在任务队列中。
+
+### 🧠 **模型和 API**
+
+**问：我可以在 Kiro 中使用自己的 API 密钥吗？**
+
+目前，Kiro 不支持直接使用 API 密钥。API 密钥通常比订阅费用更高。在 Cursor 中，如果使用 API 密钥，Agent 等核心功能会被禁用。
+
+**问：Kiro 是否有自动选择模型的模式？**
+
+是的，Kiro 默认使用 Auto 模型，会基于容量和性能自动选择最适合的模型。
+
+### 📚 **上下文和记忆**
+
+**问：Kiro 是否像 Cursor 一样有记忆功能？**
+
+Kiro 没有自动记忆生成功能。相反，Kiro 使用 **Steering** - 一种更结构化的项目规则方法，您可以明确定义和管理。这让您更好地控制如何在会话之间维护上下文。
+
+**问：我可以使用 ignore 文件来控制 Kiro 看到的内容吗？**
+
+Kiro 目前不支持使用忽略文件来控制文件访问。但是，您可以使用 Kiro 的上下文控制，如 #File 和 #Folder 来明确指定要在对话中包含的内容。
+
+### 🔌 **MCP（模型上下文协议）**
+
+**问：Kiro 是否支持 SSE 和可流式 HTTP 传输？**
+
+是的，Kiro 支持 SSE 和 Streamable HTTP 传输，与 Cursor 的 MCP 支持相当。
+
+**问：Kiro 中是否有 MCP 市场？**
+
+Kiro 提供了类似 Cursor 的 MCP 集成体验，包括 "Add to Kiro" 按钮来实现一键安装。MCP 生态系统正在快速增长，有许多社区贡献的服务器可用。
+
+### 🚀 **高级功能**
+
+**问：Kiro 是否有后台/远程 Agent？**
+
+Kiro 目前不支持后台或远程 Agent。但是，这些功能在 Cursor 中需要额外收费，对大多数开发工作流程来说并不重要。Kiro 的本地 Agent 功能全面且高效。
+
+**问：Kiro 的完整平台方案有什么优势？**
+
+Kiro 不仅仅是一个 IDE，而是包含三大组件的完整 AI 开发平台：
+
+- **Kiro IDE**：基于 VS Code 的智能开发环境
+- **Kiro CLI**：强大的命令行工具，支持自定义 Agent 和工作流程自动化
+- **Kiro Autonomous Agent**：前沿的自主智能体，能够跨仓库工作并独立处理开发任务
+
+这种完整平台方案提供了 Cursor 无法匹敌的全方位开发体验。

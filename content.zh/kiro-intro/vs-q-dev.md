@@ -1,6 +1,6 @@
 ---
 title: "vs. Amazon Q Developer"
-weight: 20
+weight: 70
 bookToc: false
 ---
 
@@ -320,3 +320,95 @@ Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI 开发工具。Kiro 是一�
 </tr>
 </tbody>
 </table>
+
+## Amazon Q Developer 用户常见问题
+
+### 🎯 **基本概念**
+
+**问：什么是 Kiro，Kiro 与 Amazon Q Developer 有什么区别？**
+
+**Kiro** 是一个完整的 AI 开发平台，包含 IDE、CLI 和 Autonomous Agent 三大组件，专为 AI 辅助开发而从头构建。**Amazon Q Developer** 主要作为插件/扩展在现有开发环境（如 Visual Studio Code、JetBrains、Eclipse、Visual Studio）中工作。
+
+主要区别：
+
+- **Kiro**：完整的独立 AI 开发平台，提供全方位的开发体验
+- **Amazon Q Developer**：IDE 插件形式，与现有开发环境集成
+
+### 🔐 **账户和登录**
+
+**问：如何使用我的 Amazon Q Developer Pro 账户登录 Kiro？**
+
+现阶段我们建议使用 [Kiro 企业级订阅](https://kiro.dev/enterprise/) 来使用 Kiro。如果您已有 Amazon Q Developer Pro 订阅，可以考虑[将订阅升级到 Kiro](../amazon-q/migrate/)。
+
+使用 Amazon Q Developer Pro 账户登录 Kiro 的步骤：
+
+1. 在登录页面上，选择 **Sign in with your organization identity**
+
+2. 在使用 AWS Identity Center 登录页面上：
+   - 输入起始 URL（例如：`https://your-company.awsapps.com/start`）
+   - 选择配置您的 AWS Identity Center 的 AWS 区域
+   - 请联系您的管理员获取这些信息
+
+3. 选择 **Continue** 并按照屏幕上的说明完成身份验证过程
+
+### 🚀 **功能对比**
+
+**问：Kiro 相比 Amazon Q Developer 有什么独特优势？**
+
+Kiro 作为完整平台提供了 Amazon Q Developer 插件无法匹敌的功能：
+
+- **Spec Mode**：结构化处理复杂开发任务的方法，将软件开发过程正式化
+- **Agent Hooks**：当 IDE 中发生特定事件时执行预定义操作的自动触发器
+- **Autonomous Agent**：前沿的自主智能体，能够跨仓库工作并独立处理开发任务
+- **灵活的自主性控制**：Autopilot 模式（自主修改）和 Supervised 模式（应用前审查）
+- **完整的 CLI 集成**：强大的命令行工具，支持自定义 Agent 和工作流程自动化
+- **丰富的上下文引用**：支持 #Docs、#Git、#Rules、#Terminals、#Web 等多种上下文方式
+
+**问：Amazon Q Developer 有哪些 Kiro 暂时不支持的功能？**
+
+Amazon Q Developer 在某些方面仍有优势：
+
+- **GUI 配置**：图形界面配置 MCP 服务器，比 Kiro 的 JSON 文件配置更直观
+- **固定上下文项**：可以指定在聊天会话中自动添加到所有消息的上下文项
+- **Prompt Library**：内置提示库功能，可存储和重用常用提示
+- **Named Agent**：提供专门的 Java 升级（/transform）代理
+
+### 🔧 **技术细节**
+
+**问：Kiro 的 Steering 系统与 Amazon Q Developer 的 Project Rules 有什么区别？**
+
+- **Kiro Steering**：提供更灵活的包含模式
+  - 始终包含：类似 Project Rules 的默认行为
+  - 条件包含：基于文件匹配模式自动包含
+  - 手动包含：通过 #steering 命令按需包含
+
+- **Amazon Q Developer Project Rules**：仅支持始终包含模式，所有规则都会自动添加到每次对话中
+
+**问：如何在 Kiro 中实现类似 Prompt Library 的功能？**
+
+虽然 Kiro 没有内置的 Prompt Library，但您可以：
+
+1. 将常用提示保存在手动 Steering 文件中
+2. 使用 `#steering` 命令按需包含这些提示
+3. 这种方式提供了更灵活的提示管理和组织方式
+
+### 📈 **迁移和升级**
+
+**问：我应该从 Amazon Q Developer 迁移到 Kiro 吗？**
+
+这取决于您的需求：
+
+**选择 Kiro 如果您需要：**
+- 完整的 AI 开发平台体验
+- 结构化的 Spec 驱动开发方法
+- 跨仓库的自主 Agent 功能
+- 强大的 CLI 和自动化工具
+- 更灵活的上下文和规则管理
+
+**继续使用 Amazon Q Developer 如果您：**
+- 更喜欢在现有 IDE 中工作
+- 需要 GUI 配置 MCP 服务器
+- 依赖固定上下文项和 Prompt Library 功能
+- 主要进行 Java 开发并需要升级工具
+
+两个工具都是 AWS 出品，您可以根据项目需求和个人偏好选择最适合的工具。
