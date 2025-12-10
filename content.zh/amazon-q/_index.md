@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 6
 bookFlatSection: true
 title: "Amazon Q Developer"
 ---

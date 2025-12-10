@@ -20,6 +20,10 @@ theme = 'hugo-book'
       BookComments = false
       BookPortableLinks = true
       BookServiceWorker = true
+      BookCollapseSection = true
+      BookMenuCollapse = true
+      BookSectionCollapse = true
+      BookMenuFold = true
 
   [languages.zh]
     languageName = '中文'
@@ -37,6 +41,10 @@ theme = 'hugo-book'
       BookComments = false
       BookPortableLinks = true
       BookServiceWorker = true
+      BookCollapseSection = true
+      BookMenuCollapse = true
+      BookSectionCollapse = true
+      BookMenuFold = true
 
 [markup]
   [markup.goldmark]
@@ -48,14 +56,18 @@ theme = 'hugo-book'
 [params]
   # Global parameters that apply to all languages
   BookRepo = 'https://github.com/kiro-community/book-of-kiro'
+  BookCommitPath = 'commit'
+  BookEditPath = 'edit/main'
   BookEditPage = true
   BookSearch = true
   BookSection = '*'
   BookMenuBundle = '/menu'
   BookToC = true
-  BookComments = false
-  BookPortableLinks = true
   BookServiceWorker = true
+  BookCollapseSection = true
+  BookMenuCollapse = true
+  BookSectionCollapse = true
+  BookMenuFold = true
 
 [services]
   [services.googleAnalytics]
