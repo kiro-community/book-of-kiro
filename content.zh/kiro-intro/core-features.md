@@ -704,12 +704,198 @@ inclusion: manual
 
 ---
 
+## ⚡ **Kiro Powers — 扩展生态系统的无限可能**
+
+### ⚡ **什么是 Kiro Powers？为什么它这么强大？**
+
+想象一下，如果 Kiro 不仅仅是一个 AI IDE，还能直接连接到你日常使用的各种开发工具和服务，会是什么样的体验？
+
+- "帮我在 Figma 中查看这个组件的设计稿"
+- "直接从 Kiro 部署到 Netlify"
+- "查询 Datadog 中的生产环境日志"
+- "在 Supabase 中创建新的数据表"
+
+这就是 **Kiro Powers** 的魔力！它通过 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 将 Kiro 与外部服务无缝集成，让你在一个界面中完成整个开发流程。🔌✨
+
+### 🛠️ **丰富的 Powers 生态系统**
+
+Kiro Powers 涵盖了开发者日常工作的各个方面：
+
+#### **🎨 设计与前端开发**
+- **Figma Power**：连接设计稿与代码组件，自动生成设计系统规则，保持设计与代码的一致性
+- **Netlify Power**：一键部署 React、Next.js、Vue 等现代 Web 应用到全球 CDN
+
+#### **🗄️ 数据库与后端服务**
+- **Supabase Power**：管理 Postgres 数据库、身份验证、存储和实时订阅功能
+- **Supabase Local Power**：本地开发环境的 Supabase 集成，支持完整的离线开发体验
+- **Neon Power**：无服务器 Postgres，支持数据库分支、自动扩缩容和零扩展
+- **Aurora DSQL Power**：AWS 的无服务器分布式 SQL 数据库，处理模式管理和查询执行
+
+#### **🏗️ 基础设施与部署**
+- **Terraform Power**：基础设施即代码，访问 Registry 提供商、模块、策略和 HCP Terraform 工作流管理
+- **AWS CDK Python Power**：使用 Python 构建 AWS 基础设施，遵循 AWS Well-Architected 框架最佳实践
+
+#### **🔍 监控与调试**
+- **Datadog Power**：查询日志、指标、链路追踪、RUM 事件、事故和监控器，用于生产环境调试和性能分析
+- **Dynatrace Power**：使用 DQL 查询日志、指标、链路追踪、问题和 Kubernetes 事件
+
+#### **💳 支付与商务**
+- **Stripe Power**：构建支付集成，接受付款、管理订阅、处理账单和退款
+
+#### **🧪 测试与 API 管理**
+- **Postman Power**：自动化 API 测试和集合管理，创建工作空间、集合、环境并程序化运行测试
+
+#### **🤖 AI 与智能体开发**
+- **Strands Agent SDK Power**：使用 Bedrock、Anthropic、OpenAI、Gemini 或 Llama 模型构建 AI 智能体
+- **Amazon Bedrock AgentCore Power**：用于构建、部署和操作有效智能体的代理平台
+
+#### **🏢 企业级解决方案**
+- **SaaS Builder Power**：构建生产就绪的多租户 SaaS 应用，集成无服务器架构、计费系统和企业级安全
+
+### 🚀 **Powers 的实际使用场景**
+
+#### **场景一：全栈开发流程**
+```md
+# 一个完整的项目开发流程
+
+1. 📋 使用 Spec 模式定义需求
+   "创建一个用户管理系统"
+
+2. 🎨 连接 Figma Power 获取设计
+   "从 Figma 中获取用户列表页面的设计规范"
+
+3. 🗄️ 使用 Supabase Power 设置数据库
+   "在 Supabase 中创建 users 表，包含邮箱、姓名和创建时间字段"
+
+4. 💻 开发功能（Kiro IDE + Agent）
+   "基于设计稿和数据库结构实现用户管理界面"
+
+5. 🧪 使用 Postman Power 测试 API
+   "创建用户管理 API 的测试集合"
+
+6. 🚀 使用 Netlify Power 部署
+   "将应用部署到 Netlify 生产环境"
+
+7. 🔍 使用 Datadog Power 监控
+   "查看应用的性能指标和错误日志"
+```
+
+#### **场景二：问题排查与优化**
+```md
+# 生产环境问题快速定位
+
+1. 🚨 发现问题
+   "用户反馈登录功能异常"
+
+2. 🔍 Datadog Power 查询日志
+   "查询过去1小时内登录相关的错误日志"
+
+3. 📊 分析性能数据
+   "获取登录 API 的响应时间和错误率趋势"
+
+4. 🗄️ Supabase Power 检查数据
+   "检查用户表中的数据完整性"
+
+5. 🔧 修复并测试
+   "修复问题后使用 Postman Power 验证功能"
+
+6. 🚀 重新部署
+   "通过 Netlify Power 部署修复版本"
+```
+
+### 🔧 **如何使用 Kiro Powers**
+
+#### **安装和配置**
+```md
+# 方法一：通过 Kiro Powers 市场
+1. 访问 https://kiro.dev/powers/
+2. 找到需要的 Power
+3. 点击 "Add to Kiro" 按钮一键安装
+
+# 方法二：通过 Kiro IDE
+1. 打开 Kiro 设置面板
+2. 进入 "Powers" 或 "MCP" 配置页面
+3. 添加所需的 Power 配置
+
+# 方法三：手动配置 MCP
+1. 编辑 .kiro/settings/mcp.json 文件
+2. 添加 Power 的配置信息
+3. 重启 Kiro 或重新连接 MCP 服务器
+```
+
+#### **在聊天中使用 Powers**
+```md
+# 直接在聊天中调用 Power 功能
+
+"使用 Figma Power 获取登录页面的设计规范"
+
+"通过 Supabase Power 创建一个新的产品表"
+
+"用 Datadog Power 查询过去24小时的错误日志"
+
+"使用 Netlify Power 部署当前项目到生产环境"
+```
+
+### 🌟 **Powers 的独特优势**
+
+#### **🔗 无缝集成**
+- 不需要切换工具或打开多个窗口
+- 所有操作都在 Kiro 中完成
+- 上下文信息自动传递
+
+#### **🤖 AI 驱动**
+- AI 理解你的意图，自动选择合适的 Power
+- 智能参数填充和错误处理
+- 基于项目上下文提供个性化建议
+
+#### **⚡ 高效协作**
+- 团队成员可以共享 Power 配置
+- 标准化的工作流程和最佳实践
+- 减少工具切换带来的认知负担
+
+#### **🔒 安全可控**
+- 细粒度的权限控制
+- 可信工具的自动批准机制
+- 敏感操作的确认提示
+
+### 🎯 **开发者生态**
+
+#### **创建自定义 Power**
+```md
+# 如果现有的 Powers 不满足需求，你可以：
+
+1. 📚 使用 Power Builder Power
+   "帮我创建一个连接 GitHub Issues 的自定义 Power"
+
+2. 🛠️ 基于 MCP 协议开发
+   - 遵循 Model Context Protocol 标准
+   - 使用 TypeScript/Python/Go 等语言
+   - 发布到社区供其他开发者使用
+
+3. 🌍 贡献到开源社区
+   - 提交到 Kiro Powers 市场
+   - 与全球开发者分享你的创新
+```
+
+#### **企业级定制**
+```md
+# 企业可以创建内部专用的 Powers：
+
+- 连接内部 API 和服务
+- 集成企业级安全和合规要求
+- 定制化的工作流程和审批机制
+- 与现有 DevOps 工具链无缝对接
+```
+
+---
+
 ## 🎊 **总结**
 
-这三大特色功能让 Kiro 成为真正的智能开发平台：
+这四大特色功能让 Kiro 成为真正的智能开发平台：
 
 - **Spec 模式**：从模糊需求到清晰实现的结构化开发
-- **Agent Hooks**：自动化重复工作，提升开发效率
+- **Agent Hooks**：自动化重复工作，提升开发效率  
 - **Steering**：让 AI 深度理解项目，提供精准建议
+- **Kiro Powers**：连接整个开发生态系统，实现无缝的工具集成
 
 掌握了这些功能，你就能充分发挥 Kiro 的强大能力，享受前所未有的开发体验！🚀
