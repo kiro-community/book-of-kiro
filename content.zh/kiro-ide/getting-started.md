@@ -1,42 +1,22 @@
 ---
-title: "开始使用 Kiro"
-weight: 10
+title: "开始使用"
+weight: 21
 ---
 
-# **开始使用 Kiro**
+# **开始使用 Kiro IDE**
 
-## 📌 **前言：Kiro 是什么？为啥最近这么火？**
-
-Kiro 是 AWS 于 2025 年 7 月发布的划时代 AI 集成开发环境（IDE）。<br>
-“哈？又一个编辑器？VSCode、Cursor 不就够用了？”——如果你也这么想，那请先别急着关掉页面。因为**Kiro 真的不是普通的编辑器。**
-
-## 🤔 **和传统 IDE 的决定性差别**
-
-传统 IDE 写代码这件事，100% 都是你一个人在扛。<br>
-但 Kiro 不一样，它是你的 **AI 开发搭档**，能和你一起思考、提出建议、甚至动手写代码。<br>
-就像有个经验超强的前辈工程师，随时在旁边和你一起 pair programming 的感觉！<br>
-
-## ✨ **Kiro 能做什么（重点来了）**
-
-🤖 **和 AI 对话就能写代码**：只要说一句“帮我做个登录功能”，它真的就能搞出来<br>
-📋 **自动生成规格说明书**：从模糊的需求中，变出一份清清楚楚的 specs<br>
-🔧 **Agent Hooks 自动化操作**：比如你一保存文件，它就能自动跑测试、格式化代码<br>
-🎯 **Steering 记住项目知识点**：像“我们项目用 TypeScript 啦”这种背景，它记一次就好<br>
-🔌 **MCP 支持外部工具联动**：可以和 GitHub、AWS Docs、甚至 Web 搜索整合使用<br>
-🛡️ **安全的运行环境**：防止你一不小心“啊啊啊我把东西全删了”的悲剧发生<br>
-
-## 🚀 **快速上手 - 5 分钟启动 Kiro！**
+## 🚀 **快速上手 - 5 分钟启动 Kiro IDE！**
 
 ### **最速安装指南（真的只要 5 分钟）**
 
-首先，我们来安装 Kiro。不过别紧张，和安装普通 App 一样简单！<br>
+首先，我们来安装 Kiro IDE。不过别紧张，和安装普通 App 一样简单！<br>
 
 {{% hint info %}}
 
-1. 下载
-   访问 https://kiro.dev/downloads #支持 macOS、Windows 和 Linux<br>
+1. 下载 Kiro IDE
+   访问 https://kiro.dev/downloads 下载适合您系统的版本<br>
 
-2. 安装
+2. 安装 IDE
    macOS：将下载的 Kiro.app 拖到 Applications 文件夹<br>
    Windows：双击下载的安装程序运行<br>
    Linux：为 AppImage 添加执行权限后启动<br>
@@ -110,9 +90,9 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 
 <span style="color:red;">使用步骤</span>
 
-1. 点击 “Sign in with GitHub”
+1. 点击 "Sign in with GitHub"
 2. 浏览器会自动跳转，登录你的 GitHub
-3. 点击 “Authorize kirodotdev” 授权
+3. 点击 "Authorize kirodotdev" 授权
 4. 完成！可以马上开始用了 ✨
    {{% /hint %}}
 
@@ -134,9 +114,9 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 
 <span style="color:red;">操作步骤</span>
 
-1. 点击 “Sign in with Google”
+1. 点击 "Sign in with Google"
 2. 选择你的 Google 账号
-3. 点击 “Continue” 完成授权
+3. 点击 "Continue" 完成授权
 4. 搞定！是不是超轻松？✨
    {{% /hint %}}
 
@@ -158,7 +138,7 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 
 <span style="color:red;"> 操作步骤</span>
 
-1. 点击 “Login with AWS Builder ID”
+1. 点击 "Login with AWS Builder ID"
 2. 输入你的邮箱地址
 3. 设置登录密码
 4. 完成邮箱验证，就可以开始用了 ✅
@@ -181,17 +161,16 @@ Cmd+L（Mac） / Ctrl+L（Windows/Linux）
 
 <span style="color:red;"> 使用步骤</span>
 
-1. 选择 “Sign in with AWS IAM Identity Center”
+1. 选择 "Sign in with AWS IAM Identity Center"
 2. 输入 Start URL，例如：https://your-company.awsapps.com/start，请联系您的管理员获取
 3. 选择 Region（区域）：请联系您的管理员获取
 4. 联系公司 IT 部门完成相关设置
    {{% /hint %}}
 
-## **社区与资源**
+## **下一步**
 
-📖 [官方文档](https://kiro.dev/docs) <br>
-💬 [中文社区](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=6c4ic8c6-450f-4d54-8783-dadc42d0591d) <br>
-🐙 [GitHub](https://github.com/kirodotdev)<br>
+现在您已经成功安装并登录了 Kiro IDE，可以继续探索：
 
-**Welcome to the future of coding with Kiro! 🚀✨** <br>
-请一定要亲身体验这场改变开发常识的全新体验～ ☺️
+- **[插件管理](extensions.md)** - 扩展 IDE 功能
+- **[安全设置](security.md)** - 配置 AI 自主性级别
+- **[故障排查](troubleshooting.md)** - 解决常见问题

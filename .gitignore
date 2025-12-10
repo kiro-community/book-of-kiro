@@ -59,3 +59,7 @@ infra/cdk-outputs.json
 secret-values.json
 secret-resource-policy.json
 kms-policy.json
+
+# Hugo themes (managed as submodules)
+# Note: Submodule references are still tracked, but not the actual files
+themes/*/

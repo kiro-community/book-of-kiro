@@ -1,6 +1,6 @@
 ---
 title: "vs. Amazon Q Developer"
-weight: 9
+weight: 20
 bookToc: false
 ---
 
@@ -8,15 +8,17 @@ bookToc: false
 
 ## 总结
 
-Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI Coding 工具，从整体用户体验而言，Kiro 更好， Amazon Q Developer 插件则支持不同的 IDE，用户无需更换原有 IDE。以下是主要区别：
+Kiro 和 Amazon Q Developer 都是 AWS 出品的 AI 开发工具。Kiro 是一个完整的 AI 开发平台（包含 IDE、CLI 和 Autonomous Agent），而 Amazon Q Developer 主要以 IDE 插件形式提供。从整体用户体验而言，Kiro 提供更全面的解决方案，Amazon Q Developer 插件则支持不同的 IDE，用户无需更换原有 IDE。以下是主要区别：
 
 **Kiro 的独特优势：**
 
+- **完整平台方案**：包含 IDE、CLI 和 Autonomous Agent，提供全方位的开发体验
 - **Spec Mode**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
 - **Agent Hooks**：当 IDE 中发生特定事件时执行预定义代理操作的自动触发器
+- **Autonomous Agent**：前沿的自主智能体，能够独立处理开发任务并跨仓库工作
 - **灵活的自主性**：既有 Autopilot mode（自主修改）也有 Supervised mode（应用更改前审查）
+- **CLI 集成**：强大的命令行工具，支持自定义 Agent 和工作流程自动化
 - **丰富的上下文引用**：支持 #Docs、#Git、#Rules、#Terminals、#Web 等多种上下文引用方式
-- **Property Based Testing**：进一步提升代码质量的自动化测试方法
 
 **Amazon Q Developer 的独特优势：**
 

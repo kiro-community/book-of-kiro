@@ -1,6 +1,6 @@
 ---
 title: "故障排查完全指南"
-weight: 99
+weight: 24
 ---
 
 # **故障排查完全指南**
@@ -440,37 +440,7 @@ curl -I https://kiro.dev
 - 删除 `~/.kiro`
 - 删除 `Library/Application Support/Kiro`
 
-## **CLI 常见错误**
 
-### **执行 MCP Tool 时报错**
-
-报错：Improperly formed request 或 An unexpected error occurred
-
-通常是 MCP Tool 的描述格式不规范，特别是 `input_schema` 字段，需要严格保证为合法的 JSON Schema
-
-可以使用 `/tools schema` 子命令查看 MCP Tool 的描述，确认 `input_schema` 字段是否合法
-
-### **使用苹果原生 Terminal 时崩溃**
-
-建议使用 iTerm2 作为 Terminal 来使用 Kiro CLI。
-
-如果需要排查崩溃原因，可以尝试使用[此脚本](https://gist.github.com/DiscreteTom/601bdd428ccb4079eb5e01fb914769fd)收集 Terminal 日志后交给 Kiro CLI 来排查
-
-### **如何还原默认 Agent**
-
-使用 Kiro CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `kiro-cli settings --delete chat.defaultAgent` 删除设置来还原默认 Agent
-
-### **无法升级**
-
-配置 VPC Endpoint 后，可能无法使用 `kiro-cli update` 进行 CLI 的升级。这是因为升级时需要访问 `desktop-release.q.us-east-1.amazonaws.com` ，它是 Q 的 VPC Endpoint 的子域名。如果您需要升级，可以参考[此文档](https://kiro.dev/docs/cli/installation/#with-a-zip-file)，从公网下载 zip 安装包后手动安装。
-
-### **byte index is not a char boundary**
-
-Kiro CLI 使用 Rust 语言编写，对 UTF-8 字符串的合法性有严格要求。此报错说明 Kiro CLI 处理了非法的 UTF-8 字符串，请检查本地文件是否包含非法 UTF-8 字符
-
-### **Prompt 如何定义和传递参数**
-
-目前只有 MCP Prompt 支持参数。可以使用 [shinkuro](https://github.com/DiscreteTom/shinkuro) 或类似的 MCP 服务器，把文件提示词转为 MCP 提示词，从而支持参数
 
 ## **用户管理**
 

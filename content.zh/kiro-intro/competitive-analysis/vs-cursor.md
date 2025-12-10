@@ -1,24 +1,25 @@
 ---
-title: vs. Cursor
-weight: 1
+title: "vs. Cursor"
+weight: 10
 bookToc: false
-translationKey: vs-cursor
 ---
 
 # Kiro vs. Cursor
 
-[Cursor](https://cursor.com) 是由 [Anysphere](https://anysphere.inc/) 开发的 AI 驱动代码编辑器。[Kiro](https://kiro.dev) 是由 [AWS](https://aws.amazon.com/) 开发的 AI IDE。两款工具都旨在提升开发者生产力。两款工具都是 Visual Studio Code 的分支，并直接在 IDE 中集成了先进的 AI 功能。
+[Cursor](https://cursor.com) 是由 [Anysphere](https://anysphere.inc/) 开发的 AI 驱动代码编辑器。[Kiro](https://kiro.dev) 是由 [AWS](https://aws.amazon.com/) 开发的完整 AI 开发平台，包含 IDE、CLI 和 Autonomous Agent 三大组件。两款工具都旨在提升开发者生产力。Cursor 是 Visual Studio Code 的分支，而 Kiro IDE 也基于 VS Code 构建，并提供了更广泛的开发工具生态系统。
 
 ## 总结
 
-Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但它们在 AI 辅助编程方面采用了不同的方法。以下是主要区别：
+Kiro 是一个完整的 AI 开发平台，而 Cursor 是一个 AI 驱动的 IDE。两者都能提升开发者生产力，但采用了不同的方法。以下是主要区别：
 
 **Kiro 的独特优势：**
 
+- **完整平台方案**：包含 IDE、CLI 和 Autonomous Agent，提供全方位的开发体验
 - **Spec-driven development**：结构化处理复杂开发任务的方法，将软件开发过程正式化 - 这是 Kiro 独有的功能
 - **Agent Hooks**：当 IDE 中发生特定事件时执行预定义 Agent 操作的自动触发器
+- **Autonomous Agent**：前沿的自主智能体，能够独立处理开发任务并跨仓库工作
 - **灵活的自主性**：既有 Autopilot 模式（自主完成端到端任务）也有 Supervised 模式（应用更改前人工审查）
-- **Property Based Testing**：进一步提升代码质量的自动化测试方法
+- **CLI 集成**：强大的命令行工具，支持自定义 Agent 和工作流程自动化
 
 **Cursor 的独特优势：**
 
@@ -29,7 +30,7 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 ## 功能对比
 
 {{% hint info %}}
-**最后对比日期**：2025 年 11 月 25 日
+**最后对比日期**：2025 年 12 月 10 日
 {{% /hint %}}
 
 <table>
@@ -338,6 +339,42 @@ Kiro 和 Cursor 都是 AI 驱动的 IDE，能够提升开发者生产力，但�
 <td>✅</td>
 <td>✅</td>
 <td>Kiro 提供了和 Cursor 类似的 Add to Kiro 按钮来实现一键安安装/td>
+</tr>
+<tr>
+<td rowspan="5"><strong>平台组件</strong></td>
+<td>CLI 工具</td>
+<td>独立的命令行 AI 开发工具</td>
+<td>✅ 完整的 CLI 平台，支持自定义 Agent 和工作流程自动化</td>
+<td>❌</td>
+<td>Kiro CLI 提供高度交互式的终端编程体验</td>
+</tr>
+<tr>
+<td>Autonomous Agent</td>
+<td>独立处理开发任务的自主智能体</td>
+<td>✅ 前沿的自主智能体，跨仓库工作，保持上下文</td>
+<td>❌</td>
+<td>Kiro Autonomous Agent 目前在预览阶段，为 Pro+ 用户提供</td>
+</tr>
+<tr>
+<td>跨仓库协作</td>
+<td>在多个代码仓库间协调工作</td>
+<td>✅ Autonomous Agent 支持跨仓库规划和实施</td>
+<td>❌</td>
+<td>Kiro 平台级别的独特能力</td>
+</tr>
+<tr>
+<td>沙盒执行</td>
+<td>在隔离环境中安全执行任务</td>
+<td>✅ Autonomous Agent 在沙盒环境中运行</td>
+<td>❌</td>
+<td>确保安全性和代码审查流程</td>
+</tr>
+<tr>
+<td>平台集成</td>
+<td>IDE、CLI 和 Agent 之间的无缝集成</td>
+<td>✅ 完整平台方案，组件间无缝协作</td>
+<td>❌ 仅提供 IDE</td>
+<td>Kiro 提供完整的开发生态系统</td>
 </tr>
 <tr>
 <td rowspan="2"><strong>其他</strong></td>
