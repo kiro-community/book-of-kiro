@@ -2,18 +2,7 @@
 
 ![Kiro Logo](./kiro_text.svg)
 
-A comprehensive documentation website built with Hugo using the Hugo Book theme. This project serves as a clean, book-like documentation platform for the Kiro AI IDE ecosystem, featuring competitive analysis, technical documentation, and community resources.
-
-## Features
-
-- 📚 Structured documentation with nested sections
-- 📝 Blog posts and articles
-- 🎨 Interactive shortcodes (columns, buttons, hints, tabs, etc.)
-- 🧮 Mathematical expressions with KaTeX
-- 📊 Diagrams with Mermaid
-- 🌍 Multi-language support
-- 🔍 Client-side search functionality
-- 📱 Responsive, mobile-friendly design
+A comprehensive bilingual documentation website built with Hugo using the Hugo Book theme. This project serves as the central knowledge hub for Kiro, a complete AI development platform that includes IDE, CLI, and Autonomous Agent components, featuring competitive analysis, technical documentation, and migration guides in both English and Chinese.
 
 ## Quick Start
 
@@ -42,6 +31,28 @@ hugo server
 
 4. Open your browser to `http://localhost:1313`
 
+## Bilingual Content Strategy
+
+This documentation site serves both English and Chinese-speaking developers with tailored content:
+
+### English Content Focus
+- Competitive analysis and market positioning
+- Migration guides from other AI development platforms
+- Feature comparisons with detailed technical insights
+- FAQ sections for users transitioning from other tools
+
+### Chinese Content Focus
+- Product-specific documentation organized by component
+- Comprehensive guides for IDE, CLI, and Autonomous Agent
+- Enterprise edition documentation
+- Localized best practices and use cases
+
+### Content Synchronization
+- Core messaging maintained across both languages
+- Cultural adaptation for regional developer preferences
+- Language-specific technical terminology and examples
+- Separate search indexes optimized for each language
+
 ## Deployment
 
 This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow:
@@ -62,16 +73,29 @@ This site is automatically deployed to GitHub Pages using GitHub Actions. The de
 ### Common Commands
 
 ```bash
-# Start development server
+# Start development server (all languages)
 hugo server
 
 # Start with drafts
 hugo server -D
 
+# Start with specific port
+hugo server -p 1314
+
+# Preview specific language
+hugo server --config hugo.toml --contentDir content.en   # English only
+hugo server --config hugo.toml --contentDir content.zh   # Chinese only
+
 # Build for production
 hugo
 
-# Update theme
+# Build with drafts
+hugo -D
+
+# Clean build cache
+hugo --gc
+
+# Update theme submodule
 git submodule update --remote themes/hugo-book
 ```
 
@@ -82,10 +106,21 @@ book-of-kiro/
 ├── .github/workflows/          # GitHub Actions CI/CD
 ├── .kiro/                      # Kiro IDE configuration
 │   └── steering/               # AI assistant guidance files
-├── content/                    # Site content
-│   ├── _index.md              # Homepage
-│   ├── docs/                  # Documentation sections
+├── content.en/                 # English site content
+│   ├── main/                  # Core documentation
+│   ├── features/              # Kiro features documentation
+│   ├── other-tools/           # Competitor analysis
+│   ├── amazon-q/              # Amazon Q Developer migration
+│   ├── faq/                   # Frequently asked questions
 │   └── posts/                 # Blog posts
+├── content.zh/                 # Chinese site content
+│   ├── kiro-intro/            # Kiro 介绍和对比
+│   ├── kiro-ide/              # Kiro IDE 文档
+│   ├── kiro-cli/              # Kiro CLI 文档
+│   ├── kiro-autonomous-agent/ # Kiro 自主 Agent 文档
+│   ├── kiro-enterprise/       # Kiro 企业版文档
+│   ├── amazon-q/              # Amazon Q Developer 迁移指南
+│   └── posts/                 # 博客文章
 ├── themes/hugo-book/          # Hugo Book theme (submodule)
 ├── static/                    # Static assets (copied as-is)
 ├── assets/                    # Source assets (processed)
@@ -95,12 +130,24 @@ book-of-kiro/
 └── README.md                  # This file
 ```
 
-## Project Structure Mapping
+## Content Organization
 
-### Content Organization
-- **content/docs/**: Technical documentation with nested hierarchy
-- **content/posts/**: Blog-style articles and announcements
-- **content/_index.md**: Homepage content and site introduction
+### English Content (`content.en/`)
+- **main/**: Core technical documentation
+- **features/**: Kiro-specific feature documentation and guides
+- **other-tools/**: Competitive analysis and tool comparisons
+- **amazon-q/**: Dedicated migration guide from Amazon Q Developer
+- **faq/**: Frequently asked questions for different user groups
+- **posts/**: Blog-style articles and announcements
+
+### Chinese Content (`content.zh/`)
+- **kiro-intro/**: Introduction and competitive comparisons
+- **kiro-ide/**: IDE-specific documentation and guides
+- **kiro-cli/**: CLI-specific documentation and tutorials
+- **kiro-autonomous-agent/**: Autonomous agent features and usage
+- **kiro-enterprise/**: Enterprise edition documentation
+- **amazon-q/**: Amazon Q Developer migration guide (Chinese)
+- **posts/**: Blog articles in Chinese
 
 ### Development & Build
 - **themes/hugo-book/**: Git submodule containing the Hugo Book theme
@@ -114,12 +161,14 @@ book-of-kiro/
 - **scripts/**: Build automation and deployment scripts
 
 ### Configuration & Guidance
-- **hugo.toml**: Main Hugo site configuration
+- **hugo.toml**: Main Hugo site configuration with bilingual support
+- **i18n/**: Internationalization files (en.yaml, zh.yaml)
 - **.kiro/steering/**: AI assistant guidance files
   - **tech.md**: Technology stack and commands
   - **structure.md**: Project structure documentation
   - **product.md**: Product overview and strategy
   - **content-guidelines.md**: Writing and content standards
+  - **competitive-analysis.md**: Standards for competitor comparisons
 
 ## Contributing
 
