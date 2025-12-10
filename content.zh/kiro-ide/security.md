@@ -5,94 +5,11 @@ weight: 23
 
 # **安全与隐私设置**
 
-## **Autopilot 模式 vs Supervised 模式 — 哪个更适合你？**
+本页面介绍 Kiro IDE 的数据隐私、遥测设置和安全最佳实践。
 
-### **Autopilot 模式（默认）**
-
-```md
-# 适合人群
-
-- 重视开发速度
-- 信任 AI 的判断
-- 在本地开发环境工作
-
-# 工作机制
-
-- 自动执行文件的创建、编辑和删除
-- 自动执行命令（仅限信任列表内）
-- 随时可以通过“Stop”命令中断
-
-# 使用示例
-
-"帮我实现用户认证功能"
-→ 自动创建所有必要文件并完成实现
-```
-
-### **Supervised 模式（适合谨慎派）**
-
-```md
-# 适合人群
-
-- 在生产环境中工作
-- 重要项目
-- 想仔细确认 AI 每个动作
-
-# 工作机制
-
-- 每个操作前都会弹出确认对话框
-- “确定要创建这个文件吗？”
-- “确定要执行这个命令吗？”
-
-# 切换方法
-
-在聊天界面的 “Autopilot” 开关切换为关闭（OFF）
-```
-
-## **受信任命令的管理**
-
-只读命令会被自动执行，如：
-
-```BASH
-ls      # 列出目录内容
-cat     # 显示文件内容
-echo    # 输出字符串
-pwd     # 显示当前目录
-which   # 查找命令路径
-head    # 查看文件开头部分
-tail    # 查看文件结尾部分
-find    # 文件搜索
-grep    # 字符串搜索
-```
-
-自定义命令的添加：
-
-```JSON
-// Settings → Kiro Agent: Trusted Commands
-[
-  "npm test",
-  "npm run build",
-  "git status",
-  "git diff",
-  "docker ps",
-  "docker-compose up",
-  "jest",
-  "prettier --write"
-]
-```
-
-绝对不要添加危险命令：
-
-```BASH
-# 这些命令绝对不能添加！
-rm -rf
-sudo
-chmod 777
-curl | sh
-eval
-
-```
-
-> 如果你真的要允许所有命令的执行，可以直接添加 `*` 从而信任所有命令。**请充分了解信任所有命令可能带来的风险**
+{{% hint info %}}
+**Agent 自主性设置**（Autopilot vs Supervised 模式）和**受信任命令管理**已移至 [开始使用](getting-started.md) 页面，建议先阅读该部分内容。
+{{% /hint %}}
 
 ## **数据隐私与遥测**
 
@@ -123,7 +40,8 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 - 错误信息
 - 性能指标
 - 操作系统信息
-  不收集内容：
+
+不收集内容：
 - 代码内容
 - 提示词内容（如果在设置中关闭）
 - 文件路径
@@ -131,7 +49,7 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 
 ### **按项目进行设置**
 
-```BASH
+```bash
 # 全局设置（适用于所有项目）
 ~/.kiro/settings.json
 
@@ -140,14 +58,15 @@ Settings → Application → Telemetry and Content → 关闭（Disabled）
 
 # 推荐加入 .gitignore
 .kiro/settings.json  # 如果包含 API 密钥等敏感信息
-
 ```
 
 ## **聊天历史记录位置**
 
 目前 Kiro 还没有聊天会话导出的能力，原始 JSON 格式的聊天信息保存在：
 
-- Windows: `~\AppData\Roaming\Kiro\User\globalStorage\kiro.kiroagent\<userid>\*.chat`
+- **Windows**: `~\AppData\Roaming\Kiro\User\globalStorage\kiro.kiroagent\<userid>\*.chat`
+- **macOS**: `~/Library/Application Support/Kiro/User/globalStorage/kiro.kiroagent/<userid>/*.chat`
+- **Linux**: `~/.config/Kiro/User/globalStorage/kiro.kiroagent/<userid>/*.chat`
 
 ## **安全最佳实践**
 
@@ -199,12 +118,11 @@ export BRAVE_API_KEY="BSA_xxxx"
   "autoAccept": false,        # 依然禁用自动批准
   "coreTools": ["all"]        # 允许使用所有工具
 }
-
 ```
 
 ### **3. 设置 .gitignore 文件**
 
-```BASH
+```bash
 # .gitignore
 .env
 .env.local
@@ -216,26 +134,37 @@ export BRAVE_API_KEY="BSA_xxxx"
 .kiro/steering/        # 项目知识共享
 .kiro/hooks/           # Hook 配置共享
 .kiro/specs/           # 规格说明共享
-
 ```
 
-## **为企业防火墙配置白名单**
+### **4. 定期安全检查**
 
-可以参考[官方文档](https://kiro.dev/docs/privacy-and-security/firewalls/)为您的企业防火墙配置白名单。
+```bash
+# 检查敏感信息泄露
+git log --all --full-history -- .kiro/settings.json
 
-目前官方文档上的白名单地址不全，除了文档中的内容，您还需要将以下域名添加到白名单：
+# 审查受信任命令列表
+# 定期清理不需要的 API 密钥
+# 监控异常的网络活动
+```
 
-- `codewhisperer.us-east-1.amazonaws.com`
-- `prod.us-east-1.telemetry.kiro.aws.dev`
+## **企业级安全功能**
 
-下载 Kiro 时使用的域名为：`prod.download.desktop.kiro.dev`
+如果您需要更高级的安全功能，如防火墙白名单配置、VPC Endpoint 内网访问、聊天审计等，请查看 [Kiro 企业版](../kiro-enterprise/) 相关文档。
 
-## **内网访问**
+企业版提供：
+- **防火墙白名单配置** - 为企业网络环境配置访问控制
+- **VPC Endpoint 支持** - 数据流量不出公网的内网访问  
+- **聊天审计功能** - 完整的对话记录和审计追踪
+- **SSO 集成** - 与企业身份管理系统无缝集成
 
-Kiro 提供了 VPC Endpoint 来使所有的 **数据流量（与大模型交互的流量）** 能够不出公网。但是其他流量（如登录、鉴权认证等）仍然需要走公网。
+## **安全问题报告**
 
-您可以参考[官方网站的配置教程](https://kiro.dev/docs/privacy-and-security/vpc-endpoints/)来配置 VPC Endpoint。
+如果您发现 Kiro 的安全问题，请通过以下方式报告：
 
-## **企业用户如何审计聊天信息**
+- **安全邮箱**: security@kiro.dev
+- **负责任披露**: 请先私下报告，给我们时间修复
+- **漏洞奖励**: 符合条件的安全问题可能获得奖励
 
-如果使用 Amazon Q Developer Pro 账号登录 Kiro，可以在 Amazon Q Developer 控制台中启用 prompt logging，参考[官方文档](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-admin-prompt-logging.html)。
+---
+
+保护您的代码和数据安全是我们的首要任务！
