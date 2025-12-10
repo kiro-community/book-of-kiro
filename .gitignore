@@ -62,4 +62,4 @@ kms-policy.json
 
 # Hugo themes (managed as submodules)
 # Note: Submodule references are still tracked, but not the actual files
-themes/*/
+# themes/*/
