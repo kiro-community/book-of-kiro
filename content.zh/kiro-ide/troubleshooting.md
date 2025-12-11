@@ -440,8 +440,6 @@ curl -I https://kiro.dev
 - 删除 `~/.kiro`
 - 删除 `Library/Application Support/Kiro`
 
-
-
 ## **用户管理**
 
 ### **如何使用 API 实现订阅或批量订阅？**
@@ -466,20 +464,3 @@ curl -I https://kiro.dev
 除了上述 OUTPUT 面板中的日志，还可以尝试查看页面日志。顶部栏点击 Help -> Toggle Developer Tools 即可打开开发者工具，点击其中的 Console 面板即可查看日志。
 
 日志收集完毕后，点击 Kiro 底部栏的 "Report issue" 按钮进行问题上报
-
-### **如何查看 Kiro CLI 日志**
-
-最新版本 Kiro CLI 可以使用 `/logdump` 命令把日志保存为一个 ZIP 文件。
-
-### **我有 Kiro CLI 问题希望上报给产品团队，请问需要提供哪些信息？**
-
-为加速我们排查您遇到的问题，我们建议您复现问题，并提供如下信息给 AWS Support 或者 AWS 解决方案架构师：
-
-**必须项：**
-
-1. 日志信息（建议去除敏感信息）。请参考上文获取 CLI 的日志
-2. CLI 的版本信息，使用 `kiro-cli --version` 可以查看当前版本。如果不是最新版，您可以尝试执行 `kiro-cli update` 升级到最新版后，再看下问题是否还存在
-3. 操作系统版本信息，如 Windows 11
-4. 问题描述，以及已经进行过哪些排查
-
-**可选项：** 问题的视频或者截图（如您能提供问题的视频或者截图将有助于我们排查问题）
