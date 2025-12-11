@@ -1,5 +1,5 @@
 ---
-Inclusion: Manual
+inclusion: manual
 ---
 
 # Competitive Analysis Standards
