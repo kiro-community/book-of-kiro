@@ -6,7 +6,7 @@ translationKey: homepage
 
 ![](/book-of-kiro/images/kiro_text.svg)
 
-欢迎来到 **Book of Kiro** —— 您掌握 AI 驱动开发的全面指南，使用 [Kiro](https://kiro.dev/) 这款通过结构化、规格驱动开发将想法转化为生产代码的 IDE。
+欢迎来到 **Book of Kiro** —— 您掌握 AI 驱动开发的全面指南，使用 [Kiro](https://kiro.dev/) 这个通过结构化、规格驱动开发将想法转化为生产代码的完整开发平台。
 
 {{% hint warning %}}
 本站点并非由 [kiro.dev](https://kiro.dev) 或 [AWS](https://aws.amazon.com) 维护。信息可能不是最新的。
@@ -14,7 +14,18 @@ translationKey: homepage
 
 ## 👻 什么是 Kiro？ 
 
-Kiro 是一款专为需要超越代码补全功能的开发者设计的 AI IDE。它基于这样的理念：优秀的软件始于清晰的规格说明和结构化思维。与传统的 AI 编程助手不同，Kiro 提供：
+Kiro 是一个专为需要超越代码补全功能的开发者设计的完整 AI 开发平台。它基于这样的理念：优秀的软件始于清晰的规格说明和结构化思维。Kiro 平台包含三个核心组件：
+
+### 🖥️ **Kiro IDE**
+基于 Visual Studio Code 构建的增强型 AI IDE，提供无缝的开发体验和 Agentic AI 开发能力。
+
+### ⚡ **Kiro CLI** 
+强大的命令行工具，在终端中提供高度交互式的编程体验。支持自定义 Agent、复杂代码库功能构建、工作流程自动化和精确的错误分析。
+
+### 🤖 **Kiro Autonomous Agent**
+前沿的自主智能体，能够独立处理开发任务，保持上下文并从每次交互中学习。目前正在向 Kiro Pro、Pro+ 和 Power 用户推出预览版。
+
+与传统的 AI 编程助手不同，Kiro 平台提供：
 
 - **规格驱动开发**：在实现之前将需求转化为结构化规格说明
 - **智能体钩子**：通过自定义触发器和操作自动化工作流程
@@ -23,29 +34,6 @@ Kiro 是一款专为需要超越代码补全功能的开发者设计的 AI IDE�
 - **通过 MCP 集成工具和数据**：通过原生 MCP 集成连接文档、数据库、API 等，将您的世界带到工作环境中
 
 基础的 AI 功能，如代码补全、代码解释、Agent 编程等基础功能一定有，就不过多介绍啦！
-
-## 🤖 什么是 Amazon Q Developer？
-
-Amazon Q Developer 是 AWS 推出的 AI 驱动的开发助手，旨在帮助开发者提高编程效率和代码质量。它提供智能代码建议、自动化任务和开发工作流程优化。
-
-Amazon Q Developer 主要有以下特点：
-
-- **智能代码补全**：基于上下文提供准确的代码建议和自动补全
-- **代码解释和文档**：帮助理解复杂代码并生成相应文档
-- **安全扫描**：自动检测代码中的安全漏洞和最佳实践违规
-- **IDE 集成**：通过插件形式集成到主流开发环境中
-
-Amazon Q Developer 提供两种主要形态：
-- **IDE 插件**：集成到 VS Code、IntelliJ 等 IDE 中
-- **命令行工具**：通过 CLI 提供开发辅助功能
-
-
-## 🤝 **Kiro 和 Amazon Q Developer** 的关系
-Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。
-
-- Kiro: Kiro 是一款 **Agentic IDE**，基于 Visual Studio Code 开发，拥有增强的 AI 体验。
-- Amazon Q Developer 主要包含两个形态：**Amazon Q Developer IDE 插件** 和 **Amazon Q Developer CLI**.
-
 
 ## 📖 关于本书
 
@@ -59,24 +47,23 @@ Kiro 和 Amazon Q Developer 都是 AWS 推出的 AI 驱动的开发助手。
 
 通过交互式演示和社区策划的最佳实践探索真实世界的示例并学习最优工作流程。
 
-### 💡 **社区见解**
+## ⭐ 支持我们
 
-发现 Kiro 开发者社区分享的技巧、窍门和真实世界的经验。
+如果这个文档对您有帮助，请考虑给我们的 GitHub 仓库点个 ⭐！您的支持是我们持续改进和添加更多内容的动力。
 
-## 👥 适用人群
+{{% hint info %}}
+🌟 **[在 GitHub 上给我们点赞](https://github.com/kiro-community/book-of-kiro)** 🌟
 
-- **开发者** 评估 AI IDE 并希望增强编程工作流程
-- **工程团队** 为其组织考虑 AI 驱动的开发工具
-- **技术领导者** 就开发工具做出战略决策
-- **社区贡献者** 帮助扩展和改进 Kiro 的文档
+帮助更多开发者发现这个资源！每个 ⭐ 都很重要！
+{{% /hint %}}
 
-## 🌍 社区
+## 🌍 Kiro 中文社区
 
 - [Kiro Discord](https://discord.gg/kirodotdev) – 英文社区
 - [飞书群组](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=f9bq2a34-0cbe-4ba6-9866-16bb685b2dc1) - 中文社区
 
-## 🤝 贡献
-
 本书由 Kiro 社区维护。❤️
+
+想要贡献内容或报告问题？欢迎访问我们的 [GitHub 仓库](https://github.com/kiro-community/book-of-kiro)！
 
 ---
