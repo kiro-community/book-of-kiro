@@ -21,6 +21,10 @@ weight: 35
 
 如果需要排查崩溃原因，可以尝试使用[此脚本](https://gist.github.com/DiscreteTom/601bdd428ccb4079eb5e01fb914769fd)收集 Terminal 日志后交给 Kiro CLI 来排查
 
+### **无法自动补全 CLI 命令**
+
+如果您已经在 Kiro-CLI 的设置中启用了 autocomplete，但是自动补全没有生效，可以尝试执行 `kiro-cli doctor` 进行自动修复
+
 ### **如何还原默认 Agent**
 
 使用 Kiro CLI 时，如果通过 `/agent set-default --name <NAME>` 设置的默认 Agent 后，希望恢复默认的 Agent，可以使用命令 `kiro-cli settings --delete chat.defaultAgent` 删除设置来还原默认 Agent
