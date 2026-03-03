@@ -120,6 +120,7 @@ book-of-kiro/
 │   ├── kiro-autonomous-agent/ # Kiro 自主 Agent 文档
 │   ├── kiro-enterprise/       # Kiro 企业版文档
 │   ├── amazon-q/              # Amazon Q Developer 迁移指南
+│   ├── kiro-experience/       # Kiro 使用经验
 │   └── posts/                 # 博客文章
 ├── themes/hugo-book/          # Hugo Book theme (submodule)
 ├── static/                    # Static assets (copied as-is)
@@ -147,6 +148,7 @@ book-of-kiro/
 - **kiro-autonomous-agent/**: Autonomous agent features and usage
 - **kiro-enterprise/**: Enterprise edition documentation
 - **amazon-q/**: Amazon Q Developer migration guide (Chinese)
+- **kiro-experience/**: Usage tips and integrations
 - **posts/**: Blog articles in Chinese
 
 ### Development & Build
