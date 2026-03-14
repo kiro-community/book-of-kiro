@@ -1,6 +1,6 @@
 ---
-title: "迁移到 Kiro"
-weight: 999
+title: "从 Amazon Q Developer 迁移"
+weight: 53
 bookToc: true
 ---
 
