@@ -37,6 +37,19 @@ Windows 上通过 WSL 的方式来使用 Kiro CLI 使用的资源非常有限。
 
 需要注意：由于 Amazon Q Developer CLI 升级到了 Kiro CLI，所以博客中的文件路径 `~/.local/share/amazon-q/` 应为 `~/.local/share/kiro-cli`
 
+### **出现 There was an error processing your request 报错**
+这是一个通用错误提示，可能由多种原因触发：
+1. 网络/连接问题：VPN 不稳定、网络中断、代理配置错误
+2. MCP 工具问题：MCP 工具的 input_schema 超过 10240 字符会触发此错误
+3. 图片处理问题：在对话中发送某些格式图片可能导致后端处理失败
+
+排查步骤：
+1. 检查网络连接和 VPN 状态
+2. 重启 Kiro CLI
+3. 查看 Developer Tools Console（Help → Toggle Developer Tools）中的具体错误
+4. 如果使用了 MCP 工具，检查工具的 input_schema 是否过大
+5. 尝试创建新会话
+
 ## **权限与安全**
 
 ### **CLI 有哪些 AWS 权限？**
