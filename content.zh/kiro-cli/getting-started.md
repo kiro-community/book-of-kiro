@@ -63,3 +63,11 @@ curl -fsSL https://cli.kiro.dev/install | bash
 - 输入 `/quit`
 - 输入 `/exit`
 
+### **复制图片**
+Kiro CLI 支持通过 /paste 命令粘贴剪贴板中的图片到对话中。这是 CLI 特有功能，IDE 中可以直接拖拽图片到聊天窗口。
+使用方式：
+```
+1. 先复制图片到剪贴板
+2. 在 CLI 聊天中输入 /paste
+3. 图片会被作为多模态输入发送给模型
+```
