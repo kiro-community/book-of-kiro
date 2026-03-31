@@ -115,6 +115,65 @@ Skills 的用途：
 4. 如果使用了 MCP 工具，检查工具的 input_schema 是否过大
 5. 尝试创建新会话
 
+## **计费与用量**
+
+### **如何查看发票？**
+
+在 Kiro 中点击头像 → **Manage Plan**，跳转到计费面板后可在 **Invoice History** 部分查看所有历史发票、下载 PDF 格式发票副本、查看付款日期和金额。
+
+{{% hint warning %}}
+**注意**：Kiro 目前暂不支持开具中国大陆发票（增值税发票等）。发票为国际通用格式的 Invoice/Receipt，以 USD 计费。
+{{% /hint %}}
+
+详见 [计费管理文档](https://kiro.dev/docs/billing/managing/)。
+
+### **支持哪些支付方式？**
+
+Kiro 接受所有主流信用卡和借记卡（We accept all major credit and debit cards），以 **USD** 计费。这意味着纯人民币单币卡大概率无法使用，需要支持外币交易的卡（如 Visa、Mastercard 双币卡）。
+
+详见 [计费管理文档](https://kiro.dev/docs/billing/managing/)。
+
+### **达到用量上限后会怎样？**
+
+当达到月度用量上限时，请求会暂停直到下月重置。解决方案：
+- **Free 用户**：升级到付费计划获得更多额度
+- **付费用户**：开启 overage 继续使用（会产生额外费用）
+- 如果希望固定账单，保持 overage 关闭，用量达到上限后服务会暂停
+
+如果遇到 "too many requests" 错误，通常也与用量限制有关。
+
+详见 [计费相关问题](https://kiro.dev/docs/billing/related-questions)。
+
+### **升级订阅后何时生效？**
+
+升级立即生效：
+- **首次从 Free 升级到付费版**：按剩余天数按比例收费，立即获得新 plan 的全部 credit 额度
+- **首月内再次升级**（如 Pro → Pro+）：退还之前已付费用，按比例收取新 plan 费用
+- **首月之后的升级**：全额收取差价，整月用量按新 tier 的 credits 重新计算
+
+详见 [计费相关问题](https://kiro.dev/docs/billing/related-questions)。
+
+## **版本与更新**
+
+### **如何查看版本更新内容？**
+
+Kiro 官方网站有专门的 Changelog 页面：
+- **IDE 更新记录**：https://kiro.dev/changelog/ide/
+- **CLI 更新记录**：https://kiro.dev/changelog/cli/
+
+## **上下文管理**
+
+### **对话上下文太长怎么办？**
+
+Kiro 提供以下上下文管理机制：
+- **自动压缩**：当 context window 溢出时会自动触发 Conversation compaction
+- **手动压缩**：使用 `/compact` 命令主动压缩上下文
+- **查看用量**：使用 `/context show` 查看当前 context 使用情况
+- **移除文件**：使用 `/context remove` 移除不需要的 context 文件
+- **Knowledge Base**：使用 Knowledge Base 替代大文件以减少 context 占用
+
+详见 [Context 管理文档](https://kiro.dev/docs/cli/chat/context)。
+
 ## **安全最佳实践**
 
 ### **如何安全地管理 API 密钥？**
