@@ -89,7 +89,28 @@ Kiro CLI 默认每次操作 MCP 都需要您进行确认。您可以使用以下
 
 请参考[官方文档](https://kiro.dev/docs/cli/reference/slash-commands/#logdump)。
 
+### **如何让 Kiro CLI 生成中文内容？**
+
+Kiro 默认优化为英文交互，但可以通过 [Steering 功能](https://kiro.dev/docs/cli/steering/) 自定义 AI 行为。在 `.kiro/steering/` 目录下创建 markdown 文件，指示 Kiro 使用中文即可。例如创建 `.kiro/steering/language.md`：
+
+```markdown
+# 语言偏好
+- 所有回复使用中文
+- Commit message 使用中文
+- 代码注释使用中文
+```
+
 ## **兼容性问题**
+
+### **Kiro CLI 支持 ACP 协议吗？**
+
+支持。Kiro CLI 实现了 [ACP (Agent Client Protocol)](https://kiro.dev/docs/cli/acp/) 协议，支持与任何 ACP 兼容的编辑器/客户端互操作（如 JetBrains IDE、Zed 等）。使用 `kiro-cli acp` 命令即可启动 ACP agent。
+
+### **如何通过 OpenClaw 调用 Kiro？**
+
+OpenClaw 的 [acpx](https://github.com/openclaw/acpx) 已内置支持 Kiro CLI 作为 coding agent，可以直接使用 `acpx kiro 'your task'`。也支持 MCP 反向调用、ACP 直连、tmux/shell 等多种集成方式。
+
+详见 [Kiro × OpenClaw 集成指南](../../kiro-experience/openclaw/)。
 
 ### **是否可以执行其它云厂的 CLI 指令？**
 
