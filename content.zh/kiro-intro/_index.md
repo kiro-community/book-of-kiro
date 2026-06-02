@@ -8,7 +8,7 @@ title: "Kiro 简介"
 
 ## 📌 **Kiro 是什么？**
 
-Kiro 是 AWS 推出的划时代 AI 开发平台，包含 IDE、CLI 和 Autonomous Agent 三大组件。<br>
+Kiro 是 AWS 推出的划时代 AI 开发平台，包含 IDE、CLI 和 Kiro Web 三大组件。<br>
 "哈？又一个编辑器？VSCode、Cursor 不就够用了？"——如果你也这么想，那请先别急着关掉页面。因为**Kiro 真的不是普通的编辑器，而是一个完整的 Agentic AI 开发平台。**
 
 ## 🤔 **和传统开发工具的决定性差别**
@@ -34,8 +34,8 @@ Kiro 是 AWS 推出的划时代 AI 开发平台，包含 IDE、CLI 和 Autonomou
 ### ⚡ **Kiro CLI** 
 强大的命令行工具，在终端中提供高度交互式的编程体验。
 
-### 🤖 **Kiro Autonomous Agent**
-前沿的自主智能体，能够独立处理开发任务并跨仓库协作。
+### 🌐 **Kiro Web**
+基于浏览器的 AI 开发环境，支持 Vibe 模式和 Autonomous 模式，能够跨仓库协作。
 
 ## **社区与资源**
 

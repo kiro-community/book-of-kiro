@@ -66,9 +66,9 @@ content.zh/
 │   ├── custom-agents.md        # 自定义 Agent
 │   ├── faq.md                  # 常见问题
 │   └── troubleshooting.md      # 故障排除
-├── kiro-autonomous-agent/       # Kiro 自主 Agent 文档
-│   ├── _index.md               # Agent 章节索引
-│   └── autonomous-agent.md     # 自主 Agent 功能
+├── kiro-web/                    # Kiro Web 文档
+│   ├── _index.md               # Kiro Web 章节索引
+│   └── kiro-web.md             # Kiro Web 功能
 ├── kiro-enterprise/             # Kiro 企业版文档
 │   ├── _index.md               # 企业版章节索引
 │   └── getting-started.md      # 企业版快速开始
@@ -133,7 +133,7 @@ menu:                    # Custom menu configuration
 - **kiro-intro/**: Introduction and competitive comparisons (Chinese)
 - **kiro-ide/**: IDE-specific documentation (Chinese)
 - **kiro-cli/**: CLI-specific documentation (Chinese)
-- **kiro-autonomous-agent/**: Autonomous agent documentation (Chinese)
+- **kiro-web/**: Kiro Web documentation (Chinese)
 - **kiro-enterprise/**: Enterprise edition documentation (Chinese)
 - **faq/**: Frequently asked questions
 - **posts/**: Blog-style content with dates and categories
@@ -189,7 +189,7 @@ book-of-kiro/
 │   ├── kiro-intro/            # Kiro 介绍和对比
 │   ├── kiro-ide/              # Kiro IDE 文档
 │   ├── kiro-cli/              # Kiro CLI 文档
-│   ├── kiro-autonomous-agent/ # Kiro 自主 Agent 文档
+│   ├── kiro-web/              # Kiro Web 文档
 │   ├── kiro-enterprise/       # Kiro 企业版文档
 │   ├── amazon-q/              # Amazon Q Developer 迁移指南
 │   ├── faq/                   # 常见问题

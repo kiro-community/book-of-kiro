@@ -1,6 +1,6 @@
 # Product Overview
 
-**Book of Kiro** is a comprehensive bilingual documentation website for Kiro, a complete AI development platform that includes IDE, CLI, and Autonomous Agent components, helping developers turn ideas into production code with spec-driven development. Built with Hugo using the Hugo Book theme, it serves as the central knowledge hub available in both English and Chinese for:
+**Book of Kiro** is a comprehensive bilingual documentation website for Kiro, a complete AI development platform that includes IDE, CLI, and Kiro Web components, helping developers turn ideas into production code with spec-driven development. Built with Hugo using the Hugo Book theme, it serves as the central knowledge hub available in both English and Chinese for:
 
 ## Primary Content Areas
 
@@ -9,7 +9,7 @@
 - Pricing analysis and market positioning
 - Strategic differentiation documentation
 - Feature gap analysis and roadmap insights
-- Platform component comparisons (IDE vs CLI vs Autonomous Agent capabilities)
+- Platform component comparisons (IDE vs CLI vs Kiro Web capabilities)
 
 ### Documentation Structure
 - Clean, book-like documentation platform
@@ -22,8 +22,8 @@
 - Consistent navigation and user experience across languages
 
 ## Content Strategy
-- Focus on Kiro's unique value propositions (Spec mode, Agent hooks, Parallel sessions, Autonomous Agent)
-- Emphasize the complete platform approach (IDE + CLI + Autonomous Agent)
+- Focus on Kiro's unique value propositions (Spec mode, Agent hooks, Parallel sessions, Kiro Web)
+- Emphasize the complete platform approach (IDE + CLI + Kiro Web)
 - Highlight technical differentiation and developer workflow advantages
 - Maintain up-to-date competitive intelligence across all platform components
 - Provide clear, actionable insights for product positioning
@@ -34,4 +34,4 @@
 - **Technical Writers**: Documentation contributors working in multilingual environments
 - **Kiro Community**: International community members and advocates
 - **Enterprise Teams**: Organizations with diverse linguistic requirements seeking complete AI development platforms
-- **DevOps Engineers**: Teams interested in CLI and autonomous agent capabilities for workflow automation
+- **DevOps Engineers**: Teams interested in CLI and Kiro Web capabilities for workflow automation
