@@ -8,8 +8,8 @@ title: "Kiro 簡介"
 
 ## 📌 **Kiro 是什麼？**
 
-Kiro 是 AWS 推出的劃時代 AI 開發平臺，包含 IDE、CLI 和 Autonomous Agent 三大元件。<br>
-"哈？又一個編輯器？VSCode、Cursor 不就夠用了？"——如果你也這麼想，那請先別急著關掉頁面。因為**Kiro 真的不是普通的編輯器，而是一個完整的 Agentic AI 開發平臺。**
+Kiro 是 AWS 推出的劃時代 AI 開發平台，包含 IDE、CLI 和 Autonomous Agent 三大元件。<br>
+"哈？又一個編輯器？VSCode、Cursor 不就夠用了？"——如果你也這麼想，那請先別急著關掉頁面。因為**Kiro 真的不是普通的編輯器，而是一個完整的 Agentic AI 開發平台。**
 
 ## 🤔 **和傳統開發工具的決定性差別**
 
@@ -17,7 +17,7 @@ Kiro 是 AWS 推出的劃時代 AI 開發平臺，包含 IDE、CLI 和 Autonomou
 但 Kiro 不一樣，它是你的 **AI 開發搭檔**，能和你一起思考、提出建議、甚至動手寫程式碼。<br>
 就像有個經驗超強的前輩工程師，隨時在旁邊和你一起 pair programming 的感覺！<br>
 
-## ✨ **Kiro 平臺能做什麼**
+## ✨ **Kiro 平台能做什麼**
 
 🤖 **和 AI 對話就能寫程式碼**：只要說一句"幫我做個登入功能"，它真的就能搞出來<br>
 📋 **自動生成規格說明書**：從模糊的需求中，變出一份清清楚楚的 specs<br>
@@ -49,7 +49,7 @@ Kiro 是 AWS 推出的劃時代 AI 開發平臺，包含 IDE、CLI 和 Autonomou
 ## 📖 **本章內容**
 
 - **Kiro 特色功能** - Spec 模式、Agent Hooks、Steering 三大核心功能
-- **MCP 配置** - 學習如何擴充套件 Kiro 的能力
+- **MCP 配置** - 學習如何擴展 Kiro 的能力
 - **最佳實踐** - 社群經驗和實用建議
 - **競品對比** - 與主流 AI 開發工具的詳細對比分析
 

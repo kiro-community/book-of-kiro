@@ -6,7 +6,7 @@ bookToc: true
 
 # Kiro × OpenClaw 整合指南
 
-[OpenClaw](https://github.com/openclaw/openclaw) 是一個開源 AI Agent 執行環境，擅長多平台訊息處理、定時任務、裝置控制和外部系統整合。Kiro 擅長程式碼產生、架構設計和 AWS 雲維運。兩者透過 ACP + MCP 雙協議實現雙向協作，各取所長。
+[OpenClaw](https://github.com/openclaw/openclaw) 是一個開源 AI Agent 執行環境，擅長多平台訊息處理、定時任務、裝置控制和外部系統整合。Kiro 擅長程式碼產生、架構設計和 AWS 雲端維運。兩者透過 ACP + MCP 雙協議實現雙向協作，各取所長。
 
 | 方向 | 協議 | 核心價值 |
 |------|------|---------|

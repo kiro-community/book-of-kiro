@@ -6,7 +6,7 @@ bookToc: true
 
 # **Kiro 特色功能**
 
-Kiro 不僅僅是一個 AI IDE，更是一個完整的智慧開發平臺。以下三大特色功能讓 Kiro 在眾多開發工具中脫穎而出，為開發者提供前所未有的程式設計體驗。
+Kiro 不僅僅是一個 AI IDE，更是一個完整的智慧開發平台。以下三大特色功能讓 Kiro 在眾多開發工具中脫穎而出，為開發者提供前所未有的程式設計體驗。
 
 ---
 
@@ -393,11 +393,11 @@ Kiro 非常聰明，它會自動分析你的專案，幫你生成最基本的 St
 
 ## 產品名稱
 
-MyAwesomeEC 購物平臺
+MyAwesomeEC 購物平台
 
 ## 使命
 
-為中小型線上商家提供一個簡單易用、功能強大的電商建站平臺
+為中小型線上商家提供一個簡單易用、功能強大的電商建站平台
 
 ## 目標使用者
 
@@ -704,11 +704,11 @@ inclusion: manual
 
 ---
 
-## ⚡ **Kiro Powers — 擴充套件生態系統的無限可能**
+## ⚡ **Kiro Powers — 擴展生態系統的無限可能**
 
 ### ⚡ **什麼是 Kiro Powers？**
 
-Kiro Powers 將 MCP（Model Context Protocol）、Steering 和 Hooks 打包成可重用的能力包，讓你能夠輕鬆擴充套件 Kiro 的功能。Powers 封裝了來自開發工具提供商和領域專家的最佳實踐，為設計、開發、部署和可觀測性等各種用例提供智慧指導。
+Kiro Powers 將 MCP（Model Context Protocol）、Steering 和 Hooks 打包成可重用的能力包，讓你能夠輕鬆擴充 Kiro 的功能。Powers 封裝了來自開發工具提供商和領域專家的最佳實踐，為設計、開發、部署和可觀測性等各種用例提供智慧指導。
 
 {{% hint info %}}
 Kiro Powers 功能在 Kiro IDE 0.7+ 版本中可用。
@@ -736,7 +736,7 @@ Powers 根據你的對話上下文動態載入。Kiro 評估已安裝的 Powers 
 #### **🗄️ 資料庫與後端服務**
 - **Build a backend with Supabase** (by Supabase)：使用 Supabase 的 Postgres 資料庫、身份驗證、儲存和實時訂閱功能構建應用
 - **Build a backend (local) with Supabase** (by Supabase)：本地 Supabase 開發，讓你在本地機器上的自包含環境中工作專案
-- **Build a database with Neon** (by Neon)：無伺服器 Postgres，支援資料庫分支、自動擴縮容和零擴充套件，完美適配現代開發工作流程
+- **Build a database with Neon** (by Neon)：無伺服器 Postgres，支援資料庫分支、自動擴縮容和零擴充功能，完美適配現代開發工作流程
 
 #### **🏗️ 基礎設施與部署**
 - **Deploy infrastructure with Terraform** (by HashiCorp)：使用 Terraform 構建和管理基礎設施即程式碼，訪問 Registry 提供商、模組、策略和 HCP Terraform 工作流管理
@@ -755,7 +755,7 @@ Powers 根據你的對話上下文動態載入。Kiro 評估已安裝的 Powers 
 
 #### **🤖 AI 與智慧體開發**
 - **Build an agent with Strands** (by AWS)：使用 Strands Agent SDK 和 Bedrock、Anthropic、OpenAI、Gemini 或 Llama 模型構建 AI 智慧體
-- **Build an agent with Amazon Bedrock AgentCore** (by AWS)：Amazon Bedrock AgentCore 是一個用於構建、部署和操作有效智慧體的代理平臺
+- **Build an agent with Amazon Bedrock AgentCore** (by AWS)：Amazon Bedrock AgentCore 是一個用於構建、部署和操作有效智慧體的代理平台
 
 #### **🏢 企業級解決方案**
 - **SaaS Builder** (by Allen Helton)：構建生產就緒的多租戶 SaaS 應用，整合無伺服器架構、計費系統和企業級安全
@@ -884,7 +884,7 @@ Powers 根據你的對話上下文動態載入。Kiro 評估已安裝的 Powers 
 3. **貢獻到社群**：
    - 提交到 [Kiro Powers 提交頁面](https://kiro.dev/powers/submit/)
    - 與全球開發者分享你的創新
-   - 幫助擴充套件 Kiro 生態系統
+   - 幫助擴展 Kiro 生態系統
 
 #### **企業級定製**
 企業可以建立內部專用的 Powers：
@@ -901,7 +901,7 @@ Powers 根據你的對話上下文動態載入。Kiro 評估已安裝的 Powers 
 
 ## 🎊 **總結**
 
-這四大特色功能讓 Kiro 成為真正的智慧開發平臺：
+這四大特色功能讓 Kiro 成為真正的智慧開發平台：
 
 - **Spec 模式**：從模糊需求到清晰實作的結構化開發
 - **Agent Hooks**：自動化重複工作，提升開發效率  

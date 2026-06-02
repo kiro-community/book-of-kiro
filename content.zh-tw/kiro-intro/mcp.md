@@ -46,7 +46,7 @@ MCP 是給 Kiro 的 AI 加上“特殊技能”的機制。比如：
 # 只需在聊天中提問
 "S3 的生命週期策略是什麼？"
 "Lambda 函式的冷啟動如何最佳化？"
-"DynamoDB 分割槽鍵設計的最佳實踐有哪些？"
+"DynamoDB partition key 設計的最佳實踐有哪些？"
 
 # Kiro 會自動搜尋 AWS 官方文件並回答
 ```

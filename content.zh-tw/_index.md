@@ -6,7 +6,7 @@ translationKey: homepage
 
 ![](/book-of-kiro/images/kiro_text.svg)
 
-歡迎來到 **Book of Kiro** —— 您掌握 AI 驅動開發的全面指南，使用 [Kiro](https://kiro.dev/) 這個透過結構化、規格驅動開發將想法轉化為生產程式碼的完整開發平臺。
+歡迎來到 **Book of Kiro** —— 您掌握 AI 驅動開發的全面指南，使用 [Kiro](https://kiro.dev/) 這個透過結構化、規格驅動開發將想法轉化為生產程式碼的完整開發平台。
 
 {{% hint warning %}}
 本站點並非由 [kiro.dev](https://kiro.dev) 或 [AWS](https://aws.amazon.com) 維護。資訊可能不是最新的。
@@ -14,7 +14,7 @@ translationKey: homepage
 
 ## 👻 什麼是 Kiro？ 
 
-Kiro 是一個專為需要超越程式碼補全功能的開發者設計的完整 AI 開發平臺。它基於這樣的理念：優秀的軟體始於清晰的規格說明和結構化思維。Kiro 平臺包含三個核心元件：
+Kiro 是一個專為需要超越程式碼補全功能的開發者設計的完整 AI 開發平台。它基於這樣的理念：優秀的軟體始於清晰的規格說明和結構化思維。Kiro 平台包含三個核心元件：
 
 ### 🖥️ **Kiro IDE**
 基於 Visual Studio Code 構建的增強型 AI IDE，提供無縫的開發體驗和 Agentic AI 開發能力。
@@ -25,7 +25,7 @@ Kiro 是一個專為需要超越程式碼補全功能的開發者設計的完整
 ### 🤖 **Kiro Autonomous Agent**
 前沿的自主智慧體，能夠獨立處理開發任務，保持上下文並從每次互動中學習。目前正在向 Kiro Pro、Pro+ 和 Power 使用者推出預覽版。
 
-與傳統的 AI 程式設計助手不同，Kiro 平臺提供：
+與傳統的 AI 程式設計助手不同，Kiro 平台提供：
 
 - **規格驅動開發**：在實作之前將需求轉化為結構化規格說明
 - **智慧體鉤子**：透過自定義觸發器和操作自動化工作流程
