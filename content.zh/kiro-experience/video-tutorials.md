@@ -6,7 +6,7 @@ bookToc: true
 
 # Kiro 入门系列视频
 
-本系列视频涵盖 Kiro IDE、Kiro CLI 和 Kiro 自主 Agent 的核心功能介绍，帮助您快速上手 Kiro 平台。
+本系列视频涵盖 Kiro IDE、Kiro CLI 和 Kiro Web 的核心功能介绍，帮助您快速上手 Kiro 平台。
 
 ## Kiro 特色功能
 
@@ -30,13 +30,13 @@ bookToc: true
 
 ---
 
-### 玩转 Kiro 自主 Agent - 向 Kiro autonomous agent 提交任务的三种方式
+### 玩转 Kiro 自主 Agent - 向 Kiro autonomous agent 提交任务的三种方式（现已更名为 Kiro Web）
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1xywDzGEud&autoplay=0" width="100%" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 📺 [在 Bilibili 观看](https://www.bilibili.com/video/BV1xywDzGEud/) | 时长：08:37
 
-介绍向 Kiro autonomous agent 提交任务的三种方式。
+介绍向 Kiro Web 提交任务的三种方式。
 
 ---
 

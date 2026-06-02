@@ -10,7 +10,7 @@ title: "Kiro 使用经验"
 
 ## 💡 **本章内容**
 
-- **Kiro 入门系列视频** - 7 个视频带你快速上手 Kiro IDE、CLI 和自主 Agent
+- **Kiro 入门系列视频** - 7 个视频带你快速上手 Kiro IDE、CLI 和 Kiro Web
 - **飞书 Remote MCP 配置** - 在 Kiro 中连接飞书云文档
 - **Kiro 技术博客** - AWS 官方博客中与 Kiro 相关的技术文章合集
 

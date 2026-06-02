@@ -2,7 +2,7 @@
 
 ![Kiro Logo](./kiro_text.svg)
 
-A comprehensive bilingual documentation website built with Hugo using the Hugo Book theme. This project serves as the central knowledge hub for Kiro, a complete AI development platform that includes IDE, CLI, and Autonomous Agent components, featuring competitive analysis, technical documentation, and migration guides in both English and Chinese.
+A comprehensive bilingual documentation website built with Hugo using the Hugo Book theme. This project serves as the central knowledge hub for Kiro, a complete AI development platform that includes IDE, CLI, and Kiro Web components, featuring competitive analysis, technical documentation, and migration guides in both English and Chinese.
 
 ## Quick Start
 
@@ -43,7 +43,7 @@ This documentation site serves both English and Chinese-speaking developers with
 
 ### Chinese Content Focus
 - Product-specific documentation organized by component
-- Comprehensive guides for IDE, CLI, and Autonomous Agent
+- Comprehensive guides for IDE, CLI, and Kiro Web
 - Enterprise edition documentation
 - Localized best practices and use cases
 
@@ -117,7 +117,7 @@ book-of-kiro/
 │   ├── kiro-intro/            # Kiro 介绍和对比
 │   ├── kiro-ide/              # Kiro IDE 文档
 │   ├── kiro-cli/              # Kiro CLI 文档
-│   ├── kiro-autonomous-agent/ # Kiro 自主 Agent 文档
+│   ├── kiro-web/              # Kiro Web 文档
 │   ├── kiro-enterprise/       # Kiro 企业版文档
 │   ├── amazon-q/              # Amazon Q Developer 迁移指南
 │   ├── kiro-experience/       # Kiro 使用经验
@@ -145,7 +145,7 @@ book-of-kiro/
 - **kiro-intro/**: Introduction and competitive comparisons
 - **kiro-ide/**: IDE-specific documentation and guides
 - **kiro-cli/**: CLI-specific documentation and tutorials
-- **kiro-autonomous-agent/**: Autonomous agent features and usage
+- **kiro-web/**: Kiro Web features and usage
 - **kiro-enterprise/**: Enterprise edition documentation
 - **amazon-q/**: Amazon Q Developer migration guide (Chinese)
 - **kiro-experience/**: Usage tips and integrations

@@ -104,7 +104,7 @@ The following technical terms should remain in English in Chinese content:
 - **Agent Hooks** / **Hooks** - Kiro's automated triggers (不要翻译为"代理钩子"或"钩子")
 - **Vibe** - Kiro's agent mode (不要翻译为"代理模式")
 - **Supervised mode** - Kiro's supervised agent mode (不要翻译为"监督模式")
-- **Autopilot mode** - Kiro's autonomous agent mode (不要翻译为"自动驾驶模式")
+- **Autopilot mode** - Kiro IDE's autonomous execution mode (不要翻译为"自动驾驶模式")
 - **Named Agent** - Specialized agents with specific functions (不要翻译为"命名代理")
 - **MCP** - Model Context Protocol (保持英文缩写)
 - **API** - Application Programming Interface (保持英文缩写)
