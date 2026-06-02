@@ -1,0 +1,20 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Add Traditional Chinese (zh-TW) language configuration to hugo.toml and create the i18n/zh-TW.yaml file with all UI string translations converted to Traditional Chinese with Taiwan-standard terminology.",
+  "status": "in_progress",
+  "steps": [
+    "Add a new [languages.zh-tw] section in hugo.toml following the pattern of the existing [languages.zh] section. Set languageName to '繁體中文', languageCode to 'zh-TW', weight to 2, title to 'Book of Kiro', and contentDir to 'content.zh-tw'. Include all the same [languages.zh-tw.params] settings as the zh version.",
+    "Create i18n/zh-TW.yaml by translating i18n/zh.yaml from Simplified Chinese to Traditional Chinese (Taiwan standard). Key terminology conversions: 首页->首頁, 文档->文件, 博客->部落格, 搜索->搜尋, 阅读更多->閱讀更多, 返回顶部->返回頂部, 目录->目錄, 下一页->下一頁, 上一页->上一頁, 未找到->找不到, 指南->指南, 教程->教學, 参考->參考, 示例->範例, 对比->比較, 最后更新->最後更新, 发布于->發佈於, 分钟->分鐘. Keep all id values unchanged. Keep the bookSearchConfig JavaScript function structure identical but update the comment to Traditional Chinese."
+  ],
+  "acceptance_criteria": [
+    "hugo.toml contains a [languages.zh-tw] section with all required settings",
+    "i18n/zh-TW.yaml exists with all IDs from i18n/zh.yaml translated to Traditional Chinese",
+    "Hugo builds successfully with the new language configuration (no errors)"
+  ],
+  "verification": [
+    "Run 'hugo --gc --minify' and confirm no build errors related to the zh-tw language"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

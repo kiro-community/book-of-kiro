@@ -1,0 +1,157 @@
+# Chinese (Traditional) translations for Book of Kiro
+# 為 Book of Kiro 網站提供的繁體中文翻譯
+
+# 語言切換器
+- id: language_switch
+  translation: 語言
+
+- id: switch_to_chinese
+  translation: 中文
+
+- id: switch_to_english
+  translation: English
+
+- id: current_language
+  translation: 目前語言
+
+- id: available_languages
+  translation: 可用語言
+
+# 翻譯狀態資訊
+- id: translation_missing
+  translation: 此頁面暫無中文翻譯，顯示英文版本。
+
+- id: help_translate
+  translation: 幫助我們翻譯
+
+- id: contribute_translation
+  translation: 貢獻翻譯
+
+- id: page_in_english
+  translation: 此頁面有英文版本
+
+- id: view_in_english
+  translation: 檢視英文版本
+
+- id: translation_incomplete
+  translation: 此翻譯可能不完整或已過時。
+
+- id: original_version
+  translation: 檢視原版
+
+# 導覽和介面元素
+- id: home
+  translation: 首頁
+
+- id: documentation
+  translation: 文件
+
+- id: blog
+  translation: 部落格
+
+- id: main_docs
+  translation: 主要文件
+
+- id: other_tools
+  translation: 其他工具
+
+- id: competitor_analysis
+  translation: 競品分析
+
+- id: getting_started
+  translation: 快速開始
+
+- id: community
+  translation: 社群
+
+- id: resources
+  translation: 資源
+
+# 常用介面元素
+- id: read_more
+  translation: 閱讀更多
+
+- id: back_to_top
+  translation: 返回頂部
+
+- id: table_of_contents
+  translation: 目錄
+
+- id: on_this_page
+  translation: 本頁內容
+
+- id: related_pages
+  translation: 相關頁面
+
+- id: next_page
+  translation: 下一頁
+
+- id: previous_page
+  translation: 上一頁
+
+- id: page_not_found
+  translation: 找不到頁面
+
+- id: go_back
+  translation: 返回
+
+# 搜尋相關
+- id: search_placeholder
+  translation: 搜尋文件...
+
+- id: search_results
+  translation: 搜尋結果
+
+- id: no_results
+  translation: 找不到結果
+
+- id: search_tip
+  translation: 嘗試不同的關鍵字或檢查拼寫
+
+# 搜尋配置 - 針對中文最佳化
+- id: bookSearchConfig
+  translation: |
+    {
+      encode: false,
+      tokenize: function(str) {
+        // 中文字元分詞：將中文字元單獨分離，保留英文單詞完整性
+        return str.replace(/[\u4e00-\u9fff]/g, ' $& ').split(/\s+/).filter(function(token) {
+          return token.length > 0;
+        });
+      },
+      threshold: 0.3,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      ignoreLocation: true,
+      findAllMatches: true
+    }
+
+# 內容類型
+- id: guide
+  translation: 指南
+
+- id: tutorial
+  translation: 教學
+
+- id: reference
+  translation: 參考
+
+- id: example
+  translation: 範例
+
+- id: comparison
+  translation: 比較
+
+# 日期和時間
+- id: last_updated
+  translation: 最後更新
+
+- id: published_on
+  translation: 發佈於
+
+- id: reading_time
+  translation: 閱讀時間
+
+- id: minutes
+  translation: 分鐘
