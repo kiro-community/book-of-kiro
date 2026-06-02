@@ -20,6 +20,16 @@ bookToc: true
 
 ---
 
+## 基于 Amazon ECS Fargate 自建 Keycloak 作为 AWS IAM Identity Center 外部 IdP，为 Kiro 提供企业级 SSO 登录
+
+**日期**：2026-05-22 | **分类**：Security, Identity & Compliance
+
+Kiro 支持 Google、GitHub、AWS Builder ID、AWS IAM Identity Center（IdC）多种登录方式。本文聚焦 IdC 这条路径，介绍如何基于 Amazon ECS Fargate 自建 Keycloak 作为外部身份提供商，适合需要把 Kiro 纳入企业身份治理、按组织统一下发权限的团队。
+
+🔗 [阅读全文](https://aws.amazon.com/cn/blogs/china/based-on-amazon-ecs-fargate-keycloak-aws-iam-identity-center/)
+
+---
+
 ## 使用 Kiro 和 MCP 自动化大规模升级 RDS MySQL 8.0 至 RDS MySQL 8.4
 
 **日期**：2026-05-22 | **分类**：Database
