@@ -1,0 +1,28 @@
+{
+  "id": "FEAT-006",
+  "type": "fix",
+  "description": "Fix terminology issues identified in review: standardize 平臺->平台, fix 擴充套件 usage, correct 雲維運->雲端維運, and fix 分割槽鍵->partition key.",
+  "status": "in_progress",
+  "steps": [
+    "Replace all occurrences of 平臺 with 平台 across content.zh-tw/ files",
+    "Fix 擴充套件 to appropriate terms based on context: 擴充功能 for IDE/browser extensions, 擴展/擴充 for verb usage",
+    "Fix 雲維運 to 雲端維運 in content.zh-tw/kiro-experience/openclaw.md",
+    "Fix 分割槽鍵 to partition key in content.zh-tw/kiro-intro/mcp.md"
+  ],
+  "acceptance_criteria": [
+    "No occurrences of 平臺 remain in content.zh-tw/",
+    "No occurrences of 擴充套件 remain in content.zh-tw/",
+    "雲維運 is replaced with 雲端維運 in openclaw.md",
+    "分割槽鍵 is replaced with partition key in mcp.md",
+    "Hugo build passes without errors"
+  ],
+  "verification": [
+    "Run 'hugo --gc --minify' and confirm no build errors",
+    "grep -r '平臺' content.zh-tw/ returns no results",
+    "grep -r '擴充套件' content.zh-tw/ returns no results",
+    "grep -r '雲維運' content.zh-tw/ returns no results",
+    "grep -r '分割槽鍵' content.zh-tw/ returns no results"
+  ],
+  "blocked_reason": null,
+  "findings": null
+}
